@@ -2,10 +2,12 @@
 
 = Introduction =
 
-Add your content here.
-
+I mostly check *bold*yavuz.koroglu@boun.edu.tr*bold* e-mail address, so you can contact me from there too.
 
 = Details =
+
+*paragraph*I am 21 years old. I have experience with stand-alone java applications, but no experience with internet services whatsoever. Also I don't have any experience in teamwork. I am experienced in writing matching/searching algorithms, I wrote many word correction and unit-ability matcher algorithms, so I may have useful ideas in user-service matching algorithm in this project
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
