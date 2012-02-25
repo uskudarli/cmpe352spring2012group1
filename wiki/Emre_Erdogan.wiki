@@ -2,12 +2,9 @@
 
 = Introduction =
 
-You can contact me at emre.erdogan1@boun.edu.tr.
+You can contact me at _emre.erdogan1@boun.edu.tr_
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+I am quite confident with the *Java* language, also I have written small programs in *C*, *C++*, and *Perl*. I have some experience with searching and matching algorithms. Unfortunately, I do not have any experience in group projects, yet I enjoy brainstorming, and I try my best to make my work aesthetically pleasing.
