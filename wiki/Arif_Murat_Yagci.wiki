@@ -1,13 +1,12 @@
 #summary Info about Arif Murat Yağcı
 
-= Introduction =
+= Info =
 
-Add your content here.
+I am a grad student. I have some experience as a developer. I implemented machine learning and computer vision algorithms before using C++ and Java, but I have very limited experience in web-based design and development.
+
+Regarding the project, I have familiarity with Java and MySQL. I also have a few servers incl. tomcat running for experimental purposes on my Linux machine. Though, I am no pro at any of these.
 
 
-= Details =
+= Contact =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+yagcim_{AT}_gmail
