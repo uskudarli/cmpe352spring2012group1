@@ -1,12 +1,8 @@
 #summary Info about Salih Tuğra Çetindamar
-= Introduction =
+= Info =
 
-Add your content here.
+I'm a senior expecting to graduate in Jan 2013. I'm familiar with most of the common programming languages and I have been doing a summer internship on DWH & Reporting. I would be much more willing to contribute research and analysis parts of the project.
 
+= Contact =
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+salih.cetindamar@boun.edu.tr
