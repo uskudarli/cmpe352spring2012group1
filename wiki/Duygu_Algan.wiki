@@ -1,13 +1,10 @@
 #summary Info about Duygu Algan
 
-= Introduction =
+= Info =
 
-Add your content here.
+I am a junior student in CMPE. I am much more interested in design and management of technology rather than coding part. I am obsessed with odd numbers. Also I am keen on cars and advertisements. 
 
 
-= Details =
+= Contact =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+You can contact me via algan.duygu@gmail.com
