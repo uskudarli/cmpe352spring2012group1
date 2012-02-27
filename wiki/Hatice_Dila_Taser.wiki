@@ -1,13 +1,16 @@
 #summary Info about Hatice Dila Taşer
 
-= Introduction =
+= Info =
 
-Add your content here.
+I'm a junior student at Boğaziçi University, CMPE department. Becoming a computer engineering was a dream of mine since my early childhood, although I didn't exactly know what I was going to face when I get into the department, probably was dreaming of inventing new technologies :)
+
+If it wasn't this hard in this university, I definitely would enjoy it much more, and if I was a bit successful I wouldn't lose all my self confidence which I had before :P
+
+Because I'm not a very hardworking person and basically I suck at time management, I sometimes lose my belief in life when on midterm-project-final periods. But I can say when I take the responsibility of something, I try my best, although I sometimes fail at the end :/
+
+Besides these, I like painting and cooking, especially desserts, and I love trying different flavors each time, not like revani or regular cake, but like nanaimo bars and welsh cake :)
 
 
-= Details =
+= Contact =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+You can contact me through *_dilataser@gmail.com_*
