@@ -1,13 +1,10 @@
 #summary Info about Alperen Adikti
 
-= Introduction =
+*Info*
 
-Add your content here.
+I am a junior student in CMPE. I am highly interested in finance and applications of computer engineering in that area. I love reading books and watching films about history.
 
 
-= Details =
+*Contact*
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+You can contact me via e-mail in alperen.adikti@gmail.com.
