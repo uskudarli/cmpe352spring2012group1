@@ -8,4 +8,4 @@
 
  # http://www.goodwizz.com/social-network-with-matchmaking-personality-and-relationship-games offers games to match users and create user profiles.
  # http://www.patientslikeme.com/ offers patients to learn from the experiences of similar patients by condition, age and sex matching. The site is very simple to use.
- # http://www.ning.com/ is a weppage which allows the users to create their own social community websites.
+ # http://www.ning.com/ is a webpage which allows the users to create their own social community websites.
