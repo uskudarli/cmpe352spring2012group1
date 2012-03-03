@@ -9,7 +9,7 @@
 * What I can say about me is: *
 {{{
 
-TeamMember Yavuz = new TeamMember(1.70, 70, 21); // Weight-Height-Age
+TeamMember Yavuz = new TeamMember(1.70, 70, 21); // Height-Weight-Age
 Yavuz.hobbies = ["chess", "piano", "swimming", "super-mario:)"];
 
 Yavuz.chess.currentlevel = PRO;
