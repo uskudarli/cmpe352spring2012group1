@@ -27,6 +27,6 @@ Yavuz.wouldComeToSomeMeetingWhereHeCantDrinkIceTea = false;
 
 }}}
 
-= Related-to-Work-Details =
+= Related-to-Work Details =
 
 * I have experience with stand-alone java applications, but no experience with internet services whatsoever. Also I don't have any experience in teamwork. I am experienced in writing matching/searching algorithms, I wrote many word correction and unit-ability matcher algorithms, so I may have useful ideas in user-service matching algorithm in this project.*
