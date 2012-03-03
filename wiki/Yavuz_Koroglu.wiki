@@ -1,9 +1,32 @@
 #summary Info about Yavuz Köroğlu
 
-= Introduction =
+= Contact =
 
-I mostly check *yavuz.koroglu@boun.edu.tr* e-mail address, so you can contact me from there too.
+* I mostly check *yavuz.koroglu@boun.edu.tr* e-mail address, so you can contact me from there too.*
 
-= Details =
+= About Me =
 
-I am 21 years old. I have experience with stand-alone java applications, but no experience with internet services whatsoever. Also I don't have any experience in teamwork. I am experienced in writing matching/searching algorithms, I wrote many word correction and unit-ability matcher algorithms, so I may have useful ideas in user-service matching algorithm in this project.
+* What I can say about me is: *
+{{{
+
+TeamMember Yavuz = new TeamMember(1.70, 70, 21); // Weight-Height-Age
+Yavuz.hobbies = ["chess", "piano", "swimming", "super-mario:)"];
+
+Yavuz.chess.currentlevel = PRO;
+Yavuz.piano.currentlevel = YOU_DONT_WANT_TO_KNOW;
+Yavuz.swimming.currentlevel = LIKE_A_BOSS;
+Yavuz.mario.currentlevel = STILL_FIRST_STAGE;
+
+Yavuz.likes = ["writing funny code", "fantastic-role-playing stories"];
+Yavuz.purpose = "To write a programming language which understands natural English";
+
+Yavuz.wouldLikeToPlayVideoGamesWithOtherTeamMembers = true;
+
+Yavuz.favoriteDrink = "Ice-tea";
+Yavuz.wouldComeToSomeMeetingWhereHeCantDrinkIceTea = false;
+
+}}}
+
+= Related-to-Work-Details =
+
+* I have experience with stand-alone java applications, but no experience with internet services whatsoever. Also I don't have any experience in teamwork. I am experienced in writing matching/searching algorithms, I wrote many word correction and unit-ability matcher algorithms, so I may have useful ideas in user-service matching algorithm in this project.*
