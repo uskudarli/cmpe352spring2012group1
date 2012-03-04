@@ -1,6 +1,16 @@
-#summary Useful Websites
+#summary Useful Notes and Links
 
-= Useful Websites =
+= Useful Notes and Links =
+
+== Similar systems ==
+
+  # Local exchange trading systems (LETS) are not-for-profit community enterprises that provide a community information service and record transactions of members exchanging "goods and services" by using the currency of locally created "LETS Credits". Means for crediting and rating as well as encouragement of community members are central to our project. Therefore, it is worth further investigating the following links.
+
+  * http://en.wikipedia.org/wiki/Local_exchange_trading_system
+  * http://www.unilets.org/
+
+
+== On Social Networks ==
 
 * * http://en.wikipedia.org/wiki/List_of_social_networking_websites * is a list of all social-network websites on the internet.
 
