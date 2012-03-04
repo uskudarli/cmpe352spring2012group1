@@ -1,0 +1,16 @@
+#summary Meeting Minutes
+
+= Meeting 1 =
+
+*Date:* 02.03.2012 *Location:* Online
+
+*Participants:* All group members
+
+
+==Discussions:==
+ # We have not yet come together with the client for detailed requirements analysis, but we can do a preliminary research on the project.
+ # Initial ideas on Responsibility assignment
+ # Formation of a group on Facebook, or a circle on Google+ etc. 
+ 
+ ==Action items:==
+ # Everybody will do preliminary research on the project topic and requirements and update a single wiki page "Useful Notes and Links" accordingly.
