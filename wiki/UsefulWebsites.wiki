@@ -1,21 +1,32 @@
-#summary Useful Notes and Links
+#summary Research about the project domain and similar projects
 
-= Useful Notes and Links =
+= What is "Social Services Community"? =
 
-== Similar systems ==
+ to be completed
 
-  # Local exchange trading systems (LETS) are not-for-profit community enterprises that provide a community information service and record transactions of members exchanging "goods and services" by using the currency of locally created "LETS Credits". Means for crediting and rating as well as encouragement of community members are central to our project. Therefore, it is worth further investigating the following links.
+= Similar Projects =
+
+  # On Social Networks
+
+ * http://en.wikipedia.org/wiki/List_of_social_networking_websites is a list of all social-network websites on the internet.
+
+* Taken from that website, *
+
+ * http://www.goodwizz.com/social-network-with-matchmaking-personality-and-relationship-games offers games to match users and create user profiles.
+ * http://www.patientslikeme.com/ offers patients to learn from the experiences of similar patients by condition, age and sex matching. The site is very simple to use.
+ * http://www.ning.com/ is a webpage which allows the users to create their own social community websites. _Yavuz Köroğlu_
+
+
+  # Local exchange trading systems (LETS) are not-for-profit community enterprises that provide a community information service and record transactions of members exchanging "goods and services" by using the currency of locally created "LETS Credits". Means for crediting and rating as well as encouragement of community members are central to our project. Therefore, it is worth further investigating the following links. _ Murat Yağcı_
 
   * http://en.wikipedia.org/wiki/Local_exchange_trading_system
   * http://www.unilets.org/
 
 
-== On Social Networks ==
+ # During my research on the web I encountered projects similar to ours. I want to mention two of them. The first one is “The Service Exchange of Boulder Country”. The idea of meeting each other’s need is the same. However their principle depends solely on a written membership agreement rather than a web-based system.
+ * http://bcn.boulder.co.us/community/servexchange/
 
-* * http://en.wikipedia.org/wiki/List_of_social_networking_websites * is a list of all social-network websites on the internet.
+The second one is quoted from a continuing brainstorm on the future of cities and published on the webpage of a US based company called GOOD. It is suggested that cities would extend this [http://seeclickfix.com/citizens] to a trade platform for services. This model is able to display recent activities and allow some kind of rating system as in the requirements of our project. As a result all citizens would have a complete profile of their skills, experience, and contributions in a Facebook-like citizen social network paired with opportunity matching. _Duygu Algan_
+ * http://www.good.is/post/ideas-for-cities-diy-city/
 
-* Taken from that website, *
 
- # http://www.goodwizz.com/social-network-with-matchmaking-personality-and-relationship-games offers games to match users and create user profiles.
- # http://www.patientslikeme.com/ offers patients to learn from the experiences of similar patients by condition, age and sex matching. The site is very simple to use.
- # http://www.ning.com/ is a webpage which allows the users to create their own social community websites.
