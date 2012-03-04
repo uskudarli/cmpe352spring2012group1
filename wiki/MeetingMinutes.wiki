@@ -1,4 +1,4 @@
-#summary Meeting Minutes
+#summary Meeting Minutes #1
 
 = Meeting 1 =
 
@@ -9,7 +9,7 @@
 
 ==Discussions:==
  # We have not yet come together with the client for detailed requirements analysis, but we can do a preliminary research on the project.
- # Initial ideas on Responsibility assignment
+ # Initial ideas on responsibility assignment.
  # Formation of a group on Facebook, or a circle on Google+ etc. 
  
 ==Action items:==
