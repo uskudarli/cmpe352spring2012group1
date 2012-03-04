@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Similar Social Networks
 
 = Social Networks =
 
@@ -19,4 +19,3 @@ Couch-surfing and Localyte are the two social networks that are based on specifi
 On the other hand, *Localyte* brings travelers and local people together to promote travel experiences. Members write about themselves as well as the services they offer such as tours, driving, tutoring and more. They provide helpful answers to demonstrate their expertise about where they live. They may also earn money by responding to service requests from travelers with their proposals and prices. Users can also collect reviews from travelers on their profiles.
 
 More Info: [http://www.localyte.com/ Localyte], [http://www.couchsurfing.org/ Couchsurfing]  
-
