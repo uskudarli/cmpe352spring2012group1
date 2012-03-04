@@ -12,5 +12,5 @@
  # Initial ideas on Responsibility assignment
  # Formation of a group on Facebook, or a circle on Google+ etc. 
  
- ==Action items:==
+==Action items:==
  # Everybody will do preliminary research on the project topic and requirements and update a single wiki page "Useful Notes and Links" accordingly.
