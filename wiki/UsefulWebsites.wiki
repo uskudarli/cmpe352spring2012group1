@@ -15,10 +15,21 @@
 _Yavuz Köroğlu_
 ----
 
-  * Local exchange trading systems (LETS) are not-for-profit community enterprises that provide a community information service and record transactions of members exchanging "goods and services" by using the currency of locally created "LETS Credits". Means for crediting and rating as well as encouragement of community members are central to our project. Therefore, it is worth further investigating the following links.  
+  * Local exchange/employment trading systems (LETS) are not-for-profit community enterprises that provide a community information service and record transactions of members exchanging "goods and services" by using the currency of locally created "LETS Credits". Means for crediting and rating as well as encouragement of community members are central to our project. Therefore, it is worth further investigating the following links.  
 
   # http://en.wikipedia.org/wiki/Local_exchange_trading_system
-  # http://www.unilets.org/
+  # [http://www.unilets.org/ UniLets Directory]
+  # [http://www.letsvlaanderen.be/Links/tabid/386/Default.aspx LETS in Belgium]
+
+Unilets provides links to LETS worldwide. Most of the links point to simple sites with phone/email as the only contact medium. Trust is very important in such societies, therefore they do not let people in by simple web-based sign up. Most of these systems have properties like the following;
+
+ # Each member has a record book (or an e-wallet). There are no physical tokens - it's more like earning gold stars or brownie points. Members put currency into their accounts by doing work for other members. If you want a job done on LETS, you phone/email someone in the directory and negotiate a "price" in the local currency units.
+ # The scheme is (said to be) self-regulating in practice. Members are trusted to use it fairly and as the accounts are published from time to time, all members can see how others operate. A member who only takes from the system is quickly seen and isolated. If a member leaves the scheme, they must leave their account at zero or in credit. 
+ # Administration can be burdensome and costly. Some systems even take an initial registration fee. Effective use of web-based systems are needed here. 
+ # Kind of services offered are decided by the community.
+ # The system forces into a world where "one earns easily, but spends hardly" from a world where it is the opposite.
+ 
+Social networking approach may be useful to apply to such a system. Further to providing tools for improving communication and easing administration, it may also be used, for example, to analyze social network information about a person to evaluate his/her trustworthiness. 
 
 _ Murat Yağcı_
 ----
