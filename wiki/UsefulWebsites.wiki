@@ -50,3 +50,30 @@ _Duygu Algan_
 
 _Dila Taşer_
 ----
+
+*Social Networks*
+
+A social networking service is an online service, platform, or site that focuses on building and reflecting of social networks or social relations among people, who, for example, share interests and/or activities. Source: [http://en.wikipedia.org/wiki/Social_networking_service Wikipedia]
+
+More on Social Networks:
+
+http://social-networking-websites-review.toptenreviews.com/
+
+http://www.whatissocialnetworking.com/
+
+*Similar Web Sites*
+
+Couch-surfing,Armut and Localyte are the social networks that are based on specific service exchanges. 
+
+*Couchsurfing* is a social network offering its users hospitality exchange. More information provided by a member, it is more likely that someone will find the member trustworthy enough to be his host or guest. We can make use of this idea by letting users to provide detailed info and upload photos to create a trusted environment. Security issues may be seen as the weakest point of the service exchange through a social network. However Couchsurfing makes use of personal references and a personal vouching system to increase security of hospitality exchange.
+
+On the other hand, *Localyte* brings travelers and local people together to promote travel experiences. Members write about themselves as well as the services they offer such as tours, driving, tutoring and more.
+
+*Armut* is from Turkey and it seems like it is the most similar one to our project. It is based on finding offers and facilitating service exchange.
+
+More Info: [http://www.localyte.com/ Localyte], [http://www.couchsurfing.org/ Couchsurfing],
+[http://armut.com/ Armut]  
+
+_Tuğra Çetindamar_
+
+----
