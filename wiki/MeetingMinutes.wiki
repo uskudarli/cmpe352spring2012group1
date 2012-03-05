@@ -10,6 +10,7 @@
 ==Discussions:==
  # Majority supports a decrease in the scope of the project such that the project should only include university students.
  # http://armut.com/ is offered as an example webpage.
+ # Usage of physical or virtual neighborhood and requirement of sign-up or just anonymous entering has not yet decided.
 
 ==Action items:==
  # All links and researches should be written on the same wiki page.
