@@ -2,7 +2,7 @@
 
 = Info =
 
-I am a grad student who has to take this course but it seems to be well worth it especially when Suzan Hoca is lecturing it. I have some experience as a developer. I implemented machine learning and computer vision algorithms before in industrial and academic settings as well as some database-driven projects, but I have limited experience in web-based design and development.
+I am a grad student who has to take this course but it seems to be well worth it especially because Suzan Hoca is lecturing it. I have some experience as a developer. I implemented machine learning and computer vision algorithms before in industrial and academic settings as well as some database-driven projects, but I have limited experience in web-based design and development.
 
 Regarding the project, I have familiarity with Java and MySQL. I also have a few servers incl. tomcat running for experimental purposes on my Linux machine. 
 
