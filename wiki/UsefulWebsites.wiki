@@ -34,7 +34,7 @@ _Duygu Algan_
 
   # http://yapanzi.com/ is a website that provides getting or offering services that are splitted into categories, can be searched, rated etc.
   # http://www.service-network.co.uk/ Service Network, the voice of the service sector in the North East of England, brings together the best of the corporate world and vibrant smaller businesses, all focussed on delivering high value, business to business services. Our members are talented, driven individuals and companies looking for opportunities to exchange best practice, learn, move their business forward, and collaborate.
-  # meetup.com/ is a network of local groups. Meetup makes it easy for anyone to organize a local group or find one of the thousands already meeting up face-to-face.
+  # http://meetup.com/ is a network of local groups. Meetup makes it easy for anyone to organize a local group or find one of the thousands already meeting up face-to-face.
 
 _Dila Taşer_
 ----
