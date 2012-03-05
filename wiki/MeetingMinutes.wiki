@@ -1,5 +1,23 @@
 #summary Meeting Minutes #1
 
+= Meeting 2 =
+*Date:* 05.03.2012 *Location:* ETA A3
+*Time:* 19:30 after PS
+
+*Participants:* Duygu, Semih, Salih, Dila, Yavuz
+
+
+==Discussions:==
+ # Majority supports a decrease in the scope of the project such that the project should only include university students.
+ # http://armut.com/ is offered as an example webpage.
+
+==Action items:==
+ # All links and researches should be written on the same wiki page.
+ # Each contributor must write his/her name to the end of his/her part of the wiki in paranthesis.
+ # There will be a facebook group of this project team.
+ # Each member should increase their profile size.
+ # A possible logo for the project should be searched or drawn by all members if possible.
+
 = Meeting 1 =
 
 *Date:* 02.03.2012 *Location:* Online
