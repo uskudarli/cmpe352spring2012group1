@@ -83,10 +83,10 @@ _Tuğra Çetindamar_
   * Users communicate via their e-mails. To publish ads, one must sign up to the site.
  
   Global
-  # http://www.craigslist.org/about/sites
+  * http://www.craigslist.org/about/sites
 
   Istanbul
-  # http://istanbul.craigslist.com.tr/
+  * http://istanbul.craigslist.com.tr/
 
 _Semih Öztürk_
 
