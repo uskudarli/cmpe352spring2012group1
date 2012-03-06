@@ -2,7 +2,7 @@
 
 = Meeting 2 =
 *Date:* 05.03.2012 *Location:* ETA A3
-*Time:* 19:30 after PS
+*Time:* 17:30 after PS
 
 *Participants:* Duygu, Semih, Salih, Dila, Yavuz
 
@@ -19,6 +19,7 @@
  # Each member should increase their profile size.
  # A possible logo for the project should be searched or drawn by all members if possible.
 
+----
 = Meeting 1 =
 
 *Date:* 02.03.2012 *Location:* Online
