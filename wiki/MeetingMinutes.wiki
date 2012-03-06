@@ -1,4 +1,4 @@
-#summary Meeting Minutes #1
+#summary Meeting Minutes
 
 = Meeting 2 =
 *Date:* 05.03.2012 *Location:* ETA A3
