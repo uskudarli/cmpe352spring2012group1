@@ -1,5 +1,23 @@
 #summary Meeting Minutes
 
+= Meeting 4 =
+
+*Date:* 12.03.2012 *Location:* ETA A3
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Semih
+
+==Discussions:==
+ # There will be no "sign-in with Facebook" feature. This is because that our project requires that the users must include their true identities in their profiles.
+ # Only invited people will be allowed to sign-in.
+ # Service offers is decided to be taken request-based.
+ # There will be a forum for social service users included in the project.
+
+==Action items:==
+ # Every member shall upload their logos from Administer section
+ # Murat will add the requirements document. Please read it carefully.
+ # Every member should send his skype address to every other member via e-mail.
+
+----
 = Meeting 3 =
 
 *Date:* 09.03.2012 *Location:* Online
