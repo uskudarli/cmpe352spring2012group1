@@ -1,5 +1,22 @@
 #summary Meeting Minutes
 
+= Meeting 3 =
+
+*Date:* 09.03.2012 *Location:* Online
+
+*Participants:* Alperen, Duygu, Salih, Yavuz, Semih, Dila, Murat
+
+
+==Discussions:==
+ # Preparation of initial draft requirements document with clarification of key concepts and functional and non-functional dichotomy.
+ # Document format will be as required by the customer.
+ # An elicitation process with customer is necessary.
+ 
+==Action items:==
+ # Everybody will come up with ideas/solutions to the meeting on next Monday to further elaborate the initial document.
+ # Duygu will organize the weekly group meetings. 
+
+----
 = Meeting 2 =
 *Date:* 05.03.2012 *Location:* ETA A3
 *Time:* 17:30 after PS
