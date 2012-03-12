@@ -4,7 +4,7 @@
 == 1. FUNCTIONAL REQUIREMENTS ==
 
 === 1.1.  USER TYPES AND ACCESS ===
-1.1.1. There shall be 2 types of users: MEMBER and ADMIN.
+1.1.1. There shall be two types of users: MEMBER and ADMIN.
 
 1.1.2. MEMBER shall be able to register to the community on invitation basis.
 
@@ -21,33 +21,43 @@
 
 1.2.4. Each MEMBER shall have a COMMUNITY CREDITS account upon registration with zero balance.
 
-1.2.5. MEMBER shall offer SERVICEs belonging to predefined SERVICE groups.
+1.2.5. MEMBER shall offer SERVICEs belonging to predefined SERVICE groups on his/her profile page.
 
-1.2.6. Each SERVICE entry shall contain a title, a maximum of  1024-character description and a compensation in terms of COMMUNITY CREDITS, ....
+1.2.6. Each SERVICE entry shall contain a title, a maximum of  1024-character description and a compensation in terms of COMMUNITY CREDITS.
 
-1.2.7. MEMBERs shall be free to demand an amount of COMMUNITY CREDITS for their SERVICEs which shall be updateable as a result of negotiation.
+1.2.7. MEMBERs shall be free to demand an amount of COMMUNITY CREDITS for their SERVICEs which shall be updateable as a result of negotiation. 
 
-1.2.8. MEMBER shall offer SERVICEs to all of the community, not to a certain individual(s).
+1.2.8. A SERVICE shall be taken as request-based.
 
-1.2.9. There shall not be COMMUNITY CREDITS loans.
+1.2.9. After a service request is approved by the MEMBER who offers it, the SERVICE shall appear on the profile pages of the two individuals.
 
-1.2.10. MEMBER should be able to earn COMMUNITY CREDITS by doing charity work approved in the system.
+1.2.10. The status of the service shall be 'on progress', 'accomplished' or 'not accomplished'.
 
-1.2.11. ADMINs earn predefined COMMUNITY CREDITS for their service.
+1.2.11. COMMUNITY CREDITS transaction happen when the user who demands the service marks it as 'accomplished'.
+
+1.2.12. MEMBER shall offer SERVICEs to all of the community, not to a certain individual(s).
+
+1.2.13. There shall not be COMMUNITY CREDITS loans.
+
+1.2.14. MEMBER should be able to earn COMMUNITY CREDITS by doing charity work approved in the system.
+
+1.2.15. ADMINs earn predefined COMMUNITY CREDITS for their service.
 
 === 1.3. RATING AND ENCOURAGEMENT ===
-1.3.1. MEMBER shall be rated by the beneficiary for any SERVICE accomplished w.r.t. amount of credits and quality of service ...
+1.3.1. MEMBER shall be rated by the beneficiary for any SERVICE accomplished with respect to amount of credits and quality of service.
 
 1.3.2. MEMBER profile shall be made public with the following information: Details of SERVICEs offered, number of SERVICEs accomplished, up-to-date rating average for demanded amount of credits and quality of service, current account balance.
 
 1.3.3. The list of up-to-date account balances shall be made available to all community MEMBERs.
 
-1.3.4. MEMBERs whose balances exceed specified limits (positive or negative) shall be isolated  and notified to move their balance back towards zero by spending or earning.
+1.3.4. The system shall display recent activities in order to promote MEMBERs.
+
+1.3.5. MEMBERs whose balances exceed specified limits (positive or negative) shall be isolated  and notified to move their balance back towards zero by spending or earning.
 
 === 1.4. SEARCHING FOR SERVICES ===
 1.4.1. Any MEMBER shall be able to search SERVICEs with respect to SERVICE groups or a given search query.
 
-1.4.2. SERVICEs should be ranked w.r.t. relevance to a given search query. This may involve e.g. implementation of a recommender system.
+1.4.2. SERVICEs should be ranked with respect to relevance to a given search query. This should involve e.g. implementation of a recommender system.
 
 === 1.5. SOCIAL NETWORKING ASPECTS ===
 1.5.1. MEMBERs information at different common social networks should be linked to its community account to evaluate his/her trustworthiness.
