@@ -1,0 +1,75 @@
+= PROJECT REQUIREMENTS =
+
+
+== 1. FUNCTIONAL REQUIREMENTS ==
+
+=== 1.1.  USER TYPES AND ACCESS ===
+1.1.1. There shall be 2 types of users: MEMBER and ADMIN.
+
+1.1.2. MEMBER shall be able to register to the community on invitation basis.
+
+1.1.3. Registration shall include true identity of a MEMBER with location information.
+
+1.1.4. There should be different roles for ADMINs (e.g. administration, content management, ...)
+
+=== 1.2. DEFINITION OF SERVICE AND COMMUNITY CREDITS ===
+1.2.1. SERVICE shall refer to any allowed type of service in the community.
+
+1.2.2. Valid SERVICE types shall be specified by system administrators. However, MEMBER should be able to propose new SERVICEs.
+
+1.2.3. There shall be no involvement of money or products in SERVICE exchange, but the COMMUNITY CREDITS.
+
+1.2.4. Each MEMBER shall have a COMMUNITY CREDITS account upon registration with zero balance.
+
+1.2.5. MEMBER shall offer SERVICEs belonging to predefined SERVICE groups.
+
+1.2.6. Each SERVICE entry shall contain a title, a maximum of  1024-character description and a compensation in terms of COMMUNITY CREDITS, ....
+
+1.2.7. MEMBERs shall be free to demand an amount of COMMUNITY CREDITS for their SERVICEs which shall be updateable as a result of negotiation.
+
+1.2.8. MEMBER shall offer SERVICEs to all of the community, not to a certain individual(s).
+
+1.2.9. There shall not be COMMUNITY CREDITS loans.
+
+1.2.10. MEMBER should be able to earn COMMUNITY CREDITS by doing charity work approved in the system.
+
+1.2.11. ADMINs earn predefined COMMUNITY CREDITS for their service.
+
+=== 1.3. RATING AND ENCOURAGEMENT ===
+1.3.1. MEMBER shall be rated by the beneficiary for any SERVICE accomplished w.r.t. amount of credits and quality of service ...
+
+1.3.2. MEMBER profile shall be made public with the following information: Details of SERVICEs offered, number of SERVICEs accomplished, up-to-date rating average for demanded amount of credits and quality of service, current account balance.
+
+1.3.3. The list of up-to-date account balances shall be made available to all community MEMBERs.
+
+1.3.4. MEMBERs whose balances exceed specified limits (positive or negative) shall be isolated  and notified to move their balance back towards zero by spending or earning.
+
+=== 1.4. SEARCHING FOR SERVICES ===
+1.4.1. Any MEMBER shall be able to search SERVICEs with respect to SERVICE groups or a given search query.
+
+1.4.2. SERVICEs should be ranked w.r.t. relevance to a given search query. This may involve e.g. implementation of a recommender system.
+
+=== 1.5. SOCIAL NETWORKING ASPECTS ===
+1.5.1. MEMBERs information at different common social networks should be linked to its community account to evaluate his/her trustworthiness.
+
+1.5.2. System should have sharing capabilities related to a SERVICE (images, message box etc.)
+
+
+== 2. NON-FUNCTIONAL REQUIREMENTS ==
+
+=== 2.1. USABILITY ===
+2.1.1. The system should be easy to use by no tech people with basic internet usage skills.
+
+2.1.2. A minimalist web page design should be preferred where applicable.
+
+=== 2.2. RELIABILITY ===
+2.2.1. Database shall be replicated to compensate for failures.
+
+2.2.2. COMMUNITY CREDIT transfer shall be atomic, i.e. it will be implemented as a transaction.
+
+=== 2.3. DEPENDABILITY ===
+2.3.1. Project shall be designed to run problem free on Mozilla Firefox, Google Chrome, and Internet Explorer web browsers.
+
+2.3.2. The project shall be implemented using standard Java 1.6. and Eclipse IDE and run on Apache Tomcat Server 6.0 on customer’ s site.
+
+2.3.3. Progress of project shall be monitored by customer and contractor via Google code.
