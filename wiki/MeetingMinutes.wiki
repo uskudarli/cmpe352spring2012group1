@@ -14,8 +14,8 @@
 
 ==Action items:==
  # Every member shall upload their logos from Administer section
- # Murat will add the requirements document. Please read it carefully.
- # Every member should send his skype address to every other member via e-mail.
+ # Murat will upload the requirements document. Please read it carefully.
+ # Every member should send his/her skype address to every other member via e-mail.
 
 ----
 = Meeting 3 =
@@ -37,7 +37,6 @@
 ----
 = Meeting 2 =
 *Date:* 05.03.2012 *Location:* ETA A3
-*Time:* 17:30 after PS
 
 *Participants:* Duygu, Semih, Salih, Dila, Yavuz
 
