@@ -1,4 +1,6 @@
-= PROJECT REQUIREMENTS =
+= REQUIREMENTS DOCUMENT =
+
+This document contains functional and non-functional requirements of the "Social Services Community" project. Contents of this document may change over time upon mutual agreement of customer and contractor (Group1). Please always refer to the project site for the latest version. 
 
 
 == 1. FUNCTIONAL REQUIREMENTS ==
@@ -8,9 +10,11 @@
 
 1.1.2. MEMBER shall be able to register to the community on invitation basis.
 
-1.1.3. Registration shall include true identity of a MEMBER with location information.
+1.1.3. Registration shall include true identity of a MEMBER at least with SSN, location information, a valid e-mail address and phone number.
 
-1.1.4. There should be different roles for ADMINs (e.g. administration, content management, ...)
+1.1.4. Each user shall login with his/her e-mail address as user id and a password. 
+
+1.1.5. There should be different roles for ADMINs (administration, content management).
 
 === 1.2. DEFINITION OF SERVICE AND COMMUNITY CREDITS ===
 1.2.1. SERVICE shall refer to any allowed type of service in the community.
@@ -21,15 +25,15 @@
 
 1.2.4. Each MEMBER shall have a COMMUNITY CREDITS account upon registration with zero balance.
 
-1.2.5. MEMBER shall offer SERVICEs belonging to predefined SERVICE groups on his/her profile page.
+1.2.5. Any MEMBER shall be able to offer SERVICEs belonging to predefined SERVICE groups.
 
-1.2.6. Each SERVICE entry shall contain a title, a maximum of  1024-character description and a compensation in terms of COMMUNITY CREDITS.
+1.2.6. Each SERVICE entry shall contain at least a title, a maximum of  1024-character description and a compensation in terms of COMMUNITY CREDITS.
 
-1.2.7. MEMBERs shall be free to demand an amount of COMMUNITY CREDITS for their SERVICEs which shall be updateable as a result of negotiation. 
+1.2.7. MEMBERs shall be free to demand an amount of COMMUNITY CREDITS for their SERVICEs which shall be updateable as a result of negotiation. However, other MEMBERs should be able to report/complain about abuse of this system conveniently.
 
 1.2.8. A SERVICE shall be taken as request-based.
 
-1.2.9. After a service request is approved by the MEMBER who offers it, the SERVICE shall appear on the profile pages of the two individuals.
+1.2.9. After a SERVICE request is approved by the MEMBER who offers it, the SERVICE shall appear on the profile pages of the two individuals.
 
 1.2.10. The status of the service shall be 'on progress', 'accomplished' or 'not accomplished'.
 
@@ -39,9 +43,9 @@
 
 1.2.13. There shall not be COMMUNITY CREDITS loans.
 
-1.2.14. MEMBER should be able to earn COMMUNITY CREDITS by doing charity work approved in the system.
+1.2.14. MEMBER should be able to earn COMMUNITY CREDITS by doing charity work regularly listed and approved by the system.
 
-1.2.15. ADMINs earn predefined COMMUNITY CREDITS for their service.
+1.2.15. ADMINs earn a predefined amount of COMMUNITY CREDITS for their service.
 
 === 1.3. RATING AND ENCOURAGEMENT ===
 1.3.1. MEMBER shall be rated by the beneficiary for any SERVICE accomplished with respect to amount of credits and quality of service.
@@ -55,14 +59,14 @@
 1.3.5. MEMBERs whose balances exceed specified limits (positive or negative) shall be isolated  and notified to move their balance back towards zero by spending or earning.
 
 === 1.4. SEARCHING FOR SERVICES ===
-1.4.1. Any MEMBER shall be able to search SERVICEs with respect to SERVICE groups or a given search query.
+1.4.1. Any MEMBER shall be able to search for SERVICEs with respect to SERVICE groups or a given search query.
 
 1.4.2. SERVICEs should be ranked with respect to relevance to a given search query. This should involve e.g. implementation of a recommender system.
 
 === 1.5. SOCIAL NETWORKING ASPECTS ===
 1.5.1. MEMBERs information at different common social networks should be linked to its community account to evaluate his/her trustworthiness.
 
-1.5.2. System should have sharing capabilities related to a SERVICE (images, message box etc.)
+1.5.2. System should have sharing capabilities related to a SERVICE (e.g. image/video sharing, online/offline messaging)
 
 
 == 2. NON-FUNCTIONAL REQUIREMENTS ==
