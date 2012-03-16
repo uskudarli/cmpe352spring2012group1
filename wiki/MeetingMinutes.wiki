@@ -1,5 +1,20 @@
 #summary Meeting Minutes
 
+= Meeting 5 =
+*Date:* 16.03.2012 *Location:* Online(Skype)
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Alperen
+
+==Discussions:==
+ # First UML diagram will cover the whole function of the project. It shall be possible to explain certain scenarios on this first diagram.
+ # Second UML diagram will be drawn if needed and it shall describe the detailed case-scenarios.
+ # Socializing part of the project should be expanded and requirements shall be expanded in that way also.
+
+==Action items:==
+ # Yavuz Alperen and Dila shall finish the diagrams until Sunday evening.
+ # Duygu is going to talk to the customer asking the questions discusssed.
+ # Murat Tuğra and Semih are going to prepare use-case scenarios and describe them in natural language.
+----
 = Meeting 4 =
 
 *Date:* 12.03.2012 *Location:* ETA A3
