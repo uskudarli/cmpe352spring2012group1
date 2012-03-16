@@ -13,7 +13,8 @@
 ==Action items:==
  # Yavuz Alperen and Dila shall finish the diagrams until Sunday evening.
  # Duygu is going to talk to the customer asking the questions discusssed.
- # Murat Tuğra and Semih are going to prepare use-case scenarios and describe them in natural language.
+ # Murat and Tuğra are going to prepare use-case scenarios and describe them in natural language.
+ # Semih and Duygu are going to prepare a slide show.
 ----
 = Meeting 4 =
 
