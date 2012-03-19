@@ -1,3 +1,5 @@
+#summary Requirement Analysis
+
 = REQUIREMENTS DOCUMENT =
 
 This document contains functional and non-functional requirements of the "Social Services Community" project. Contents of this document may change over time upon mutual agreement of customer and contractor (Group1). Please always refer to the project site for the latest version. 
