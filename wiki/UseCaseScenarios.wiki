@@ -1,10 +1,10 @@
 #summary Use Case Scenarios
 
-== Scenario 1: ==  
+== Scenario 1 ==  
 
 *Summary:*  
 
- * Ali offers a new service and is looking to broadcast/socialize 
+ * Ali offers a new service and is looking to broadcast/socialize. 
 
 *Plot:*  
 
@@ -41,11 +41,11 @@
 ----
 
 
-== Scenario 2: ==  
+== Scenario 2 ==  
 
 *Summary:*  
 
- * Ayse is looking for a specific service. She cannot find what she is looking for. She then decides to look for a slightly different service and finds many. She compares them and chooses one among them. She is matched with the service provider.
+ * Ayse is looking for a specific service. She cannot find what she is looking for. She then decides to look for a slightly different service and finds many. She compares them and chooses one among them. She is matched with Handan Hanim.
 
 *Plot:*  
 
@@ -75,8 +75,8 @@
 
  * Handan Hanim also approves the request and starts to cook apple cookies.
 
- * After 30 minutes Handan Hanim brings cookies to Ayşe.
+ * After 30 minutes Handan Hanim brings cookies to Ayse.
 
- * Ayşe eats the cookies and really likes them. She again logs into the social services community system and ranks the service of Handan Hanim with maximum points.
+ * Ayse eats the cookies and really likes them. She again logs into the social services community system and ranks the service of Handan Hanim with maximum points.
 
  * Since the service has been accomplished, Handan Hanim receives 5 credits from Ayse’s account.
