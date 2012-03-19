@@ -1,72 +1,80 @@
-= Scenario 1 =
-==User offers a new service & is looking to broadcast / socialize ==
+== Scenario 1: ==  
 
-Ali who is a student in CMPE department, decides to enter the social services community.
+*Summary:*  
 
-He first registers to the website and then creates himself a profile. 
+ * Ali offers a new service and is looking to broadcast/socialize 
 
-He enriches his profile by adding his photos and personal information.
+*Plot:*  
 
-He also provides links from his Facebook page to add up more information about himself.
+ * Ali, who is a student in CMPE department, decides to enter the social services community.
 
-Then he decides to serve the community within his programming skills. 
+ * He first registers to the website and then creates himself a profile.
 
-So he submits his offer describing his skills in great detail and also shares a document including the projects that he has been accomplished so far.
+ * Ali wants to create a rich profile since this may help attract more people to his profile. He enriches his profile by adding his photos and personal information. He also provides links from his Facebook page to add up more information about himself.
 
-He adds “computer”, “programming” and “software” tags to his service so that it would be easier for others to find it.
+ * Then, he decides to serve the community within his programming skills. 
 
-To be able to set the price for his service Ali checks the system database and reviews similar services offered by others. 
+ * He submits an offer for freelance programming in interesting web-based projects for 2 days a week. He describes his skills in great detail and also shares a document including the projects that he has accomplished so far.
 
-He sees Ayşe a junior student offering programming service for 50 credits and a senior Veli offering the same service for 60 credits. 
+ * He adds “computer”, “programming” and “software” tags to his service so that it would be easier for others to find it.
 
-So Ali decides on the price of 55 credits and finally publishes his own service.
+ * To be able to set the compensation for his service, Ali checks the system database and reviews similar services offered by other members. 
 
-Then the programming service of the Ali is listed in the list of recent activities.
+ * He sees Nese a junior student offering programming service for 50 credits and a senior Veli offering the same service for 60 credits. 
 
-After offering a service, Ali decides to take a look at the services offered by others and tries to see if there are services and members he might be interested in.
+ * So, Ali decides on the price of 55 credits and finally publishes his own service.
 
-Ali’s flat has a problematic electric network and it usually breaks down. So Ali becomes really happy when he finds Mehmet Bey who is an electrician and offers fixing minor electricity problems for relatively cheap prices. 
+ * Then, the programming service of the Ali is listed in the list of recent activities.
 
-Ali then starts to follow Mehmet Bey on the online services community in case he might have a problem with electricity of his flat.
+ * After offering a service, Ali decides to take a look at the services offered by others and tries to see if there are services and members he might be interested in.
 
-Ali then takes a look on the forum of the social network and reads topics related to the programming service that he is giving.
+ * Ali’s flat has a problematic electric network and it usually breaks down. So Ali becomes really happy when he finds Mehmet Bey who is an electrician and offers fixing minor electricity problems for relatively cheap prices. 
 
-He also takes a look on other topics mostly opened by electricians, keeping in mind that he may need an electrician one day.
+ * Ali then starts to follow Mehmet Bey on the online services community in case he might have a problem with electricity of his flat.
+
+ * Ali then takes a look on the forum of the social network and reads topics related to the programming service that he is giving.
+
+ * He also takes a look on other topics mostly opened by electricians, keeping in mind that he may need an electrician one day.
 
 ----
 
 
-= Scenario 2 =
-==A user is looking for a specific service. He cannot find what he is looking for. He then decides to look for a slightly different service and finds many. He compares them and chooses one among them. He is matched with the service provider==
+== Scenario 2: ==  
 
-Ayşe, who is 13 years old, really likes apple pie. 
+*Summary:*  
 
-One day when she arrives home after school, she feels really hungry and realizes that her mother is at work and forgot to make apple pie for her.
+ * Ayse is looking for a specific service. She cannot find what she is looking for. She then decides to look for a slightly different service and finds many. She compares them and chooses one among them. She is matched with the service provider.
 
-Therefore, she logs into the social services community and tries to find out a person who offers cooking apple pie, so that she could end her hunger. 
+*Plot:*  
 
-She searches for “apple pie” but she can’t find any. 
+ * Ayse, who is 13 years old, really likes apple pie. 
 
-Then she types only “pie” to the search bar and finds nothing again. 
+ * One day, when she arrives home after school, she feels really hungry and realizes that her mother is at work and forgot to make an apple pie for her.
 
-However when she searches for “apple”, she finds many people offering apple cookies.
+ * Therefore, she logs into the social services community and tries to find out a person who offers cooking an apple pie, so that she could end her hunger. 
 
-Then Ayşe, lists the search results (services offered) with respect to their location.
+ * She searches for “apple pie” but she can’t find any. 
 
-Being in the same neighborhood is the most important criterion for her since she is too hungry. 
+ * Then she types only “pie” to the search bar and finds nothing again. 
 
-Therefore she decides to request the service whose server is closest and available. 
+ * However, when she searches for “apple”, she finds many people offering apple cookies.
 
-Ayşe requests the service from Handan Hanım who lives in the next apartment by indicating the time as ‘now’.
+ * Then Ayse, lists the search results (services offered) with respect to their location.
 
-Handan Hanım receives the request and calls Ayşe to understand how many cookies Ayşe needs. 
+ * Being in the same neighborhood is the most important criterion for her since she is too hungry. 
 
-Then they agree on 5 cookies and Ayşe accepts to pay 5credits for such a service.
+ * Therefore she decides to request the service whose offerer is the closest and available. 
 
-Handan Hanım also approves the request and starts to cook apple cookies.
+ * Ayse requests the service from Handan Hanim who lives in the next apartment by indicating the time as ‘now’.
 
-After 30minutes Handan Hanım brings cookies to Ayşe.
+ * Handan Hanim receives the request and calls Ayse to understand how many cookies Ayse needs. 
 
-Ayşe eats the cookies and really likes them. She again logs into the social services community system and ranks the service of Handan Hanım with maximum points.
+ * Then they agree on 5 cookies and Ayse accepts to pay 5 credits for such a service.
 
-Since the service has been accomplished, Handan Hanım receives 5 credits from Ayşe’s account.
+ * Handan Hanim also approves the request and starts to cook apple cookies.
+
+ * After 30 minutes Handan Hanim brings cookies to Ayşe.
+
+ * Ayşe eats the cookies and really likes them. She again logs into the social services community system and ranks the service of Handan Hanim with maximum points.
+
+ * Since the service has been accomplished, Handan Hanim receives 5 credits from Ayse’s account.
