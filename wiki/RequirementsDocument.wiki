@@ -69,6 +69,7 @@ This document contains functional and non-functional requirements of the "Social
 
 1.5.5. The system shall also display recent activities in order to promote MEMBERs.
 
+1.5.6. MEMBERs who does not participate in any SERVICE REQUEST activity for a long time shall start to lose their credits continuously. This continuous decrease in credits is called DECAY. The speed of the DECAY will increase if the MEMBER continues not to use the SERVICE REQUEST system.
 
 === 1.6. SEARCHING FOR SERVICES ===
 1.6.1. Any MEMBER shall be able to search for SERVICEs with respect to available SERVICE types or a given search query.
