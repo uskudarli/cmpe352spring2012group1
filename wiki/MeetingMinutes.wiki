@@ -1,5 +1,21 @@
 #summary Meeting Minutes
 
+= Meeting 6 =
+*Date:* 19.03.2012 *Location:* ETA A3
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Alperen
+
+==Discussions:==
+ # Members shall be able to report abuse.
+ # Members shall be able to view recent activity.
+ # Members can become admins if they apply to the job and all and some admin of a scenario can become the member of another scenario.
+ # Members who do not participate in any service taking activity for a long time shall start to lose their community credits(decay).
+ # Members should be able to search using different criterion.
+ # All detailed work of the meeting is at https://cacoo.com/diagrams/KHqknnyT5NKTejck.
+
+==Action items:==
+ # Requirements shall be updated mainly by Murat. Yavuz shall add the decaying community credits requirement to the document.
+ # The use case diagram shall be updated by Dila, according to the new requirements and discussions today.
+
 = Meeting 5 =
 *Date:* 16.03.2012 *Location:* Online(Skype)
 
