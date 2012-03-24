@@ -15,7 +15,7 @@
  # Dila & Semih shall finish activity diagrams before Monday PS.
  # Yavuz & Tuğra shall finish sequential diagrams before Monday PS.
  # Duygu shall track these jobs using the issue tracker.
- # Every member should think of a project name until tomorrow 12:00.
+ # Every member should think of a project name until Sunday 12:00.
 
 = Meeting 6 =
 *Date:* 19.03.2012 *Location:* ETA A3
