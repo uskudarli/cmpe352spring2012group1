@@ -119,6 +119,7 @@ This document contains functional and non-functional requirements of the "Social
 
 === 2.3. RELIABILITY ===
 <font color="red">2.3.1.</font> Database should be replicated to compensate for instant failures. RAID level 1 storage system shall be used for this purpose.
+
 <font color="red">2.3.2.</font> Daily system backup shall be scheduled. 
 
 
