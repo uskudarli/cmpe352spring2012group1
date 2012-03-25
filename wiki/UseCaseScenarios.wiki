@@ -12,29 +12,25 @@
 
  * He first registers to the website and then creates himself a profile.
 
- * Ali wants to create a rich profile since this may help attract more people to his profile. He enriches his profile by adding his photos and personal information. He also provides links from his Facebook page to add up more information about himself.
+ * Ali wants to create a rich profile since this may help attract more people to his profile. He enriches his profile by adding a photo and personal information. He also provides links from his Facebook page to add up more information about himself.
 
- * Then, he decides to serve the community within his programming skills. 
+ * Then, he decides to serve the community with his programming skills. 
 
- * He submits an offer for freelance programming in interesting web-based projects for 2 days a week. He describes his skills in great detail and also shares a document including the projects that he has accomplished so far.
+ * Ali is not sure what exactly he can offer. So, he checks the system and reviews similar services offered by other members.
 
- * He adds “computer”, “programming” and “software” tags to his service so that it would be easier for others to find it.
+ * He eventually decides to submit an offer for freelance programming in interesting web-based projects for 2 days a week, 5 hours a day. He specifies location is not a big problem for him, since he can collaborate using his laptop and ADSL connection. He describes his skills in great detail and also shares a document including the projects that he has accomplished so far.
 
- * To be able to set the compensation for his service, Ali checks the system database and reviews similar services offered by other members. 
+ * He lists his service under “programming” service type and also adds “computer” and “software” tags so that it would be easier for others to find it.
 
- * He sees Nese a junior student offering programming service for 50 credits and a senior Veli offering the same service for 60 credits. 
-
- * So, Ali decides on the price of 55 credits and finally publishes his own service.
-
- * Then, the programming service of the Ali is listed in the list of recent activities.
+ * Then, Ali' s service is listed in the list of recent activities.
 
  * After offering a service, Ali decides to take a look at the services offered by others and tries to see if there are services and members he might be interested in.
 
- * Ali’s flat has a problematic electric network and it usually breaks down. So Ali becomes really happy when he finds Mehmet Bey who is an electrician and offers fixing minor electricity problems for relatively cheap prices. 
+ * Ali’s flat has a problematic electric network and it usually breaks down. So Ali becomes really happy when he finds Mehmet Bey who is an experienced electrician and offers fixing minor electricity problems in his neighborhood. 
 
- * Ali then starts to follow Mehmet Bey on the online services community in case he might have a problem with electricity of his flat.
+ * Ali starts to follow Mehmet Bey on the services community in case he might have a problem with electricity of his flat.
 
- * Ali then takes a look on the forum of the social network and reads topics related to the programming service that he is giving.
+ * Ali then takes a look on the forum of the social network and reads more about topics related to the programming service that he is giving.
 
  * He also takes a look on other topics mostly opened by electricians, keeping in mind that he may need an electrician one day.
 
@@ -57,26 +53,22 @@
 
  * She searches for “apple pie” but she can’t find any. 
 
- * Then she types only “pie” to the search bar and finds nothing again. 
+ * Then she types only “pie” to the search bar, but still she cannot find exactly what she is looking for. 
 
- * However, when she searches for “apple”, she finds many people offering apple cookies.
+ * In the end, when she searches for “apple”, she finds some people offering apple cookies and she decides to have some of those instead of an apple pie.
 
- * Then Ayse, lists the search results (services offered) with respect to their location.
+ * Ayse lists the retrieved search results (services offered) with respect to their location. Being in the same neighborhood is the most important criterion for her since she is too hungry. 
 
- * Being in the same neighborhood is the most important criterion for her since she is too hungry. 
-
- * Therefore she decides to request the service whose offerer is the closest and available. 
+ * She decides to request the service whose provider is the closest and available. 
 
  * Ayse requests the service from Handan Hanim who lives in the next apartment by indicating the time as ‘now’.
 
- * Handan Hanim receives the request and calls Ayse to understand how many cookies Ayse needs. 
+ * Handan Hanim receives the request and messages Ayse to understand how many cookies Ayse needs. 
 
- * Then they agree on 5 cookies and Ayse accepts to pay 5 credits for such a service.
+ * Handan Hanim has the required ingredients already and she agrees that she will cook and deliver them within an hour.
 
- * Handan Hanim also approves the request and starts to cook apple cookies.
+ * Handan Hanim approves the request and starts to cook apple cookies.
 
- * After 30 minutes Handan Hanim brings cookies to Ayse.
+ * After an hour Handan Hanim brings cookies to Ayse. Ayse eats the cookies and really likes them. She again logs into the social services community system and ranks the service of Handan Hanim with maximum points.
 
- * Ayse eats the cookies and really likes them. She again logs into the social services community system and ranks the service of Handan Hanim with maximum points.
-
- * Since the service has been accomplished, Handan Hanim receives 5 credits from Ayse’s account.
+ * Since the service has been accomplished, Handan Hanim receives an hourly credit from Ayse’s account.
