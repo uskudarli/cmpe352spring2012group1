@@ -13,6 +13,7 @@
  # All members shall upload their diagrams using the moodle submission system.
  # All members shall read the scenarios at least once before tomorrow's lecture.
 
+----
 = Meeting 7 =
 *Date:* 24.03.2012 *Location:* Online(Skype)
 
