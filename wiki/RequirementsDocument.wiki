@@ -18,7 +18,7 @@ This document contains functional and non-functional requirements of the "Social
 
 1.1.4. Each MEMBER shall login with his/her e-mail address as user id and a password.
 
-<font color="red">1.1.5.</font> GUEST access shall be possible with anonymous login to a simulated version of the system with full functionality. 
+<font color="red">1.1.5.</font> GUEST access shall be possible with anonymous login to a simulated version of the system where GUEST can see a list of recent activities. 
 
 1.1.6. There should be different roles for ADMINs (administration, content management).
 
