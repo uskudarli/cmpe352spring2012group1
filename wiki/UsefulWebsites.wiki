@@ -4,7 +4,7 @@
 
   The social services community offers individuals the opportunity to share skills and needs, to help themselves while helping others. For example, tutoring can be offered to a teenager who in turn takes care of the tutor’s pet. The main principles of matching people are reciprocity and equality. For such a system to work all members of the community should provide and consume services. Every individual can supply useful services.The service exchange not only complements existing services but also promotes self-sufficiency and connection inside community. 
 
-
+<br />
 
 = Domain Analysis and Similar Projects =
 
