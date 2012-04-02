@@ -1,0 +1,3 @@
+#summary Sequence diagram for the 2nd scenario
+
+||||
