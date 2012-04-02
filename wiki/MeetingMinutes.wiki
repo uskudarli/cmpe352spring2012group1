@@ -3,7 +3,7 @@
 = Meeting 10 =
 *Date:* 02.04.2012 *Location:* ETA A4
 
-*Participants:* Duygu, Dila, Murat, Tuğra
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra
 
 ==Discussions:==
  # How our sequence diagrams should be.
