@@ -4,17 +4,17 @@
 
 ||http://cmpe352spring2012group1.googlecode.com/files/Use%20Case%20Diagram%20-%20General.png||
 
-
+----
 =Registration:=
 
 ||http://cmpe352spring2012group1.googlecode.com/files/Use%20Case%20Diagram%20SubPart1-%20Registration.png||
 
-
+----
 =Service Procedures:=
 
 ||http://cmpe352spring2012group1.googlecode.com/files/Use%20Case%20Diagram%20SubPart2-%20Service%20Procedures.png||
 
-
+----
 =Social Network:=
 
 ||http://cmpe352spring2012group1.googlecode.com/files/Use%20Case%20Diagram%20SubPart3-%20Social%20Network.png||
