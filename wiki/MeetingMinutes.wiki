@@ -1,5 +1,14 @@
 #summary Meeting Minutes
 
+= Meeting 11 =
+*Date:* 12.05.2012 *Location:* Online
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Semih, Alperen
+
+==Discussions:==
+ # Everybody is reminded of the current individual issue searching assignment.
+ # Discussed how and where to look for issues in different projects. All documents, diagrams and the code should be searched.
+
 = Meeting 10 =
 *Date:* 02.04.2012 *Location:* ETA A4
 
