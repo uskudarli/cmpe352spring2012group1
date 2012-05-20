@@ -7,7 +7,7 @@ package com.soda.app;
 
 public class Service 
 {
-	/* CLASS VARIABLES */
+	/* CLASS VARIABLES */ //
 	private int serviceID;
 	
 
