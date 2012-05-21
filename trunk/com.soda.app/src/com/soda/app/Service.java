@@ -27,6 +27,11 @@ public class Service
 		// TO DO
 	}
 	
+	public void viewDetails()
+	{
+		// TO DO
+	}
+	
 	public void sendFeedback()
 	{
 		// TO DO
