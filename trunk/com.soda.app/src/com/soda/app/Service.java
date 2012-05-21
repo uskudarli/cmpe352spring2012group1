@@ -8,12 +8,28 @@ package com.soda.app;
 public class Service 
 {
 	/* CLASS VARIABLES */
-	private int serviceID;
+	private int serviceID;	
 	
-	public Service(int serviceID){
+	/* MEMBER FUNCTIONS */
+	public Service(int serviceID)
+	{
 		this.setServiceID(serviceID);
 	}
-	/* MEMBER FUNCTIONS */ 
+	
+	public boolean setServiceID(int serviceID) 
+	{
+		if (serviceID < 0)
+			return false;
+
+		this.serviceID = serviceID;			
+		return true;
+	}
+
+	public int getServiceID() 
+	{
+		return serviceID;
+	}
+	
 	public void offer()
 	{
 		// TO DO
@@ -42,20 +58,5 @@ public class Service
 	public void sendFeedback()
 	{
 		// TO DO
-	}
-
-	public boolean setServiceID(int serviceID) 
-	{
-		if (serviceID < 0)
-			return false;
-
-		this.serviceID = serviceID;			
-		return true;
-	}
-
-	public int getServiceID() 
-	{
-		return serviceID;
-	}
-	
+	}	
 }
