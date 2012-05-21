@@ -1,0 +1,10 @@
+#summary The table of test steps for Test_Phase_1.
+
+|| *Step No.* || *Step Description* || *Expected Results* || *P/F* || *Comments* ||
+|| 1 || Create a test service || A Service with SERVICE_ID = -5 || || ||
+|| 2 || Change the SERVICE_ID || Service::SERVICE_ID different than -5 || || ||
+
+Test Phase Overall Result : 
+
+Date :
+Tester Name : 
