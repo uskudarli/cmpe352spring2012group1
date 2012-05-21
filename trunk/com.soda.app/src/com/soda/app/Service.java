@@ -29,6 +29,11 @@ public class Service
 		// TO DO
 	}
 	
+	public void complementaryProcedures()
+	{
+		// TO DO
+	}
+	
 	public void viewDetails()
 	{
 		// TO DO
