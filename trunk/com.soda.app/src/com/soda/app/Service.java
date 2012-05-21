@@ -10,7 +10,9 @@ public class Service
 	/* CLASS VARIABLES */
 	private int serviceID;
 	
-
+	public Service(int serviceID){
+		this.setServiceID(serviceID);
+	}
 	/* MEMBER FUNCTIONS */ 
 	public void offer()
 	{
