@@ -1,4 +1,4 @@
-#summary The table of test steps for Test_Phase_1.
+#summary Test steps for Test_Phase_1.
 
 || *Step No.* || *Step Description* || *Expected Results* || *P/F* || *Comments* ||
 || 1 || Create a test service || A Service with SERVICE_ID = -5 || || ||
