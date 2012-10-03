@@ -1,5 +1,21 @@
 #summary Meeting Minutes
 
+= Meeting 14 =
+*Date:* 03.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Dila
+
+==Discussions:==
+ # Assignment 1
+ # Review of requirements document
+ # Project plan
+
+==Action items:==
+ # Seçkin prepared the presentation.
+ # Final Version of requirements document is done.
+ # First project plan is done.
+
+----
 = Meeting 13 =
 *Date:* 02.10.2012 *Location:* CMPE Student room
 
