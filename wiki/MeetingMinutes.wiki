@@ -1,5 +1,20 @@
 #summary Meeting Minutes
 
+= Meeting 13 =
+*Date:* 02.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur
+
+==Discussions:==
+ # Open Project: Review of the old project plan
+ # Review of requirements document
+
+==Action items:==
+ # New members will create their own pages.
+ # Requirements document will be revised.
+ # Every member should learn how to use Open Project.
+
+----
 = Meeting 12 =
 *Date:* 21.05.2012 *Location:* CMPE Student room
 
