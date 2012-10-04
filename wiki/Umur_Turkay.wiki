@@ -2,12 +2,10 @@
 
 = Introduction =
 
-Add your content here.
+I am a senior student in computer engineering department of Bogazici University. I am interested in software and database design/development. I have been planning to get a masters degree on a management related program.<br><br>
+I love reading books and I am highly interested in football. There are other areas that I am interested in like politics, history and literature. I write poets sometimes.
 
 
-= Details =
+= Contact =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+You can contact me via umur.turkay@gmail.com
