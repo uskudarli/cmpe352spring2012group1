@@ -1,5 +1,35 @@
 #summary Meeting Minutes
 
+= Meeting 16 =
+*Date:* 15.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Dila, Hasan
+
+==Discussions:==
+ # Search algorithm
+ # GUI design
+ # Database design
+
+==Action items:==
+ # Search algorithm has not been decided yet.
+ # Database tables is designed to some extend. But they will evolve over time.
+ # Basic pages of the website are determined.
+
+----
+= Meeting 15 =
+*Date:* 11.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Dila, Hasan
+
+==Discussions:==
+ # Review of project plan
+
+==Action items:==
+ # Final Version of project plan is done.
+ # Time for the next meeting is determined.
+ # Main parts and responsible people are decided.
+
+----
 = Meeting 14 =
 *Date:* 03.10.2012 *Location:* CMPE Student room
 
