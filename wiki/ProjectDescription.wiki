@@ -1,4 +1,4 @@
-#summary General description of of our project
+#summary General description of our project
 
 =Social Services Community=
 
