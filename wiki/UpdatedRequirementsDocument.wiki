@@ -1,0 +1,76 @@
+#summary Reviewed and updated version of requirements document for Cmpe451
+
+= REQUIREMENTS ANALYSIS =
+This document contains functional and non-functional requirements of the "Social Services Community" project. Contents of this document may change over time upon mutual agreement of customer and contractor (Group1). Please always refer to Google Code for the latest version.
+
+== 1. FUNCTIONAL REQUIREMENTS ==
+
+=== 1.1. USER TYPES AND ACCESS ===
+1.1.1. There shall be three types of users: MEMBER, GUEST and ADMIN.
+1.1.2. By default, MEMBER shall be able to register to the community with a personal invitation code. However, there shall be an administrative option to toggle this setting.
+1.1.3. Registration shall include true identity of a MEMBER at least with location information, valid e-mail address and phone number.
+1.1.4. Each MEMBER shall login with his/her e-mail address as user id and a password.
+1.1.5. GUEST access shall be possible with anonymous login to a simulated version of the system where GUEST can see a list of recent activities.
+1.1.6. There should be different roles for ADMINs (administration, content management).
+
+=== 1.2. SERVICES AND COMMUNITY CREDITS ===
+1.2.1. SERVICE shall refer to one or more predefined service types for the community.
+1.2.2. SERVICE shall not involve exchange of money or third-party products in either direction. A so-called virtual "COMMUNITY CREDITS per unit time" shall be the only means of SERVICE compensation.
+1.2.3. Each MEMBER shall have a COMMUNITY CREDITS account upon registration.
+1.2.4. There shall not be COMMUNITY CREDITS loans.
+1.2.5. ADMINs shall earn COMMUNITY CREDITS for their online time spent on the website.
+1.2.6. COMMUNITY CREDITS transfer shall be atomic, i.e. implemented as a transaction.
+
+=== 1.3. SERVICE OFFER ===
+1.3.1. Any MEMBER shall be able to offer SERVICEs belonging to predefined SERVICE types.
+1.3.2. Each SERVICE entry shall contain at least a title, description of service with location, duration, and time information. SERVICEs shall belong to at least one predefined SERVICE type and have optional additional tags. Moreover, MEMBER shall be able to upload documents and images necessary for local or virtual service entry.
+1.3.3. MEMBERs shall earn a fixed amount of COMMUNITY CREDITS per unit time for whatever SERVICE they offer.
+1.3.4. MEMBER shall offer SERVICEs to all of the community, not to a certain individual(s).
+
+=== 1.4. SERVICE REQUEST ===
+1.4.1. Any MEMBER shall be able to request a SERVICE.
+1.4.2. MEMBER shall request a SERVICE by submitting a SERVICE request form including his/her message.
+1.4.3. Upon approval by the service provider, SERVICE details shall appear on the profile pages of both individuals.
+1.4.4. The status of the SERVICE request shall be 'in progress', 'accomplished' or 'not accomplished'.
+1.4.5. COMMUNITY CREDITS transaction is committed when the beneficiary marks it as 'accomplished'.
+
+=== 1.5. SEARCHING FOR SERVICES ===
+1.5.1. Any MEMBER shall be able to search for SERVICEs with respect to available SERVICE types or a given search query.
+1.5.2. Tagging of SERVICEs shall be made possible to optimize search.
+1.5.3. Search results shall be retrieved and ranked with respect to relevance to a given search query in a random order.
+1.5.4. MEMBERs shall be able to sort listing of the retrieved results with respect to location. 
+
+=== 1.6. SOCIAL NETWORKING ASPECTS ===
+1.6.1. MEMBERs information at different common social networks should be linked to its community account to help him/her socialize.
+
+== 2. NON-FUNCTIONAL REQUIREMENTS ==
+
+=== 2.1. USABILITY ===
+2.1.1. The system should be easy to use by non-tech savvy people with basic internet usage skills.
+2.1.2. System usage shall be guided by tooltips.
+2.1.3. A minimalist web page design should be preferred where applicable.
+2.1.4. Search pages shall be loaded under 5 seconds with a maximum of 20 results per page, other web pages shall be loaded under 3 seconds with a 1Mbit ADSL connection.
+2.1.5. Web design shall conform to W3C standards.
+
+=== 2.2. SECURITY  ===
+2.2.1. Sensitive information shall not be public. Furthermore, no personal information shall be visible to non-members.
+2.2.3. User shall log off by clicking a button or by closing the browser.
+
+=== 2.3. AVAILABILITY ===
+2.3.1. System MTBF (mean time between failures) should be measured and reported during the system test period after deployment on customer site so that periodical system maintenance can be planned.
+2.3.2. Web traffic analysis in point 2.5.1. shall also facilitate maintenance plans.
+2.3.3. System shall work 24/7 with an uptime greater than 95%.
+2.3.4. Daily system backup shall be scheduled. During backup process there shall be a predetermined downtime.
+
+=== 2.4. CAPACITY ===
+2.4.1. System shall allow multi-user access up to 1000 people, enough for small/medium-sized communities.
+2.4.2. System shall be allowed to use up to 10 Gbit/sec bandwidth.
+2.4.3. MySQL database system shall be used to handle the required volume of transactions.
+
+=== 2.5. COMMUNITY SYSTEM PERFORMANCE ===
+2.5.1. Web traffic analysis shall be made using analytics tools.
+
+=== 2.6. DEPENDABILITY ===
+2.6.1. The project shall be implemented using standard Java SE7 and run on Apache Tomcat Server 7.0 on customer’ s site.
+2.6.2. Progress of project shall be monitored by customer and contractor via Google code.
+
