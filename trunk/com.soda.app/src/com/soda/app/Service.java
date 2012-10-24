@@ -3,6 +3,7 @@ package com.soda.app;
 /*
  * Service base class
  * (different kind of services can be derived from this)
+ * 
  * */
 
 public class Service 
