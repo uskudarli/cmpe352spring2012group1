@@ -7,8 +7,10 @@ package edu.cmpe451.soda.entity;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -19,57 +21,68 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author aurora
  */
 @Entity
-@Table(name = "Town")
+@Table(name = "town", catalog = "database1", schema = "")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Town.findAll", query = "SELECT t FROM Town t"),
-    @NamedQuery(name = "Town.findByCityID", query = "SELECT t FROM Town t WHERE t.townPK.cityID = :cityID"),
-    @NamedQuery(name = "Town.findByTownID", query = "SELECT t FROM Town t WHERE t.townPK.townID = :townID"),
-    @NamedQuery(name = "Town.findByTownName", query = "SELECT t FROM Town t WHERE t.townName = :townName")})
+    @NamedQuery(name = "Town.findById", query = "SELECT t FROM Town t WHERE t.id = :id"),
+    @NamedQuery(name = "Town.findByCityId", query = "SELECT t FROM Town t WHERE t.cityId = :cityId"),
+    @NamedQuery(name = "Town.findByName", query = "SELECT t FROM Town t WHERE t.name = :name")})
 public class Town implements Serializable {
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected TownPK townPK;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "TownName")
-    private String townName;
+    @Column(name = "id")
+    private Integer id;
+    @Basic(optional = false)
+    @Column(name = "city_id")
+    private int cityId;
+    @Basic(optional = false)
+    @Column(name = "name")
+    private String name;
 
     public Town() {
     }
 
-    public Town(TownPK townPK) {
-        this.townPK = townPK;
+    public Town(Integer id) {
+        this.id = id;
     }
 
-    public Town(TownPK townPK, String townName) {
-        this.townPK = townPK;
-        this.townName = townName;
+    public Town(Integer id, int cityId, String name) {
+        this.id = id;
+        this.cityId = cityId;
+        this.name = name;
     }
 
-    public Town(int cityID, int townID) {
-        this.townPK = new TownPK(cityID, townID);
+    public Integer getId() {
+        return id;
     }
 
-    public TownPK getTownPK() {
-        return townPK;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setTownPK(TownPK townPK) {
-        this.townPK = townPK;
+    public int getCityId() {
+        return cityId;
     }
 
-    public String getTownName() {
-        return townName;
+    public void setCityId(int cityId) {
+        this.cityId = cityId;
     }
 
-    public void setTownName(String townName) {
-        this.townName = townName;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (townPK != null ? townPK.hashCode() : 0);
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -80,7 +93,7 @@ public class Town implements Serializable {
             return false;
         }
         Town other = (Town) object;
-        if ((this.townPK == null && other.townPK != null) || (this.townPK != null && !this.townPK.equals(other.townPK))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -88,7 +101,7 @@ public class Town implements Serializable {
 
     @Override
     public String toString() {
-        return "edu.cmpe451.soda.entity.Town[ townPK=" + townPK + " ]";
+        return "edu.cmpe451.soda.entity.Town[ id=" + id + " ]";
     }
     
 }
