@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>edu.cmpe451.soda</finalName>
+    <finalName>soda</finalName>
   </build>
 </project>
