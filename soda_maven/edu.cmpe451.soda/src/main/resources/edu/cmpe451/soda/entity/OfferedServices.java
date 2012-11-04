@@ -34,7 +34,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "OfferedServices.findByTitle", query = "SELECT o FROM OfferedServices o WHERE o.title = :title"),
     @NamedQuery(name = "OfferedServices.findByTag", query = "SELECT o FROM OfferedServices o WHERE o.tag = :tag"),
     @NamedQuery(name = "OfferedServices.findByBeginDate", query = "SELECT o FROM OfferedServices o WHERE o.beginDate = :beginDate"),
-    @NamedQuery(name = "OfferedServices.findByEndDate", query = "SELECT o FROM OfferedServices o WHERE o.endDate = :endDate")})
+    @NamedQuery(name = "OfferedServices.findByEndDate", query = "SELECT o FROM OfferedServices o WHERE o.endDate = :endDate"),
+    @NamedQuery(name = "OfferedServices.findByEnabled", query = "SELECT o FROM OfferedServices o WHERE o.enabled = :enabled")})
 public class OfferedServices implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -63,6 +64,9 @@ public class OfferedServices implements Serializable {
     @Column(name = "end_date")
     @Temporal(TemporalType.DATE)
     private Date endDate;
+    @Basic(optional = false)
+    @Column(name = "enabled")
+    private boolean enabled;
 
     public OfferedServices() {
     }
@@ -71,7 +75,7 @@ public class OfferedServices implements Serializable {
         this.id = id;
     }
 
-    public OfferedServices(Integer id, int userId, String title, String desc, String tag, Date beginDate, Date endDate) {
+    public OfferedServices(Integer id, int userId, String title, String desc, String tag, Date beginDate, Date endDate, boolean enabled) {
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -79,6 +83,7 @@ public class OfferedServices implements Serializable {
         this.tag = tag;
         this.beginDate = beginDate;
         this.endDate = endDate;
+        this.enabled = enabled;
     }
 
     public Integer getId() {
@@ -135,6 +140,14 @@ public class OfferedServices implements Serializable {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
     @Override
