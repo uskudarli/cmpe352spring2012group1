@@ -9,7 +9,10 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -22,86 +25,100 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author aurora
  */
 @Entity
-@Table(name = "OfferedServices")
+@Table(name = "offered_services", catalog = "database1", schema = "")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "OfferedServices.findAll", query = "SELECT o FROM OfferedServices o"),
-    @NamedQuery(name = "OfferedServices.findByOfferedServiceID", query = "SELECT o FROM OfferedServices o WHERE o.offeredServiceID = :offeredServiceID"),
-    @NamedQuery(name = "OfferedServices.findByOfferedServiceOwnerID", query = "SELECT o FROM OfferedServices o WHERE o.offeredServiceOwnerID = :offeredServiceOwnerID"),
-    @NamedQuery(name = "OfferedServices.findByServiceDescription", query = "SELECT o FROM OfferedServices o WHERE o.serviceDescription = :serviceDescription"),
-    @NamedQuery(name = "OfferedServices.findByTags", query = "SELECT o FROM OfferedServices o WHERE o.tags = :tags"),
+    @NamedQuery(name = "OfferedServices.findById", query = "SELECT o FROM OfferedServices o WHERE o.id = :id"),
+    @NamedQuery(name = "OfferedServices.findByUserId", query = "SELECT o FROM OfferedServices o WHERE o.userId = :userId"),
+    @NamedQuery(name = "OfferedServices.findByTitle", query = "SELECT o FROM OfferedServices o WHERE o.title = :title"),
+    @NamedQuery(name = "OfferedServices.findByTag", query = "SELECT o FROM OfferedServices o WHERE o.tag = :tag"),
     @NamedQuery(name = "OfferedServices.findByBeginDate", query = "SELECT o FROM OfferedServices o WHERE o.beginDate = :beginDate"),
     @NamedQuery(name = "OfferedServices.findByEndDate", query = "SELECT o FROM OfferedServices o WHERE o.endDate = :endDate")})
 public class OfferedServices implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "OfferedServiceID")
-    private Integer offeredServiceID;
+    @Column(name = "id")
+    private Integer id;
     @Basic(optional = false)
-    @Column(name = "OfferedServiceOwnerID")
-    private int offeredServiceOwnerID;
+    @Column(name = "user_id")
+    private int userId;
     @Basic(optional = false)
-    @Column(name = "ServiceDescription")
-    private String serviceDescription;
+    @Column(name = "title")
+    private String title;
     @Basic(optional = false)
-    @Column(name = "Tags")
-    private String tags;
+    @Lob
+    @Column(name = "desc")
+    private String desc;
     @Basic(optional = false)
-    @Column(name = "BeginDate")
+    @Column(name = "tag")
+    private String tag;
+    @Basic(optional = false)
+    @Column(name = "begin_date")
     @Temporal(TemporalType.DATE)
     private Date beginDate;
     @Basic(optional = false)
-    @Column(name = "EndDate")
+    @Column(name = "end_date")
     @Temporal(TemporalType.DATE)
     private Date endDate;
 
     public OfferedServices() {
     }
 
-    public OfferedServices(Integer offeredServiceID) {
-        this.offeredServiceID = offeredServiceID;
+    public OfferedServices(Integer id) {
+        this.id = id;
     }
 
-    public OfferedServices(Integer offeredServiceID, int offeredServiceOwnerID, String serviceDescription, String tags, Date beginDate, Date endDate) {
-        this.offeredServiceID = offeredServiceID;
-        this.offeredServiceOwnerID = offeredServiceOwnerID;
-        this.serviceDescription = serviceDescription;
-        this.tags = tags;
+    public OfferedServices(Integer id, int userId, String title, String desc, String tag, Date beginDate, Date endDate) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.desc = desc;
+        this.tag = tag;
         this.beginDate = beginDate;
         this.endDate = endDate;
     }
 
-    public Integer getOfferedServiceID() {
-        return offeredServiceID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setOfferedServiceID(Integer offeredServiceID) {
-        this.offeredServiceID = offeredServiceID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public int getOfferedServiceOwnerID() {
-        return offeredServiceOwnerID;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setOfferedServiceOwnerID(int offeredServiceOwnerID) {
-        this.offeredServiceOwnerID = offeredServiceOwnerID;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getServiceDescription() {
-        return serviceDescription;
+    public String getTitle() {
+        return title;
     }
 
-    public void setServiceDescription(String serviceDescription) {
-        this.serviceDescription = serviceDescription;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getTags() {
-        return tags;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setTags(String tags) {
-        this.tags = tags;
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public Date getBeginDate() {
@@ -123,7 +140,7 @@ public class OfferedServices implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (offeredServiceID != null ? offeredServiceID.hashCode() : 0);
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -134,7 +151,7 @@ public class OfferedServices implements Serializable {
             return false;
         }
         OfferedServices other = (OfferedServices) object;
-        if ((this.offeredServiceID == null && other.offeredServiceID != null) || (this.offeredServiceID != null && !this.offeredServiceID.equals(other.offeredServiceID))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -142,7 +159,7 @@ public class OfferedServices implements Serializable {
 
     @Override
     public String toString() {
-        return "edu.cmpe451.soda.entity.OfferedServices[ offeredServiceID=" + offeredServiceID + " ]";
+        return "edu.cmpe451.soda.entity.OfferedServices[ id=" + id + " ]";
     }
     
 }

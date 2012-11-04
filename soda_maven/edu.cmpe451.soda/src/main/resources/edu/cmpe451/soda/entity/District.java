@@ -7,8 +7,10 @@ package edu.cmpe451.soda.entity;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -19,58 +21,68 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author aurora
  */
 @Entity
-@Table(name = "District")
+@Table(name = "district", catalog = "database1", schema = "")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "District.findAll", query = "SELECT d FROM District d"),
-    @NamedQuery(name = "District.findByCityID", query = "SELECT d FROM District d WHERE d.districtPK.cityID = :cityID"),
-    @NamedQuery(name = "District.findByTownID", query = "SELECT d FROM District d WHERE d.districtPK.townID = :townID"),
-    @NamedQuery(name = "District.findByDistrictID", query = "SELECT d FROM District d WHERE d.districtPK.districtID = :districtID"),
-    @NamedQuery(name = "District.findByDistrictName", query = "SELECT d FROM District d WHERE d.districtName = :districtName")})
+    @NamedQuery(name = "District.findById", query = "SELECT d FROM District d WHERE d.id = :id"),
+    @NamedQuery(name = "District.findByTownId", query = "SELECT d FROM District d WHERE d.townId = :townId"),
+    @NamedQuery(name = "District.findByName", query = "SELECT d FROM District d WHERE d.name = :name")})
 public class District implements Serializable {
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected DistrictPK districtPK;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "DistrictName")
-    private String districtName;
+    @Column(name = "id")
+    private Integer id;
+    @Basic(optional = false)
+    @Column(name = "town_id")
+    private int townId;
+    @Basic(optional = false)
+    @Column(name = "name")
+    private String name;
 
     public District() {
     }
 
-    public District(DistrictPK districtPK) {
-        this.districtPK = districtPK;
+    public District(Integer id) {
+        this.id = id;
     }
 
-    public District(DistrictPK districtPK, String districtName) {
-        this.districtPK = districtPK;
-        this.districtName = districtName;
+    public District(Integer id, int townId, String name) {
+        this.id = id;
+        this.townId = townId;
+        this.name = name;
     }
 
-    public District(int cityID, int townID, int districtID) {
-        this.districtPK = new DistrictPK(cityID, townID, districtID);
+    public Integer getId() {
+        return id;
     }
 
-    public DistrictPK getDistrictPK() {
-        return districtPK;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setDistrictPK(DistrictPK districtPK) {
-        this.districtPK = districtPK;
+    public int getTownId() {
+        return townId;
     }
 
-    public String getDistrictName() {
-        return districtName;
+    public void setTownId(int townId) {
+        this.townId = townId;
     }
 
-    public void setDistrictName(String districtName) {
-        this.districtName = districtName;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (districtPK != null ? districtPK.hashCode() : 0);
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -81,7 +93,7 @@ public class District implements Serializable {
             return false;
         }
         District other = (District) object;
-        if ((this.districtPK == null && other.districtPK != null) || (this.districtPK != null && !this.districtPK.equals(other.districtPK))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -89,7 +101,7 @@ public class District implements Serializable {
 
     @Override
     public String toString() {
-        return "edu.cmpe451.soda.entity.District[ districtPK=" + districtPK + " ]";
+        return "edu.cmpe451.soda.entity.District[ id=" + id + " ]";
     }
     
 }

@@ -9,7 +9,10 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -22,86 +25,100 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author aurora
  */
 @Entity
-@Table(name = "RequestedServices")
+@Table(name = "requested_services", catalog = "database1", schema = "")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "RequestedServices.findAll", query = "SELECT r FROM RequestedServices r"),
-    @NamedQuery(name = "RequestedServices.findByRequestedServiceID", query = "SELECT r FROM RequestedServices r WHERE r.requestedServiceID = :requestedServiceID"),
-    @NamedQuery(name = "RequestedServices.findByRequesterID", query = "SELECT r FROM RequestedServices r WHERE r.requesterID = :requesterID"),
-    @NamedQuery(name = "RequestedServices.findByDescription", query = "SELECT r FROM RequestedServices r WHERE r.description = :description"),
-    @NamedQuery(name = "RequestedServices.findByTags", query = "SELECT r FROM RequestedServices r WHERE r.tags = :tags"),
+    @NamedQuery(name = "RequestedServices.findById", query = "SELECT r FROM RequestedServices r WHERE r.id = :id"),
+    @NamedQuery(name = "RequestedServices.findByUserId", query = "SELECT r FROM RequestedServices r WHERE r.userId = :userId"),
+    @NamedQuery(name = "RequestedServices.findByTitle", query = "SELECT r FROM RequestedServices r WHERE r.title = :title"),
+    @NamedQuery(name = "RequestedServices.findByTag", query = "SELECT r FROM RequestedServices r WHERE r.tag = :tag"),
     @NamedQuery(name = "RequestedServices.findByBeginDate", query = "SELECT r FROM RequestedServices r WHERE r.beginDate = :beginDate"),
     @NamedQuery(name = "RequestedServices.findByEndDate", query = "SELECT r FROM RequestedServices r WHERE r.endDate = :endDate")})
 public class RequestedServices implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "RequestedServiceID")
-    private Integer requestedServiceID;
+    @Column(name = "id")
+    private Integer id;
     @Basic(optional = false)
-    @Column(name = "RequesterID")
-    private int requesterID;
+    @Column(name = "user_id")
+    private int userId;
     @Basic(optional = false)
-    @Column(name = "Description")
-    private String description;
+    @Column(name = "title")
+    private String title;
     @Basic(optional = false)
-    @Column(name = "Tags")
-    private String tags;
+    @Lob
+    @Column(name = "desc")
+    private String desc;
     @Basic(optional = false)
-    @Column(name = "BeginDate")
+    @Column(name = "tag")
+    private String tag;
+    @Basic(optional = false)
+    @Column(name = "begin_date")
     @Temporal(TemporalType.DATE)
     private Date beginDate;
     @Basic(optional = false)
-    @Column(name = "EndDate")
+    @Column(name = "end_date")
     @Temporal(TemporalType.DATE)
     private Date endDate;
 
     public RequestedServices() {
     }
 
-    public RequestedServices(Integer requestedServiceID) {
-        this.requestedServiceID = requestedServiceID;
+    public RequestedServices(Integer id) {
+        this.id = id;
     }
 
-    public RequestedServices(Integer requestedServiceID, int requesterID, String description, String tags, Date beginDate, Date endDate) {
-        this.requestedServiceID = requestedServiceID;
-        this.requesterID = requesterID;
-        this.description = description;
-        this.tags = tags;
+    public RequestedServices(Integer id, int userId, String title, String desc, String tag, Date beginDate, Date endDate) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.desc = desc;
+        this.tag = tag;
         this.beginDate = beginDate;
         this.endDate = endDate;
     }
 
-    public Integer getRequestedServiceID() {
-        return requestedServiceID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setRequestedServiceID(Integer requestedServiceID) {
-        this.requestedServiceID = requestedServiceID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public int getRequesterID() {
-        return requesterID;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setRequesterID(int requesterID) {
-        this.requesterID = requesterID;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTitle() {
+        return title;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getTags() {
-        return tags;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setTags(String tags) {
-        this.tags = tags;
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public Date getBeginDate() {
@@ -123,7 +140,7 @@ public class RequestedServices implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (requestedServiceID != null ? requestedServiceID.hashCode() : 0);
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -134,7 +151,7 @@ public class RequestedServices implements Serializable {
             return false;
         }
         RequestedServices other = (RequestedServices) object;
-        if ((this.requestedServiceID == null && other.requestedServiceID != null) || (this.requestedServiceID != null && !this.requestedServiceID.equals(other.requestedServiceID))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -142,7 +159,7 @@ public class RequestedServices implements Serializable {
 
     @Override
     public String toString() {
-        return "edu.cmpe451.soda.entity.RequestedServices[ requestedServiceID=" + requestedServiceID + " ]";
+        return "edu.cmpe451.soda.entity.RequestedServices[ id=" + id + " ]";
     }
     
 }
