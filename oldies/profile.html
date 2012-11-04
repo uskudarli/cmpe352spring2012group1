@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Soda Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>    
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="welcome.html">Soda</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="profile.html">Profile</a></li>
+              <li><a href="search.html">Search for Services</a></li>
+              <li><a href="service creation.htm">Offer/Request Services</a></li>
+              <li><a href="help.html">Help</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">  
+                <div class="span3">
+                    <img src="img/alp.kindiroglu.jpg"/>
+                </div>
+                <div class="span3" align="center">
+                    <h2>Name Surname</h2>
+                    <h4>City - Town - District</h4>
+                    <div class="btn-group">
+                        <button class="btn"><a href="editprofile.html">Edit Profile</a></button>
+                    </div>
+                </div>
+                <div class="span3" align="center">
+                <h3>Credit</h3>
+                <h2>100</h2>
+                </div>
+            <div class="span3" align="center">
+                <div class="well">
+                <a href="messages.html">Messages</a><br>
+                <a href="history.html">Service History</a>
+                </div>
+            </div>
+
+              <!-- middle grid -->
+            
+        </div>
+
+        <hr class="bs-docs-separator"></hr>
+
+        <div class="row">
+            <div class="span12" align="center">
+                <h3>Recent Services</h3>
+                <div class="row">
+                    <div class="span6">Offered Services</div>
+                    <div class="span6">Requested Services</div>
+                </div>
+            </div>
+        </div>
+
+                <hr class="bs-docs-separator">
+                <div style="height: 75px" id="activity_feed_item">
+                    <p>
+                    <a href="#">Name Surname</a> gave service <em>Painting wall.</em>
+                    </p>
+                </div>
+      <hr>
+      <footer>
+        <p>&copy; Cmpe 451 Group1 Fall2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
