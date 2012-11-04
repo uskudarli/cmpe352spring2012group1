@@ -34,7 +34,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "RequestedServices.findByTitle", query = "SELECT r FROM RequestedServices r WHERE r.title = :title"),
     @NamedQuery(name = "RequestedServices.findByTag", query = "SELECT r FROM RequestedServices r WHERE r.tag = :tag"),
     @NamedQuery(name = "RequestedServices.findByBeginDate", query = "SELECT r FROM RequestedServices r WHERE r.beginDate = :beginDate"),
-    @NamedQuery(name = "RequestedServices.findByEndDate", query = "SELECT r FROM RequestedServices r WHERE r.endDate = :endDate")})
+    @NamedQuery(name = "RequestedServices.findByEndDate", query = "SELECT r FROM RequestedServices r WHERE r.endDate = :endDate"),
+    @NamedQuery(name = "RequestedServices.findByEnabled", query = "SELECT r FROM RequestedServices r WHERE r.enabled = :enabled"),
+    @NamedQuery(name = "RequestedServices.findByServiceEveryone", query = "SELECT r FROM RequestedServices r WHERE r.serviceEveryone = :serviceEveryone")})
 public class RequestedServices implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -63,6 +65,12 @@ public class RequestedServices implements Serializable {
     @Column(name = "end_date")
     @Temporal(TemporalType.DATE)
     private Date endDate;
+    @Basic(optional = false)
+    @Column(name = "enabled")
+    private boolean enabled;
+    @Basic(optional = false)
+    @Column(name = "service_everyone")
+    private boolean serviceEveryone;
 
     public RequestedServices() {
     }
@@ -71,7 +79,7 @@ public class RequestedServices implements Serializable {
         this.id = id;
     }
 
-    public RequestedServices(Integer id, int userId, String title, String desc, String tag, Date beginDate, Date endDate) {
+    public RequestedServices(Integer id, int userId, String title, String desc, String tag, Date beginDate, Date endDate, boolean enabled, boolean serviceEveryone) {
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -79,6 +87,8 @@ public class RequestedServices implements Serializable {
         this.tag = tag;
         this.beginDate = beginDate;
         this.endDate = endDate;
+        this.enabled = enabled;
+        this.serviceEveryone = serviceEveryone;
     }
 
     public Integer getId() {
@@ -135,6 +145,22 @@ public class RequestedServices implements Serializable {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public boolean getServiceEveryone() {
+        return serviceEveryone;
+    }
+
+    public void setServiceEveryone(boolean serviceEveryone) {
+        this.serviceEveryone = serviceEveryone;
     }
 
     @Override
