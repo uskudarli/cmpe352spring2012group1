@@ -1,0 +1,11 @@
+#summary Info about Semih Öztürk
+
+= Introduction =
+
+I am a junior student in CmpE. I am interested in mobile application development and familiar with Android-SDK, JAVA Web Services (JAX-RS), Apache Derby, SQLite, Tomcat. I am used to work with Eclipse IDE. 
+
+I would recommend to use Eclipse IDE in this project, since it is very useful when working with all JAVA related development tools and also it is very efficient when both coding and debugging.
+
+= Contact =
+
+You can contact me via _semturk@gmail.com_

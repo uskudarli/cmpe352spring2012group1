@@ -1,0 +1,22 @@
+#summary General description of our project
+
+=Social Services Community=
+
+Social credit based service communities aim to exchange services within a community. 
+
+Our project is a Java-based Social Services Community program which provides means for publishing services that can be offered and those that are desired. Such a system could be used by a physical neighborhood or a virtual online community.
+
+In our project we are supposed to build a Web based system, which will support:
+  * Definition of service offers and request
+  * Service matching (find a person who has offered a given kind of service)
+  * Searching for services
+  * Browsing services
+  * Providing social credit for services
+  * Means for rating those who provide and get services
+  * Equitable distribution of services (all community members should be able to offer services, new comers should be encouraged to provide services)
+  * Location based services (physical proximity often is a better choice for some types of services)
+  * Virtual services (i.e. translation services)
+  * Displaying recent activities to promote this system
+  * Create a social network an perform social network analysis in order to evaluate the application success
+
+This project will be built with Java and hosted with Tomcat. Also the code will be open source, accessible from Google Code.

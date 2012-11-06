@@ -1,0 +1,252 @@
+#summary Meeting Minutes
+
+= Meeting 16 =
+*Date:* 15.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Dila, Hasan
+
+==Discussions:==
+ # Search algorithm
+ # GUI design
+ # Database design
+
+==Action items:==
+ # Search algorithm has not been decided yet.
+ # Database tables is designed to some extend. But they will evolve over time.
+ # Basic pages of the website are determined.
+
+----
+= Meeting 15 =
+*Date:* 11.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Dila, Hasan
+
+==Discussions:==
+ # Review of project plan
+
+==Action items:==
+ # Final Version of project plan is done.
+ # Time for the next meeting is determined.
+ # Main parts and responsible people are decided.
+
+----
+= Meeting 14 =
+*Date:* 03.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Dila
+
+==Discussions:==
+ # Assignment 1
+ # Review of requirements document
+ # Project plan
+
+==Action items:==
+ # Seçkin prepared the presentation.
+ # Final Version of requirements document is done.
+ # First project plan is done.
+
+----
+= Meeting 13 =
+*Date:* 02.10.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur
+
+==Discussions:==
+ # Open Project: Review of the old project plan
+ # Review of requirements document
+
+==Action items:==
+ # New members will create their own pages.
+ # Requirements document will be revised.
+ # Every member should learn how to use Open Project.
+
+----
+= Meeting 12 =
+*Date:* 21.05.2012 *Location:* CMPE Student room
+
+*Participants:* Duygu, Dila, Murat, Semih, Tuğra
+
+==Discussions:==
+ # Eclipse, svn, junit integration : Resolution of common problems
+ # How unit tests work
+ # Review of current base class and unit tests
+
+==Action items:==
+ # Each project developer will contribute to either base class or tests.
+ # Each developer will try to find a bug or enhancement.
+
+----
+= Meeting 11 =
+*Date:* 12.05.2012 *Location:* Online
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Semih, Alperen
+
+==Discussions:==
+ # Everybody is reminded of the current individual issue searching assignment.
+ # Discussed how and where to look for issues in different projects. All documents, diagrams and the code should be searched.
+
+----
+= Meeting 10 =
+*Date:* 02.04.2012 *Location:* ETA A4
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra
+
+==Discussions:==
+ # How our sequence diagrams should be.
+ # System architecture will be designed in client-server model.
+
+==Action items:==
+ # System arcitecture model is designed on paper. Dila and Murat will draw and upload it.
+ # Tuğra shall remake the use-case scenario sequential diagrams until 23.59.
+ # Duygu is assigned to make sure that our home page is up to date.
+
+----
+= Meeting 9 =
+*Date:* 31.03.2012 *Location:* Online(Skype)
+
+*Participants:* Duygu, Dila, Yavuz, Semih, Alperen, Murat
+
+==Discussions:==
+ # Zero(0) has a negative effect on people.
+ # User demand is essential on the service types.
+
+==Action items:==
+ # Dila shall finish the overall system architecture diagram until Monday PS.
+ # Yavuz shall remake the 1st use-case scenario sequential diagram until Monday PS.
+ # IF THERE IS NO PS, PLEASE COME TO THE LOUNGE AT THE SAME HOUR!
+
+----
+= Meeting 8 =
+*Date:* 26.03.2012 *Location:* CmpE Lounge
+
+*Participants:* Duygu, Dila, Yavuz, Semih
+
+==Discussions:==
+ # Ranking system may lead to unjust treatment of new users compared to experienced ones.
+
+==Action items:==
+ # Duygu shall make the necessary changes in the Use Case Diagrams until tomorrow's lecture.
+ # All members shall upload their diagrams using the moodle submission system.
+ # All members shall read the scenarios at least once before tomorrow's lecture.
+
+----
+= Meeting 7 =
+*Date:* 24.03.2012 *Location:* Online(Skype)
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Alperen
+
+==Discussions:==
+ # We shall emphasize more the fair and just treatment of the users.
+ # We shall often be voluntary for presentations.
+
+==Action items:==
+ # Murat shall update the requirements and the scenario documents until Sunday 12:00.
+ # Alperen shall finish use-case diagrams until Sunday 23:59
+ # Dila & Semih shall finish activity diagrams before Monday PS.
+ # Yavuz & Tuğra shall finish sequential diagrams before Monday PS.
+ # Duygu shall track these jobs using the issue tracker.
+ # Every member should think of a project name until Sunday 12:00.
+
+----
+= Meeting 6 =
+*Date:* 19.03.2012 *Location:* ETA A3
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Alperen
+
+==Discussions:==
+ # Members shall be able to report abuse.
+ # Members shall be able to view recent activity.
+ # Members can become admins if they apply to the job and all and some admin of a scenario can become the member of another scenario.
+ # Members who do not participate in any service taking activity for a long time shall start to lose their community credits(decay).
+ # Members should be able to search using different criterion.
+ # All detailed work of the meeting is at https://cacoo.com/diagrams/KHqknnyT5NKTejck.
+
+==Action items:==
+ # Requirements shall be updated mainly by Murat. Yavuz shall add the decaying community credits requirement to the document.
+ # The use case diagram shall be updated by Dila, according to the new requirements and discussions today.
+
+----
+= Meeting 5 =
+*Date:* 16.03.2012 *Location:* Online(Skype)
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Alperen
+
+==Discussions:==
+ # First UML diagram will cover the whole function of the project. It shall be possible to explain certain scenarios on this first diagram.
+ # Second UML diagram will be drawn if needed and it shall describe the detailed case-scenarios.
+ # Socializing part of the project should be expanded and requirements shall be expanded in that way also.
+
+==Action items:==
+ # Yavuz Alperen and Dila shall finish the diagrams until Sunday evening.
+ # Duygu is going to talk to the customer asking the questions discusssed.
+ # Murat and Tuğra are going to prepare use-case scenarios and describe them in natural language.
+ # Semih and Duygu are going to prepare a slide show.
+----
+= Meeting 4 =
+
+*Date:* 12.03.2012 *Location:* ETA A3
+
+*Participants:* Duygu, Dila, Yavuz, Murat, Tuğra, Semih
+
+==Discussions:==
+ # There will be no "sign-in with Facebook" feature. This is because that our project requires that the users must include their true identities in their profiles.
+ # Only invited people will be allowed to sign-in.
+ # Service offers is decided to be taken request-based.
+ # There will be a forum for social service users included in the project.
+
+==Action items:==
+ # Every member shall upload their logos from Administer section
+ # Murat will upload the requirements document. Please read it carefully.
+ # Every member should send his/her skype address to every other member via e-mail.
+
+----
+= Meeting 3 =
+
+*Date:* 09.03.2012 *Location:* Online
+
+*Participants:* Alperen, Duygu, Salih, Yavuz, Semih, Dila, Murat
+
+
+==Discussions:==
+ # Preparation of initial draft requirements document with clarification of key concepts and functional and non-functional dichotomy.
+ # Document format will be as required by the customer.
+ # An elicitation process with customer is necessary.
+ 
+==Action items:==
+ # Everybody will come up with ideas/solutions to the meeting on next Monday to further elaborate the initial document.
+ # Duygu will organize the weekly group meetings. 
+
+----
+= Meeting 2 =
+*Date:* 05.03.2012 *Location:* ETA A3
+
+*Participants:* Duygu, Semih, Salih, Dila, Yavuz
+
+
+==Discussions:==
+ # Majority supports a decrease in the scope of the project such that the project should only include university students.
+ # http://armut.com/ is offered as an example webpage.
+ # Usage of physical or virtual neighborhood and requirement of sign-up or just anonymous entering has not yet decided.
+
+==Action items:==
+ # All links and researches should be written on the same wiki page.
+ # Each contributor must write his/her name to the end of his/her part of the wiki in paranthesis.
+ # There will be a facebook group of this project team.
+ # Each member should increase their profile size.
+ # A possible logo for the project should be searched or drawn by all members if possible.
+
+----
+= Meeting 1 =
+
+*Date:* 02.03.2012 *Location:* Online
+
+*Participants:* Alperen, Duygu, Salih, Yavuz, Semih, Dila, Murat
+
+
+==Discussions:==
+ # We have not yet come together with the client for detailed requirements analysis, but we can do a preliminary research on the project.
+ # Initial ideas on responsibility assignment.
+ # Formation of a group on Facebook, or a circle on Google+ etc. 
+ 
+==Action items:==
+ # Everybody will do preliminary research on the project topic and requirements and update a single wiki page "Useful Notes and Links" accordingly.
