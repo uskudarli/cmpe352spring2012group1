@@ -20,6 +20,7 @@ import java.util.List;
  * Time: 11:02 AM
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class SimpleDAOImpl implements SimpleDAO {
     JdbcTemplate jdbcTemplate;
 
