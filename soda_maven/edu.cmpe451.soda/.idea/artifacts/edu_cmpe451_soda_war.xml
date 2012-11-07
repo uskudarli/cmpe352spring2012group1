@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="edu.cmpe451.soda:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="soda.war">
+    <root id="archive" name="edu.cmpe451.soda-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="edu.cmpe451.soda:war exploded" />
     </root>
   </artifact>
