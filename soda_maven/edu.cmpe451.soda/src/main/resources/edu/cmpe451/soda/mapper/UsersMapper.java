@@ -3,7 +3,7 @@ package edu.cmpe451.soda.mapper;
 import edu.cmpe451.soda.entity.Users;
 import org.springframework.jdbc.core.RowMapper;
 
-import javax.resource.cci.ResultSet;
+//import javax.resource.cci.ResultSet;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -27,6 +27,7 @@ public class UsersMapper implements RowMapper<Users> {
         userBean.setSurname(resultSet.getString("surname"));
         return userBean;
     }
+
 
 
 }
