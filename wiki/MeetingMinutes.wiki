@@ -1,15 +1,28 @@
 #summary Meeting Minutes
 
+= Meeting 22 =
+*Date:* 12.11.2012 19:00-20:00 *Location:* CMPE Building
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Hasan, Dila
+
+==Action items:==
+ # We will need to measure distance between users, so we discussed about a new method for keeping address information. Google API is offered. Seçkin and Hasan will do some research about this issue till tomorrow.
+ # Login page will be updated till Thursday.
+ # Lack of logoff button is realized. It will be added till Thursday.
+ # Search will be done after Google API decision.
+ # There will be a part called 'waiting services' in profile page for replies to the service request we created. It will be added to UI design.
+
+----
 = Meeting 21 =
 *Date:* 05.11.2012 19:00-21:00 *Location:* CMPE Student room
 
 *Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Hasan
 
 ==Action items:==
- # fully functional profile page is implemented
- # project plan is updated
- # login & search pages will be implemented
- # mvn deployment will be done
+ # Fully functional profile page is implemented.
+ # Project plan is updated.
+ # Login & search pages will be implemented.
+ # Mvn deployment will be done.
 
 ----
 = Meeting 20 =
