@@ -1,3 +1,0 @@
-#summary Sequence diagram for the 2nd scenario
-
-||http://cmpe352spring2012group1.googlecode.com/files/seqdiagram2.png||
