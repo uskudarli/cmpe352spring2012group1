@@ -97,7 +97,16 @@
                             <tbody>
                             <c:forEach items="${offeredServices}" var="service">
                             <tr>
-                                <td><strong>${service.title}</strong></td>
+                                <td>
+                                <a href="#" rel="popover" data-placement="right"
+                                data-original-title="${service.title}" data-content="${service.desc}
+                                ${service.tag}">${service.title}</a>
+								<script>  
+								$(function ()  
+								{ $("[rel=popover]").popover();  
+								});  
+								</script>
+                                </td>
                                 <td>${service.beginDate}</td>
                                 <td>${service.endDate}</td>
                             </tr>
@@ -117,7 +126,16 @@
                             <tbody>
                             <c:forEach items="${requestedServices}" var="service">
                                 <tr>
-                                    <td><strong>${service.title}</strong></td>
+                                <td>
+                                <a href="#" rel="popover" data-placement="right"
+                                data-original-title="${service.title}" data-content="${service.desc}
+                                ${service.tag}">${service.title}</a>
+								<script>  
+								$(function ()  
+								{ $("[rel=popover]").popover();  
+								});  
+								</script>
+                                </td>
                                     <td>${service.beginDate}</td>
                                     <td>${service.endDate}</td>
                                 </tr>
