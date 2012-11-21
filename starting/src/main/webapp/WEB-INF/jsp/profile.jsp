@@ -129,13 +129,7 @@
             </div>
         </div>
 
-                <hr class="bs-docs-separator">
-                <div style="height: 75px" id="activity_feed_item">
-                    <p>
-                    <a href="#">Name Surname</a> gave service <em>Painting wall.</em>
-                    </p>
-
-                </div>
+      <hr class="bs-docs-separator">
       <a class="btn btn-primary" href="/starting/createservice/${user.userId}">Create New Service</a>
 
         <hr>
