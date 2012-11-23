@@ -24,6 +24,7 @@ public class UserMapper implements RowMapper<Users> {
         userBean.setEnabled(resultSet.getBoolean("enabled"));
         userBean.setName(resultSet.getString("name"));
         userBean.setSurname(resultSet.getString("surname"));
+        userBean.setAvatar_link(resultSet.getString("avatar_link"));
         return  userBean;
     }
 }

@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row">
                     <div class="span3">
-                    <%--<img src="img/profile/profile-photo.jpg"/>--%>
+                    <img src="${user.avatar_link}"/>
                 </div>
                 <div class="span3" align="center">
                     <h2>${user.name} ${user.surname}</h2>
@@ -97,7 +97,16 @@
                             <tbody>
                             <c:forEach items="${offeredServices}" var="service">
                             <tr>
-                                <td><strong>${service.title}</strong></td>
+                                <td>
+                                <a href="#" rel="popover" data-placement="right"
+                                data-original-title="${service.title}" data-content="${service.desc}
+                                ${service.tag}">${service.title}</a>
+								<script>  
+								$(function ()  
+								{ $("[rel=popover]").popover();  
+								});  
+								</script>
+                                </td>
                                 <td>${service.beginDate}</td>
                                 <td>${service.endDate}</td>
                             </tr>
@@ -115,27 +124,33 @@
                             </tr>
                             </thead>
                             <tbody>
+                             
                             <c:forEach items="${requestedServices}" var="service">
                                 <tr>
-                                    <td><strong>${service.title}</strong></td>
+                                <td>
+                                <a href="#" rel="popover" data-placement="right"
+                                data-original-title="${service.title}" data-content="${service.desc}
+                                ${service.tag}">${service.title}</a>
+								<script>  
+								$(function ()  
+								{ $("[rel=popover]").popover();  
+								});  
+								</script>
+                                </td>
                                     <td>${service.beginDate}</td>
                                     <td>${service.endDate}</td>
                                 </tr>
                             </c:forEach>
+                            
                             </tbody>
+                            
                         </table>
                     </div>
                 </div>
             </div>
         </div>
 
-                <hr class="bs-docs-separator">
-                <div style="height: 75px" id="activity_feed_item">
-                    <p>
-                    <a href="#">Name Surname</a> gave service <em>Painting wall.</em>
-                    </p>
-
-                </div>
+      <hr class="bs-docs-separator">
       <a class="btn btn-primary" href="/starting/createservice/${user.userId}">Create New Service</a>
 
         <hr>

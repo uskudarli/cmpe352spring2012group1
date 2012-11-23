@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row">
                     <div class="span3">
-                    <%--<img src="img/profile/profile-photo.jpg"/>--%>
+                    <img src="${user.avatar_link}"/>
                 </div>
                 <div class="span3" align="center">
                     <h2>${user.name} ${user.surname}</h2>
@@ -124,6 +124,7 @@
                             </tr>
                             </thead>
                             <tbody>
+                             
                             <c:forEach items="${requestedServices}" var="service">
                                 <tr>
                                 <td>
@@ -140,7 +141,9 @@
                                     <td>${service.endDate}</td>
                                 </tr>
                             </c:forEach>
+                            
                             </tbody>
+                            
                         </table>
                     </div>
                 </div>

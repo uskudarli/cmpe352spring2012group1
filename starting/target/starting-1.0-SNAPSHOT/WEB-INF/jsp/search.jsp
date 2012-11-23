@@ -76,7 +76,7 @@
       <br>
       <hr class="bs-docs-separator"></hr>
       <footer>
-        <p>&copy; Cmpe 451</p>
+        <p>&copy; Cmpe451 Group1 Fall2012</p>
       </footer>
 
     </div> <!-- /container -->
