@@ -1,5 +1,20 @@
 #summary Meeting Minutes
 
+= Meeting 26 =
+*Date:* 23.11.2012 23:00-23:45 *Location:* Online
+
+*Participants:* Duygu, Seçkin, Dila, Hasan
+
+==Action items:==
+ # We discussed the feedback from Gökalp.
+ # Dila and Duygu will create UI for expanding/collapsing page until Sunday evening.
+ # Seçkin told about wordnik for semantics.
+ # Hasan and Seçkin will finalize search until Thursday.
+ # Umur will write unit test.
+ # Tuğra will update project plan.
+ # We will be in touch during the weekend.
+
+----
 = Meeting 25 =
 *Date:* 20.11.2012 17:00-17:15 *Location:* Lounge
 
