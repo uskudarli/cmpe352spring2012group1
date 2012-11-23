@@ -1,5 +1,40 @@
 #summary Meeting Minutes
 
+= Meeting 25 =
+*Date:* 20.11.2012 17:00-17:15 *Location:* Lounge
+
+*Participants:* Duygu, Seçkin, Dila, Umur, Alperen
+
+==Action items:==
+ # Seçkin gave the team feedback from Suzan Hoca.
+ # We discussed our meeting policy and next steps.
+ # We discussed work we have done so far.
+
+----
+= Meeting 24 =
+*Date:* 17.11.2012 14:30-17:00 *Location:* Lounge
+
+*Participants:* Duygu, Seçkin, Hasan
+
+==Action items:==
+ # Seçkin completed search operation.
+ # Duygu created popover pages for the services listed on profile page.
+ # Geo location is postponed for now.
+ # Work division among other members is done according to the decisions of the previous meeting. For details see issues.
+
+----
+= Meeting 23 =
+*Date:* 15.11.2012 11:00-12:00 *Location:* Lounge
+
+*Participants:* Duygu, Tuğra, Seçkin, Alperen, Umur, Hasan, Dila
+
+==Action items:==
+ # There shall be a popover windows for the services listed on profile page or search result page.
+ # Service creation should be updated such that the user could select time interval from the datepickers and choose days&hours suitable for the service.
+ # The services may be active or passive depending on the availability of the provider. We should consider this.
+ # The provider can determine the quota for the service.
+
+----
 = Meeting 22 =
 *Date:* 12.11.2012 19:00-20:00 *Location:* CMPE Building
 
