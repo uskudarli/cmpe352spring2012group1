@@ -45,7 +45,10 @@ public class Users implements Serializable {
     @Basic(optional = false)
     @Column(name = "surname")
     private String surname;
-
+    @Basic(optional = false)
+    @Column(name = "avatar_link")
+    private String avatar_link;
+    
     /*public Users() {
     }
 
@@ -110,6 +113,15 @@ public class Users implements Serializable {
         this.surname = surname;
     }
 
+    public String getAvatar_link() {
+        return avatar_link;
+    }
+
+    public void setAvatar_link(String avatar_link) {
+        this.avatar_link = avatar_link;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 0;
