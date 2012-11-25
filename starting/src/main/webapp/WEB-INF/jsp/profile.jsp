@@ -114,6 +114,8 @@
                             </tbody>
                         </table>
                     </div>
+                    
+                    
                     <div class="span6">Requested Services
                         <table class="table table-condensed">
                             <thead>
@@ -124,28 +126,96 @@
                             </tr>
                             </thead>
                             <tbody>
-                             
-                            <c:forEach items="${requestedServices}" var="service">
+                                
+                                
+                        <div class="accordion" id="accordion">        
                                 <tr>
                                 <td>
-                                <a href="#" rel="popover" data-placement="right"
-                                data-original-title="${service.title}" data-content="${service.desc}
-                                ${service.tag}">${service.title}</a>
-								<script>  
-								$(function ()  
-								{ $("[rel=popover]").popover();  
-								});  
-								</script>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                            Service 1 title
+                                        </a>
+                                    </div>
+                                    <div id="collapse1" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            Service 1 description
+                                            Service 1 tags
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <script>  
+                                    $(function ()  
+                                    { $("[rel=collapse]").collapse();  
+                                    });  
+				</script>
+                                
                                 </td>
-                                    <td>${service.beginDate}</td>
-                                    <td>${service.endDate}</td>
+                                    <td>Service 1 begin date</td>
+                                    <td>Service 1 end date</td>
                                 </tr>
-                            </c:forEach>
-                            
+                                
+                                <tr>
+                                <td>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                            Service 2 title
+                                        </a>
+                                    </div>
+                                    <div id="collapse2" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            Service 2 description
+                                            Service 2 tags
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <script>  
+                                    $(function ()  
+                                    { $("[rel=collapse]").collapse();  
+                                    });  
+				</script>
+                                
+                                </td>
+                                    <td>Service 2 begin date</td>
+                                    <td>Service 2 end date</td>
+                                </tr>
+                                
+                                <tr>
+                                <td>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                            Service 3 title
+                                        </a>
+                                    </div>
+                                    <div id="collapse3" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            Service 3 description
+                                            Service 3 tags
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <script>  
+                                    $(function ()  
+                                    { $("[rel=collapse]").collapse();  
+                                    });  
+				</script>
+                                
+                                </td>
+                                    <td>Service 3 begin date</td>
+                                    <td>Service 3 end date</td>
+                                </tr>
+                                
+                        </div>    
                             </tbody>
                             
                         </table>
                     </div>
+                    
                 </div>
             </div>
         </div>
