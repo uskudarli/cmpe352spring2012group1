@@ -55,6 +55,7 @@
     <div class="container">
         <div class="row">
                     <div class="span3">
+                    <img src="${user.avatar_link}"/>
                     <%--<img src="img/profile/profile-photo.jpg"/>--%>
                 </div>
                 <div class="span3" align="center">
