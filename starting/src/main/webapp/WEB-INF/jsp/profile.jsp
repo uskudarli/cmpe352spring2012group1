@@ -55,26 +55,26 @@
     <div class="container">
         <div class="row">
                     <div class="span3">
-                    <img src="${user.avatar_link}"/>
+                        <img src="${user.avatar_link}"/>
                     <%--<img src="img/profile/profile-photo.jpg"/>--%>
-                </div>
-                <div class="span3" align="center">
+                    </div>
+                    <div class="span3" align="center">
                     <h2>${user.name} ${user.surname}</h2>
                     <%--<h4>City - Town - District</h4>--%>
-                    <div class="btn-group">
-                        <button class="btn"><a href="editprofile.html">Edit Profile</a></button>
+                        <div class="btn-group">
+                            <button class="btn"><a href="editprofile.html">Edit Profile</a></button>
+                        </div>
                     </div>
-                </div>
-                <div class="span3" align="center">
-                <h3>Credit</h3>
-                <h2>100</h2>
-                </div>
-            <div class="span3" align="center">
-                <div class="well">
-                <a href="messages.html">Messages</a><br>
-                <a href="history.html">Service History</a>
-                </div>
-            </div>
+                    <div class="span3" align="center">
+                        <h3>Credit</h3>
+                        <h2>100</h2>
+                    </div>
+                    <div class="span3" align="center">
+                        <div class="well">
+                            <a href="messages.html">Messages</a><br>
+                            <a href="history.html">Service History</a>
+                        </div>
+                    </div>
 
               <!-- middle grid -->
             
@@ -82,108 +82,116 @@
 
         <hr class="bs-docs-separator"></hr>
 
-  <div class="row">
+        <div class="row">
             <div class="span12" align="center">
+            
                 <h3>Recent Services</h3>
-                <div class="row">
-                    <div class="span6">Offered Services
-                        <table class="table table-condensed">
-                            <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Begin Date</th>
-                                <th>End Date</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${offeredServices}" var="service">        
-	                                <tr> 
-	                                <td>
-	                                <div class="accordion" id="accordion2"> 
-	                                <div class="accordion-group">
-	                                    <div class="accordion-heading">
-	                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-	                                            ${service.title}
-	                                        </a>
-	                                    </div>
-	                                    <div id="collapseOne" class="accordion-body collapse">
-	                                        <div class="accordion-inner">
-	                                            ${service.desc}
-	                                            ${service.tag}
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                                <script>  
-	                                    $(function ()  
-	                                    { $("[rel=collapseOne]").collapse();  
-	                                    });  
-									</script>
-	                                </div>
-	                                </td>
-	                                    <td>${service.beginDate}</td>
-	                                    <td>${service.endDate}</td>
-	                                </tr>  
-                        </c:forEach>   
-                            </tbody>
+                
+                    <div class="row">
+                        <div class="span6">Offered Services
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Begin Date</th>
+                                        <th>End Date</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    
+                                    <div class="accordion" id="accordion1"> 
+                                        
+                                        <c:forEach items="${offeredServices}" var="service">        
+                                            <tr> 
+                                                <td>
+	                                
+                                                    <div class="accordion-group">
+                                                        <div class="accordion-heading">
+                                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseoffer${service.id}">
+                                                                ${service.title}
+                                                            </a>
+                                                        </div>
+                                                        
+                                                        <div id="collapseoffer${service.id}" class="accordion-body collapse">
+                                                            <div class="accordion-inner">
+                                                                ${service.desc}
+                                                                ${service.tag}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+	                                
+                                                </td>
+                                                
+                                                <td>${service.beginDate}</td>
+                                                <td>${service.endDate}</td>
+                                            </tr>  
+                                        </c:forEach> 
+                                    </div>
+                                
+                                </tbody>
                             
-                        </table>
-                    </div>
-                     
-                    <div class="span6">Requested Services
-                        <table class="table table-condensed">
-                            <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Begin Date</th>
-                                <th>End Date</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${requestedServices}" var="service">        
-	                                <tr> 
-	                                <td>
-	                                <div class="accordion" id="accordion3"> 
-	                                <div class="accordion-group">
-	                                    <div class="accordion-heading">
-	                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo">
-	                                            ${service.title}
-	                                        </a>
-	                                    </div>
-	                                    <div id="collapseTwo" class="accordion-body collapse">
-	                                        <div class="accordion-inner">
-	                                            ${service.desc}
-	                                            ${service.tag}
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                                <script>  
-	                                    $(function ()  
-	                                    { $("[rel=collapseTwo]").collapse();  
-	                                    });  
-									</script>
-	                                </div>
-	                                </td>
-	                                    <td>${service.beginDate}</td>
-	                                    <td>${service.endDate}</td>
-	                                </tr>  
-                        </c:forEach>   
-                            </tbody>
-                            
-                        </table>
-                    </div>
+                            </table>
+                        </div>
                     
+                        <div class="span6">Requested Services
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Begin Date</th>
+                                        <th>End Date</th>
+                                    </tr>
+                                </thead>
+                        
+                                <tbody>
+                            
+                                    <div class="accordion" id="accordion2">
+                                        <c:forEach items="${requestedServices}" var="service">        
+                                            <tr> 
+                                                <td>
+	                                
+                                                    <div class="accordion-group">
+                                                        <div class="accordion-heading">
+                                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse${service.id}">
+                                                                ${service.title}
+                                                            </a>
+                                                        </div>
+                                                
+                                                        <div id="collapse${service.id}" class="accordion-body collapse">
+                                                            <div class="accordion-inner">
+                                                                ${service.desc}
+                                                                ${service.tag}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        
+                                                </td>
+	                                
+                                                <td>${service.beginDate}</td>
+                                                <td>${service.endDate}</td>
+                                            </tr>  
+                                    
+                                        </c:forEach>  
+                                    </div>
+
+                                </tbody>
+                            
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+    
+            <hr class="bs-docs-separator">
+            
+            <a class="btn btn-primary" href="/starting/createservice/${user.userId}">Create New Service</a>
 
-      <hr class="bs-docs-separator">
-      <a class="btn btn-primary" href="/starting/createservice/${user.userId}">Create New Service</a>
-
-        <hr>
-
-      <footer>
-        <p>&copy; Cmpe 451</p>
-      </footer>
+            <hr>
+        
+            <footer>
+                <p>&copy; Cmpe 451</p>
+            </footer>
 
     </div> <!-- /container -->
 
