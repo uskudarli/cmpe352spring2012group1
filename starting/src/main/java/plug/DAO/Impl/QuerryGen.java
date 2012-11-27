@@ -1,7 +1,16 @@
-package querrygen;
+package plug.DAO.Impl;
 
 import java.util.Collections;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.jeremybrooks.knicker.AccountApi;
+import net.jeremybrooks.knicker.Knicker;
+import net.jeremybrooks.knicker.Knicker.RelationshipType;
+import net.jeremybrooks.knicker.KnickerException;
+import net.jeremybrooks.knicker.WordApi;
+import net.jeremybrooks.knicker.dto.Related;
+import net.jeremybrooks.knicker.dto.TokenStatus;
 
 /**
  *
@@ -12,27 +21,29 @@ public class QuerryGen {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    // example usage for searching in the given cols of the table
+   /* public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello world");
         String[] priolist = new String[3];
         priolist[0] = "tag";
         priolist[1] = "title";
-        priolist[2] = "`desc`"; // desc is a keyword in mysql
-
+        priolist[2] = "`desc`"; // desc is a keyword in mysql and also a colname in our table
 
 
         System.out.println(searchQuerry("requested_services",
                 priolist,
                 "2012-1-1",
                 "2013-1-1",
-                "washing,dishes"));
+                tagQuerry("brownie")));
+        //System.out.println(
+        //tagQuerry("cake,cooking"));
 
 
 
-    }
-
-    public static String searchQuerry(String tableName, String[] fieldName, String begin_date, String end_date, String tags) {
+    }*/
+    // method that generates SQL string for given parameters
+    public static String searchQuery(String tableName, String[] fieldName, String begin_date, String end_date, String tags) {
         String result = "";
         String[] list = tags.split(",");
         //Syntatic Improvement
@@ -54,9 +65,10 @@ public class QuerryGen {
                         + " and enabled = 1) as date_checked \n"
                         + " where " + fieldName[k] + " " + "rlike '(.*)";
 
-                for (int j = 0; j < i; j++) {
-                    result += "(" + tags + ")(.*)";
-                }
+                //for (int j = 0; j < i; j++) {
+                //    result += "(" + tags + ")(.*)";
+                //}
+                result += "((" + tags + ")(.*)){"+Integer.toString(i)+"}";
                 result += "'";
                 if (i != 1) {
                     result += "\n union \n";
@@ -70,5 +82,52 @@ public class QuerryGen {
             }
         }
         return result;
+    }
+    // returns semantic related tags in comma seperated form
+    public static String tagQuery(String tags) {
+
+        System.setProperty("WORDNIK_API_KEY", "d874cc25bbe666b1573050b7e6f00bfab8747812f1a6f9dc5");
+        String allRelated = tags;
+        String[] list = tags.split(",");
+        List<Related> relationList;
+        try {
+            TokenStatus status = AccountApi.apiTokenStatus();
+            if (status.isValid()) {
+                System.out.println("API key is valid.");
+            } else {
+                System.out.println("API key is invalid!");
+                System.exit(1);
+            }
+
+            for (String inputWord : list) {
+                relationList = WordApi.related(inputWord);
+
+                for (Related relation : relationList) {
+                    System.out.println(relation.getRelType());
+
+                    if (RelationshipType.hyponym.toString().equals(relation.getRelType())
+                            || "verb-stem".equals(relation.getRelType())
+                            || "equivalent".equals(relation.getRelType())
+                            || "form".equals(relation.getRelType())
+                            || "verb-form".toString().equals(relation.getRelType())
+                            || "variant".equals(relation.getRelType())
+                            || "same-context".toString().equals(relation.getRelType())) {
+
+                        for (String word : relation.getWords()) {
+                            allRelated = allRelated + "," + word;
+
+                        }
+
+                    }
+                }
+
+            }
+
+
+        } catch (KnickerException ex) {
+            Logger.getLogger(QuerryGen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return allRelated;
     }
 }
