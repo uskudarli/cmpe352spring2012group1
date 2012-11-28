@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import plug.DAO.Impl.QuerryGen;
 import plug.beans.*;
 import plug.service.DummyService;
 
@@ -126,19 +127,19 @@ public class ExampleController{
 
     @RequestMapping(value = "/request" ,method = RequestMethod.POST)
     public void createRequest(Model model,
-                            @RequestParam("userId") int userId,
-                            @RequestParam(value = "check",defaultValue = "0",required = false) String serviceAnyone,
-                            @RequestParam("servicename") String serviceName,
-                            @RequestParam("description") String description,
-                            @RequestParam("tags") String tags,
-                            @RequestParam("hidden-tags") String hiddenTagList,
-                            @RequestParam("city") int cityId,
-                            @RequestParam("town") int townId,
-                            @RequestParam("district") int districtId,
-                            @RequestParam("begindate") String beginDate,
-                            @RequestParam("enddate") String endDate,
-                            HttpServletRequest request,
-                            HttpServletResponse response
+                              @RequestParam("userId") int userId,
+                              @RequestParam(value = "check",defaultValue = "0",required = false) String serviceAnyone,
+                              @RequestParam("servicename") String serviceName,
+                              @RequestParam("description") String description,
+                              @RequestParam("tags") String tags,
+                              @RequestParam("hidden-tags") String hiddenTagList,
+                              @RequestParam("city") int cityId,
+                              @RequestParam("town") int townId,
+                              @RequestParam("district") int districtId,
+                              @RequestParam("begindate") String beginDate,
+                              @RequestParam("enddate") String endDate,
+                              HttpServletRequest request,
+                              HttpServletResponse response
     ) throws IOException {
         String begin=formatDate(beginDate);
         String end =formatDate(endDate);
@@ -147,6 +148,45 @@ public class ExampleController{
         response.sendRedirect("/starting/profile");
     }
 
+    @RequestMapping(value = "/search" , method = RequestMethod.GET)
+    public ModelAndView getSearch(Model model)
+    {
+        model.addAttribute("cities",dummyService.getCities());
+        return new ModelAndView("search","m",model);
+    }
+
+    @RequestMapping(value = "/search" , method = RequestMethod.POST)
+    public ModelAndView postSearch(Model model,
+                                   @RequestParam("city") int cityId,
+                                   @RequestParam(value = "town",defaultValue = "0") int townId,
+                                   @RequestParam("begindate") String beginDate,
+                                   @RequestParam("enddate") String endDate,
+                                   @RequestParam("searchType") String searchType,
+                                   @RequestParam("hidden-tags") String searchWords)
+    {
+        String[] priolist = new String[3];
+        priolist[0] = "tag";
+        priolist[1] = "title";
+        priolist[2] = "`desc`";
+        String begin=formatDate(beginDate);
+        String end =formatDate(endDate);
+        String serviceQuery = QuerryGen.searchQuery(searchType,
+                priolist,
+                begin,
+                end,
+                QuerryGen.tagQuery(searchWords), cityId, townId);
+        if(searchType.equals("requested_services")){
+            List<RequestedServices> requestedServices = dummyService.getRequestedServicesSearhResult(serviceQuery);
+            model.addAttribute("requestedServices",requestedServices);
+        }
+        else if(searchType.equals("offered_services"))
+        {
+            List<OfferedServices> offeredServices =dummyService.getOfferedServicesSearchResult(serviceQuery);
+            model.addAttribute("requestedServices",offeredServices);
+        }
+        model.addAttribute("cities",dummyService.getCities());
+        return new ModelAndView("search","m",model);
+    }
 
     public static String formatDate(String date)
     {

@@ -56,6 +56,7 @@
         <div class="row">
                     <div class="span3">
                     <img src="${user.avatar_link}"/>
+                    <%--<img src="img/profile/profile-photo.jpg"/>--%>
                 </div>
                 <div class="span3" align="center">
                     <h2>${user.name} ${user.surname}</h2>
@@ -81,7 +82,7 @@
 
         <hr class="bs-docs-separator"></hr>
 
-        <div class="row">
+  <div class="row">
             <div class="span12" align="center">
                 <h3>Recent Services</h3>
                 <div class="row">
@@ -95,25 +96,39 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach items="${offeredServices}" var="service">
-                            <tr>
-                                <td>
-                                <a href="#" rel="popover" data-placement="right"
-                                data-original-title="${service.title}" data-content="${service.desc}
-                                ${service.tag}">${service.title}</a>
-								<script>  
-								$(function ()  
-								{ $("[rel=popover]").popover();  
-								});  
-								</script>
-                                </td>
-                                <td>${service.beginDate}</td>
-                                <td>${service.endDate}</td>
-                            </tr>
-                            </c:forEach>
+                            <c:forEach items="${offeredServices}" var="service">        
+	                                <tr> 
+	                                <td>
+	                                <div class="accordion" id="accordion2"> 
+	                                <div class="accordion-group">
+	                                    <div class="accordion-heading">
+	                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+	                                            ${service.title}
+	                                        </a>
+	                                    </div>
+	                                    <div id="collapseOne" class="accordion-body collapse">
+	                                        <div class="accordion-inner">
+	                                            ${service.desc}
+	                                            ${service.tag}
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                                <script>  
+	                                    $(function ()  
+	                                    { $("[rel=collapseOne]").collapse();  
+	                                    });  
+									</script>
+	                                </div>
+	                                </td>
+	                                    <td>${service.beginDate}</td>
+	                                    <td>${service.endDate}</td>
+	                                </tr>  
+                        </c:forEach>   
                             </tbody>
+                            
                         </table>
                     </div>
+                     
                     <div class="span6">Requested Services
                         <table class="table table-condensed">
                             <thead>
@@ -124,28 +139,39 @@
                             </tr>
                             </thead>
                             <tbody>
-                             
-                            <c:forEach items="${requestedServices}" var="service">
-                                <tr>
-                                <td>
-                                <a href="#" rel="popover" data-placement="right"
-                                data-original-title="${service.title}" data-content="${service.desc}
-                                ${service.tag}">${service.title}</a>
-								<script>  
-								$(function ()  
-								{ $("[rel=popover]").popover();  
-								});  
-								</script>
-                                </td>
-                                    <td>${service.beginDate}</td>
-                                    <td>${service.endDate}</td>
-                                </tr>
-                            </c:forEach>
-                            
+                            <c:forEach items="${requestedServices}" var="service">        
+	                                <tr> 
+	                                <td>
+	                                <div class="accordion" id="accordion3"> 
+	                                <div class="accordion-group">
+	                                    <div class="accordion-heading">
+	                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo">
+	                                            ${service.title}
+	                                        </a>
+	                                    </div>
+	                                    <div id="collapseTwo" class="accordion-body collapse">
+	                                        <div class="accordion-inner">
+	                                            ${service.desc}
+	                                            ${service.tag}
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                                <script>  
+	                                    $(function ()  
+	                                    { $("[rel=collapseTwo]").collapse();  
+	                                    });  
+									</script>
+	                                </div>
+	                                </td>
+	                                    <td>${service.beginDate}</td>
+	                                    <td>${service.endDate}</td>
+	                                </tr>  
+                        </c:forEach>   
                             </tbody>
                             
                         </table>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -180,3 +206,4 @@
 
   </body>
 </html>
+  

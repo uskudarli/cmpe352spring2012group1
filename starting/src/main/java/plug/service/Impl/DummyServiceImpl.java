@@ -60,4 +60,14 @@ public class DummyServiceImpl implements DummyService {
     public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone) {
         return dummyDAO.createService(userId,serviceName,description,hiddenTagList,begin,end,serviceAnyone);
     }
+
+    @Override
+    public List<RequestedServices> getRequestedServicesSearhResult(String serviceQuery) {
+        return dummyDAO.getRequestedServicesSearhResult(serviceQuery);
+    }
+
+    @Override
+    public List<OfferedServices> getOfferedServicesSearchResult(String serviceQuery) {
+        return dummyDAO.getOfferedServicesSearchResult(serviceQuery);
+    }
 }

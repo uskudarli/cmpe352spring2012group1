@@ -16,6 +16,7 @@
         <script src="/starting/static/js/bootstrap.js"></script>
         <script src="/starting/static/js/bootstrap-tagmanager.js"></script>
         <script src="/starting/static/js/bootstrap-datepicker.js"></script>
+        <script src="/starting/static/js/main.js"></script>
     </head>
  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,53 +33,8 @@
     <script type="text/javascript">
       $(document).ready(function() {
           jQuery(".tagManager").tagsManager();
-          $('#city').change(function(event){
-              var $id = $('#city').attr('selected','selected').val();
-              $.ajax({
-                  type: "GET",
-                  url: "/starting/towns",
-                  data: { id: $id }
-              }).success(function( msg ) {
-                  var arr=JSON.parse(msg);
-                  $('#town').removeAttr('disabled');
-                          $('#town')
-                                  .find('option')
-                                  .remove()
-                          $('#district')
-                                  .find('option')
-                                  .remove()
-                          for (var i=0;i<arr.length;i++)
-                          {
-                              var $townid=arr[i].id;
-                              var $townname=arr[i].name;
-                          $('#town').append('<option value='+$townid+'>'+$townname+'</option>');
-                          }
-        });
-          })
-
-          $('#town').change(function(event){
-              var $id = $('#town').attr('selected','selected').val();
-              $.ajax({
-                  type: "GET",
-                  url: "/starting/districts",
-                  data: { id: $id }
-              }).success(function( msg ) {
-                          var arr=JSON.parse(msg);
-                          $('#district').removeAttr('disabled');
-                          $('#district')
-                                  .find('option')
-                                  .remove()
-                          for (var i=0;i<arr.length;i++)
-                          {
-                              var $districtid=arr[i].id;
-                              var $districtname=arr[i].name;
-                              $('#district').append('<option value='+$districtid+'>'+$districtname+'</option>');
-                          }
-                      });
-          })
-
-
-
+          townUtil();
+          districtUtil();
        });
 
     </script>
@@ -153,7 +109,11 @@
         </form>
 
         <hr>
-                        
+
+
+
+
+
         <footer>
         <p>&copy; Cmpe 451 Group1 Fall2012</p>
         </footer>

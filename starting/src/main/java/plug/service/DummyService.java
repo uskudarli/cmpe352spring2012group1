@@ -30,4 +30,7 @@ public interface DummyService {
 
     boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone);
 
+    List<RequestedServices> getRequestedServicesSearhResult(String serviceQuery);
+
+    List<OfferedServices> getOfferedServicesSearchResult(String serviceQuery);
 }
