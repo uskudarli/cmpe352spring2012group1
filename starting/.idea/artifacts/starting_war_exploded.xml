@@ -8,7 +8,7 @@
           <element id="module-output" name="starting" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.springframework:spring-test:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" />
