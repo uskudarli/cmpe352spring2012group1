@@ -8,6 +8,7 @@
           <element id="module-output" name="starting" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:3.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" />
@@ -33,6 +34,8 @@
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:1.7.1" />
+          <element id="library" level="project" name="Maven: com.github.jeremybrooks:knicker:2.3.2" />
+          <element id="library" level="project" name="Maven: com.github.jeremybrooks:knicker-javadoc:2.3.2" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
         </element>
       </element>

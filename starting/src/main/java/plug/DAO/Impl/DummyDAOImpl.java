@@ -76,5 +76,14 @@ public class DummyDAOImpl implements DummyDAO {
                 userId,serviceName,description,hiddenTagList,begin,end,serviceAnyone)>0;
     }
 
+    @Override
+    public List<RequestedServices> getRequestedServicesSearhResult(String serviceQuery) {
+        return jdbcTemplate.query(serviceQuery,new BeanPropertyRowMapper<RequestedServices>(RequestedServices.class));
+    }
+
+    @Override
+    public List<OfferedServices> getOfferedServicesSearchResult(String serviceQuery) {
+        return jdbcTemplate.query(serviceQuery,new BeanPropertyRowMapper<OfferedServices>(OfferedServices.class));
+    }
 
 }
