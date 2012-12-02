@@ -96,6 +96,6 @@ public class ServiceTest {
         assertEquals("ffggf",requestedServices.get(2).getTitle());
         assertEquals("test",requestedServices.get(3).getTitle());
         assertEquals("Cook delicious birthday cakes",requestedServices.get(4).getTitle());
-        
+    }
     
 }
