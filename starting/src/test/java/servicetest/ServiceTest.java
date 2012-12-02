@@ -61,23 +61,21 @@ public class ServiceTest {
     public void testOfferedServices() throws Exception {
         List<OfferedServices> offeredServices=dummyService.getOfferedServicesSearchResult("select title from offered_services where user_id=1");
         assertEquals("örgü örmek",offeredServices.get(0).getTitle());
-        assertEquals("Guitar Lesson",offeredServices.get(0).getTitle());
-        assertEquals("deneme",offeredServices.get(0).getTitle());
-        assertEquals("Almanca dersi",offeredServices.get(0).getTitle());
-        assertEquals("Waffle toaster",offeredServices.get(0).getTitle());
+        assertEquals("Guitar Lesson",offeredServices.get(1).getTitle());
+        assertEquals("deneme",offeredServices.get(2).getTitle());
+        assertEquals("Almanca dersi",offeredServices.get(3).getTitle());
+        assertEquals("Waffle toaster",offeredServices.get(4).getTitle());
     }
 
-    
-  
-    
+       
     
     @Test
     public void testRequestedServices() throws Exception {
         List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
         assertEquals("perde takma",requestedServices.get(0).getTitle());
-        assertEquals("math",requestedServices.get(0).getTitle());
-        assertEquals("test",requestedServices.get(0).getTitle());
-        assertEquals("Cook delicious birthday cakes",requestedServices.get(0).getTitle());
+        assertEquals("math",requestedServices.get(1).getTitle());
+        assertEquals("test",requestedServices.get(2).getTitle());
+        assertEquals("Cook delicious birthday cakes",requestedServices.get(3).getTitle());
     }
     
    
