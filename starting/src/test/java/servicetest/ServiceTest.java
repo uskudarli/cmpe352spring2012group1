@@ -40,7 +40,13 @@ public class ServiceTest {
     public void testName() throws Exception {
         List<City> cities=dummyService.getCities();
         assertEquals(81,cities.size());
-        assertEquals("Adana",cities.get(0).getName());
+        assertEquals("Adana",cities.get(0).getName());,
+        assertEquals("Hatay",cities.get(30).getName());
+        assertEquals("Kocaeli",cities.get(40).getName());
+        assertEquals("Aðrý",cities.get(3).getName());
+        assertEquals("Malatya",cities.get(43).getName());
+        assertEquals("Zonguldak",cities.get(66).getName());
+        assertEquals("Edirne",cities.get(21).getName());
     }
     
     @Test
@@ -78,6 +84,5 @@ public class ServiceTest {
         assertEquals("test",requestedServices.get(3).getTitle());
         assertEquals("Cook delicious birthday cakes",requestedServices.get(4).getTitle());
         
-    }
     
 }
