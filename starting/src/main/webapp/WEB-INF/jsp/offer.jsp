@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8" %>
-<% This page is to be used for offering services %>
 <!DOCTYPE html>
     <html>
     <head>
@@ -36,6 +35,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
           jQuery(".tagManager").tagsManager();
+          $('.timepicker-default').timepicker();
           townUtil();
           districtUtil();
        });
