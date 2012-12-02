@@ -47,7 +47,7 @@ public class ExampleController{
 
         model.addAttribute("requestedServices",requestedServices);
         model.addAttribute("offeredServices",offeredServices);
-        model.addAttribute("user", user);
+        model.addAttribute("loggedInUser", user);
         return  new ModelAndView("profile","m",model);
     }
 
