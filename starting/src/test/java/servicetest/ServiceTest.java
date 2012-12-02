@@ -40,7 +40,7 @@ public class ServiceTest {
     public void testName() throws Exception {
         List<City> cities=dummyService.getCities();
         assertEquals(81,cities.size());
-        assertEquals("Adana",cities.get(0).getName());,
+        assertEquals("Adana",cities.get(0).getName());
         assertEquals("Hatay",cities.get(30).getName());
         assertEquals("Kocaeli",cities.get(40).getName());
         assertEquals("Aðrý",cities.get(3).getName());
