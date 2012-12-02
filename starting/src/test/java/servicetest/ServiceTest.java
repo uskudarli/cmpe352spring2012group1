@@ -100,23 +100,6 @@ public class ServiceTest {
         assertEquals("math",requestedServices.get(0).getTitle());
     }
     
-    @Test
-    public void testRequestedServices() throws Exception {
-        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
-        assertEquals("bunubulama",requestedServices.get(0).getTitle());
-    }
-    
-    @Test
-    public void testRequestedServices() throws Exception {
-        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=2");
-        assertEquals("bunubulama2",requestedServices.get(0).getTitle());
-    }
-    
-    @Test
-    public void testRequestedServices() throws Exception {
-        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=2");
-        assertEquals("ffggf",requestedServices.get(0).getTitle());
-    }
     
     @Test
     public void testRequestedServices() throws Exception {
