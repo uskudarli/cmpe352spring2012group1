@@ -74,7 +74,7 @@
         <div class="span7">
           <h2>Welcome to Soda!</h2>
           <p>The Soda (Social Dabster) Project is a Social Services Community which offers individuals the opportunity to share skills and needs, to help themselves while helping others. Every individual can supply useful services. The main principles of matching people are reciprocity and equality. The service exchange not only complements existing services but also promotes self-sufficiency and connection inside community.</p>
-          <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+          <p><a class="btn btn-primary" href="search.html">Learn more &raquo;</a></p>
         </div>
       </div>
       <div class="row">
