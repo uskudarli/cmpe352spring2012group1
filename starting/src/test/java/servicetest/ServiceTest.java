@@ -41,12 +41,12 @@ public class ServiceTest {
         List<City> cities=dummyService.getCities();
         assertEquals(81,cities.size());
         assertEquals("Adana",cities.get(0).getName());
-        assertEquals("Hatay",cities.get(30).getName());
-        assertEquals("Kocaeli",cities.get(40).getName());
+        assertEquals("Hatay",cities.get(36).getName());
+        assertEquals("Kocaeli",cities.get(51).getName());
         assertEquals("Aðrý",cities.get(3).getName());
-        assertEquals("Malatya",cities.get(43).getName());
-        assertEquals("Zonguldak",cities.get(66).getName());
-        assertEquals("Edirne",cities.get(21).getName());
+        assertEquals("Malatya",cities.get(54).getName());
+        assertEquals("Zonguldak",cities.get(80).getName());
+        assertEquals("Edirne",cities.get(27).getName());
     }
     
     @Test
