@@ -144,7 +144,7 @@
                   </tbody>
                 </table>
             </div><!--/span-->
-            <div class="span5">
+            <div class="span8">
               <h2>Most dissatisfied users</h2>
                 <table class="table">
                   <thead>
