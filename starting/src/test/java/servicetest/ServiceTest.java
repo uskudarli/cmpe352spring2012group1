@@ -70,7 +70,7 @@ public class ServiceTest {
         assertEquals("Guitar Lesson",offeredServices.get(1).getTitle());
         assertEquals("deneme",offeredServices.get(2).getTitle());
         assertEquals("Almanca dersi",offeredServices.get(3).getTitle());
-        assertEquals("Waffle toaster",offeredServices.get(4).getTitle());
+        assertEquals("Waffle toasterr",offeredServices.get(4).getTitle());
     }
 
        
