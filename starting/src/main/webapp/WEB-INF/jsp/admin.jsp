@@ -107,6 +107,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td>8</td>
+                      <td><button class="btn btn-danger" type="button">Freeze Account</button></td>
                     </tr>
                     <tr>
                       <td>2</td>
@@ -114,6 +115,7 @@
                       <td>Thornton</td>
                       <td>@fat</td>
                       <td>5</td>
+                      <td><button class="btn btn-danger" type="button">Freeze Account</button></td>
                     </tr>
                     <tr>
                       <td>3</td>
@@ -121,6 +123,7 @@
                       <td>the Bird</td>
                       <td>@twitter</td>
                       <td>5</td>
+                      <td><button class="btn btn-danger" type="button">Freeze Account</button></td>
                     </tr>
                     <tr>
                       <td>4</td>
@@ -128,6 +131,7 @@
                       <td>the Bird</td>
                       <td>@twitter</td>
                       <td>4</td>
+                      <td><button class="btn btn-danger" type="button">Freeze Account</button></td>
                     </tr>
                     <tr>
                       <td>5</td>
@@ -135,6 +139,7 @@
                       <td>the Bird</td>
                       <td>@twitter</td>
                       <td>3</td>
+                      <td><button class="btn btn-danger" type="button">Freeze Account</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -158,6 +163,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td>10</td>
+                      <td><button class="btn btn-warning" type="button">Send Message</button></td>
                     </tr>
                     <tr>
                       <td>2</td>
@@ -165,6 +171,7 @@
                       <td>Thornton</td>
                       <td>@fat</td>
                       <td>9</td>
+                      <td><button class="btn btn-warning" type="button">Send Message</button></td>
                     </tr>
                     <tr>
                       <td>3</td>
@@ -172,6 +179,7 @@
                       <td>the Bird</td>
                       <td>@twitter</td>
                       <td>7</td>
+                      <td><button class="btn btn-warning" type="button">Send Message</button></td>
                     </tr>
                     <tr>
                       <td>4</td>
@@ -179,6 +187,7 @@
                       <td>the Bird</td>
                       <td>@twitter</td>
                       <td>5</td>
+                      <td><button class="btn btn-warning" type="button">Send Message</button></td>
                     </tr>
                     <tr>
                       <td>5</td>
@@ -186,6 +195,7 @@
                       <td>the Bird</td>
                       <td>@twitter</td>
                       <td>3</td>
+                      <td><button class="btn btn-warning" type="button">Send Message</button></td>
                     </tr>
                   </tbody>
                 </table>
