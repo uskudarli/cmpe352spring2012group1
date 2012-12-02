@@ -15,16 +15,24 @@
       <link rel="stylesheet" type="text/css" href="/starting/static/css/bootstrap-responsive.css" />
       <link rel="stylesheet" type="text/css" href="/starting/static/css/bootstrap-tagmanager.css" />
       <link rel="stylesheet" type="text/css" href="/starting/static/css/datepicker.css" />
+      <link rel="stylesheet" type="text/css" href="/starting/static/css/bootstrap-editable.css">
       <script src="/starting/static/js/jquery-1.7.1.min.js"></script>
       <script src="/starting/static/js/bootstrap.js"></script>
       <script src="/starting/static/js/bootstrap-tagmanager.js"></script>
       <script src="/starting/static/js/bootstrap-datepicker.js"></script>
       <script src="/starting/static/js/main.js"></script>
-
+      <script src="/starting/static/js/bootstrap-editable.js"></script>
       <script>
           $(document).ready(function() {
               jQuery(".tagManager").tagsManager();
               townUtil();
+              $('#username').editable({
+                  type:  'text',
+                  pk:    1,
+                  name:  'username',
+                  url:   '/starting/edit',
+                  title: 'Enter username'
+              });
           });
       </script>
 
@@ -44,11 +52,11 @@
           <a class="brand" href="#">Soda</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="home.html">Home</a></li>
-              <li class="active"><a href="profile.jsp">Profile</a></li>
-              <li><a href="search.jsp">Search for Services</a></li>
-              <li><a href="offer.jsp">Offer Services</a></li>
-              <li><a href="help.html">Help</a></li>
+              <li><a href="/starting/profile">Home</a></li>
+              <li class="active"><a href="/starting/profile">Profile</a></li>
+              <li><a href="/starting/search">Search for Services</a></li>
+              <li><a href="#">Offer Services</a></li>
+              <li><a href="#">Help</a></li>
             </ul>
               <ul class="nav pull-right">
                   <li><a href="<c:url value="/j_spring_security_logout" />" > Logout</a></li>
@@ -91,6 +99,8 @@
       
       <br>
 
+        <%--<a href="#" id="username">superuser</a>--%>
+
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -106,13 +116,13 @@
         </tr>
         </thead>
         <tbody>
-        <div class="accordion" id="accordion3">
+        <div class="accordion" id="accordion1">
         <c:forEach items="${requestedServices}" var="service">
             <tr>
                 <td>
                         <div class="accordion-group">
                             <div class="accordion-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapserequest${service.id}">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapserequest${service.id}">
                                         ${service.title}
                                 </a>
                             </div>
@@ -145,13 +155,13 @@
         </tr>
         </thead>
         <tbody>
-        <div class="accordion" id="accordion3">
+        <div class="accordion" id="accordion2">
         <c:forEach items="${offeredServices}" var="service">
             <tr>
                 <td>
                         <div class="accordion-group">
                             <div class="accordion-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseoffer${service.id}">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseoffer${service.id}">
                                         ${service.title}
                                 </a>
                             </div>

@@ -38,11 +38,11 @@
           <a class="brand" href="#">Soda</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="home.html">Home</a></li>
+              <li><a href="/starting/profile">Home</a></li>
                 <li><a href="/starting/profile">Profile</a></li>
-                <li><a href="/starting/search/${userId}">Search for Services</a></li>
-                <li><a href="offer.jsp">Offer Services</a></li>
-              <li><a href="help.html">Help</a></li>
+                <li><a href="/starting/search">Search for Services</a></li>
+                <li><a href="/starting/createservice">Offer Services</a></li>
+              <li><a href="#">Help</a></li>
             </ul>
               <ul class="nav pull-right">
                   <li><a href="<c:url value="/j_spring_security_logout" />" > Logout</a></li>
@@ -55,14 +55,14 @@
     <div class="container">
         <div class="row">
                     <div class="span3">
-                        <img src="${user.avatar_link}"/>
+                        <img src="${loggedInUser.avatar_link}"/>
                     <%--<img src="img/profile/profile-photo.jpg"/>--%>
                     </div>
                     <div class="span3" align="center">
-                    <h2>${user.name} ${user.surname}</h2>
+                    <h2>${loggedInUser.name} ${loggedInUser.surname}</h2>
                     <%--<h4>City - Town - District</h4>--%>
                         <div class="btn-group">
-                            <button class="btn"><a href="editprofile.html">Edit Profile</a></button>
+                            <button class="btn"><a href="#">Edit Profile</a></button>
                         </div>
                     </div>
                     <div class="span3" align="center">
@@ -185,7 +185,7 @@
     
             <hr class="bs-docs-separator">
             
-            <a class="btn btn-primary" href="/starting/createservice/${user.userId}">Create New Service</a>
+            <a class="btn btn-primary" href="/starting/createservice">Create New Service</a>
 
             <hr>
         

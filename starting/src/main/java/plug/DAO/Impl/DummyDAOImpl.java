@@ -35,8 +35,8 @@ public class DummyDAOImpl implements DummyDAO {
      }
 
     @Override
-    public Users getLoggedInUser(String userName) {
-       return jdbcTemplate.queryForObject("select * from users where email=?",userMapper,userName);
+    public Users getLoggedInUser(String email) {
+       return jdbcTemplate.queryForObject("select * from users where email=?",userMapper,email);
     }
 
     @Override

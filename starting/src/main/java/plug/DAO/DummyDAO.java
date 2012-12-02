@@ -13,7 +13,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface DummyDAO {
-    Users getLoggedInUser(String userName);
+    Users getLoggedInUser(String email);
 
     List<RequestedServices> getRequestedServices(Integer userId);
 

@@ -4,7 +4,8 @@ $('#city').change(function(event){
     $.ajax({
         type: "GET",
         url: "/starting/towns",
-        data: { id: $id }
+        data: { id: $id },
+        dataType:"json"
     }).success(function( msg ) {
             var arr=JSON.parse(msg);
             $('#town').removeAttr('disabled');
@@ -30,7 +31,8 @@ $('#town').change(function(event){
     $.ajax({
         type: "GET",
         url: "/starting/districts",
-        data: { id: $id }
+        data: { id: $id },
+        dataType:"json"
     }).success(function( msg ) {
             var arr=JSON.parse(msg);
             $('#district').removeAttr('disabled');
