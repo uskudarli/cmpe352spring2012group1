@@ -1,9 +1,8 @@
-<%The user will be able to edit its login info through this page %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Edit Profile Page</title>
+    <title>Admin Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,6 +19,7 @@
 
     <script src="/starting/static/js/jquery-1.7.1.min.js"></script>
     <script src="/starting/static/js/bootstrap.js"></script>
+    
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -54,25 +54,47 @@
     </div>  
 
 <div class="hero-unit">
+<div class="row">
+
+
+
 
 <form>
   <fieldset>
+
     <legend>Edit Login Info</legend>
+
+	<div class="span4 offset 3">
+ <img src="static/img/change.jpg" class="img-rounded">
+</div>
+<div class="span3">
     <label>New e-Mail</label>
     <input type="text" placeholder="Type something…">
  	<label>New Password</label>
     <input type="text" placeholder="Type something…">
-    <label class="checkbox">
-      <input type="checkbox"> Change eMail
-    </label>
+	<label>New Address</label>
+    <input type="text" placeholder="Type something…">
+    
+
+<div class="row">
 <label class="checkbox">
-      <input type="checkbox"> Change password
-    </label>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+<div class="span2"> <input type="checkbox"> eMail</div>
+<div class="span2"> <input type="checkbox"> Password</div>
+<div class="span2"> <input type="checkbox"> Address</div>
+</label>
+</div>
+
+
+<div class="row">
+  <div class="span2 offset2"><button type="submit" class="btn btn-primary">Submit</button></div>
+</div>
+    
   </fieldset>
 </form>
 </div>
 
+</div>
 
       
 
