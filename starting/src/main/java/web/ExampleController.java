@@ -31,6 +31,12 @@ public class ExampleController{
 
     @Autowired
     DummyService dummyService;
+
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public void indexPage(HttpServletResponse response) throws IOException {
+       response.sendRedirect("/starting/profile");
+    }
+
     @RequestMapping(value = "/profile",method = RequestMethod.GET)
     public ModelAndView getProfile(Model model,HttpServletRequest request, HttpServletResponse response){
         //get logged in username
