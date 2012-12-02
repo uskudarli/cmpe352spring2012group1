@@ -69,7 +69,7 @@
       <div class="hero-unit">
        <div class="row">
         <div class="span3">
-          <img src="social-soda.gif" class="img-rounded">
+          <img src="/starting/src/main/webapp/static/img/socialsoda.gif" class="img-rounded">
         </div>
         <div class="span7">
           <h2>Welcome to Soda!</h2>
