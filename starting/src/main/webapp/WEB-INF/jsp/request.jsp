@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8" %>
-<% This page will be used to request services %>
+<%-- This page will be used to request services --%>
 <!DOCTYPE html>
 <html>
 <head>
