@@ -64,9 +64,69 @@ public class ServiceTest {
     }
     
     @Test
+    public void testOfferedServices() throws Exception {
+        List<OfferedServices> offeredServices=dummyService.getOfferedServicesSearchResult("select title from offered_services where user_id=1");
+        assertEquals("Guitar Lesson",offeredServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testOfferedServices() throws Exception {
+        List<OfferedServices> offeredServices=dummyService.getOfferedServicesSearchResult("select title from offered_services where user_id=1");
+        assertEquals("deneme",offeredServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testOfferedServices() throws Exception {
+        List<OfferedServices> offeredServices=dummyService.getOfferedServicesSearchResult("select title from offered_services where user_id=1");
+        assertEquals("Almanca dersi",offeredServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testOfferedServices() throws Exception {
+        List<OfferedServices> offeredServices=dummyService.getOfferedServicesSearchResult("select title from offered_services where user_id=1");
+        assertEquals("Waffle toaster",offeredServices.get(0).getTitle());
+    }
+    
+    
+    @Test
     public void testRequestedServices() throws Exception {
         List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
         assertEquals("perde takma",requestedServices.get(0).getTitle());
     }
     
+    @Test
+    public void testRequestedServices() throws Exception {
+        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
+        assertEquals("math",requestedServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testRequestedServices() throws Exception {
+        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
+        assertEquals("bunubulama",requestedServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testRequestedServices() throws Exception {
+        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=2");
+        assertEquals("bunubulama2",requestedServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testRequestedServices() throws Exception {
+        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=2");
+        assertEquals("ffggf",requestedServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testRequestedServices() throws Exception {
+        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=2");
+        assertEquals("test",requestedServices.get(0).getTitle());
+    }
+    
+    @Test
+    public void testRequestedServices() throws Exception {
+        List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=2");
+        assertEquals("Cook delicious birthday cakes",requestedServices.get(0).getTitle());
+    }
 }
