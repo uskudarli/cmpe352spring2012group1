@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8" %>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -14,10 +16,10 @@
 
                 </ul>
 
-                <form class="navbar-form pull-right">
+                <form method="post" action="<c:url value='j_spring_security_check' />" accept-charset="UTF-8" class="navbar-form pull-right">
 
-                    <input class="span2" type="text" placeholder="Email">
-                    <input class="span2" type="password" placeholder="Password">
+                    <input type="text" id="j_username" name="j_username" placeholder="Email">
+                    <input type="password" id="j_password" name="j_password" placeholder="Password">
 
                     <button type="submit" class="btn">Sign in</button>
                 </form>
