@@ -1,4 +1,4 @@
-<% BU SAYFA KULLANILMIYOR %>
+<% This page is not in use %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
