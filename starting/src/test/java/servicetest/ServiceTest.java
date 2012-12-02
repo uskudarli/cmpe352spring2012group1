@@ -36,6 +36,10 @@ public class ServiceTest {
         assertNotNull(dummyService);
     }
 
+    
+    //testing the cities in the database
+  //checks if the expected name and the name existing in the database matches
+  //checks if the number of cities expected and the number of cities in the database matches
     @Test
     public void testName() throws Exception {
         List<City> cities=dummyService.getCities();
@@ -49,6 +53,10 @@ public class ServiceTest {
         assertEquals("Edirne",cities.get(27).getName());
     }
     
+    
+    //testing the towns
+    //checks if the expected name and the name existing in the database matches
+    //checks if the number of the towns expected and the number of towns in the database matches
     @Test
     public void testTowns() throws Exception {
         List<Town> towns=dummyService.getTowns(1);
@@ -69,6 +77,9 @@ public class ServiceTest {
         
     }
     
+    //testing the districts
+    //checks if the expected name and the name existing in the database matches
+  //checks if the number of the districts expected and the number of districts in the database matches
     @Test
     public void testDistricts() throws Exception {
         List<District> districts=dummyService.getDistricts(1);
@@ -76,6 +87,8 @@ public class ServiceTest {
         assertEquals("Karsantý",districts.get(0).getName());
     }
     
+    //testing offered services
+    //checks if the expected name and the name existing in the database matches
     @Test
     public void testOfferedServices() throws Exception {
         List<OfferedServices> offeredServices=dummyService.getOfferedServicesSearchResult("select title from offered_services where user_id=1");
@@ -87,7 +100,8 @@ public class ServiceTest {
     }
 
        
-    
+    //testing requested services
+  //checks if the expected name and the name existing in the database matches
     @Test
     public void testRequestedServices() throws Exception {
         List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
