@@ -8,17 +8,17 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="/sodaproject/starting/src/main/webapp/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/starting/src/main/webapp/static/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="/sodaproject/starting/src/main/webapp/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/starting/src/main/webapp/static/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <script src="/sodaproject/starting/src/main/webapp/static/js/jquery-1.7.1.min.js"></script>
-    <script src="/sodaproject/starting/src/main/webapp/static/js/bootstrap.js"></script>
+    <script src="/starting/src/main/webapp/static/js/jquery-1.7.1.min.js"></script>
+    <script src="/starting/src/main/webapp/static/js/bootstrap.js"></script>
     <script>
 
       $(function(){
