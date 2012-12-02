@@ -46,13 +46,13 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="welcome.html">Soda</a>
+            <a class="brand" href="/starting/profile">Soda</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="/starting/profile">Profile</a></li>
-                    <li><a href="/starting/search/${userId}">Search for Services</a></li>
-                    <li class="active"><a href="service creation.htm">Offer/Request Services</a></li>
-                    <li><a href="help.html">Help</a></li>
+                    <li><a href="/starting/search">Search for Services</a></li>
+                    <li class="active"><a href="#">Offer/Request Services</a></li>
+                    <li><a href="#">Help</a></li>
                 </ul>
                 <ul class="nav pull-right">
                     <li><a href="<c:url value="/j_spring_security_logout" />" > Logout</a></li>
@@ -72,7 +72,7 @@
         </div>
         <br>
 
-        <input type="hidden" name="userId" value="${userId}">
+        <input type="hidden" name="userId" value="${loggedInUser.userId}">
 
         <label class="checkbox">
             <input type="checkbox" name="check" value="1"> Service Everyone

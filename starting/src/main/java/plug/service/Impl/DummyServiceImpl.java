@@ -1,6 +1,8 @@
 package plug.service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import plug.DAO.DummyDAO;
@@ -22,8 +24,10 @@ public class DummyServiceImpl implements DummyService {
     DummyDAO dummyDAO;
 
     @Override
-    public Users getLoggedInUser(String userName) {
-        return dummyDAO.getLoggedInUser(userName);
+    public Users getLoggedInUser() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String email = auth.getName();
+        return dummyDAO.getLoggedInUser(email);
     }
 
     @Override

@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonWriter;
 import com.mysql.jdbc.interceptors.SessionAssociationInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -18,7 +20,7 @@ import plug.DAO.Impl.QuerryGen;
 import plug.beans.*;
 import plug.service.DummyService;
 
-import java.io.IOException;
+import java.io.*;
 import java.security.Principal;
 import java.util.List;
 
@@ -31,9 +33,8 @@ public class ExampleController{
     DummyService dummyService;
     @RequestMapping(value = "/profile",method = RequestMethod.GET)
     public ModelAndView getProfile(Model model,HttpServletRequest request, HttpServletResponse response){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String email = auth.getName(); //get logged in username
-        Users user= dummyService.getLoggedInUser(email);
+        //get logged in username
+        Users user= dummyService.getLoggedInUser();
         List<RequestedServices> requestedServices=dummyService.getRequestedServices(user.getUserId());
         List<OfferedServices> offeredServices=dummyService.getOfferedServices(user.getUserId());
         System.out.println(user.getUserId());
@@ -41,7 +42,6 @@ public class ExampleController{
         model.addAttribute("requestedServices",requestedServices);
         model.addAttribute("offeredServices",offeredServices);
         model.addAttribute("user", user);
-        System.out.println(auth.getPrincipal());
         return  new ModelAndView("profile","m",model);
     }
 
@@ -60,27 +60,27 @@ public class ExampleController{
         return  new ModelAndView("login","m",model);
     }
 
-    @RequestMapping(value = "/createservice/{userId}",method =  RequestMethod.GET)
-    public ModelAndView createService(Model model,@PathVariable("userId") int userId)
+    @RequestMapping(value = "/createservice",method =  RequestMethod.GET)
+    public ModelAndView createService(Model model)
     {
-        model.addAttribute("userId",userId);
+        Users user= dummyService.getLoggedInUser();
+        model.addAttribute("loggedInUser",user);
         return new ModelAndView("serviceCreation","m",model);
     }
 
-    @RequestMapping(value = "/request/{userId}",method =  RequestMethod.GET)
-    public ModelAndView requestService(Model model,@PathVariable("userId") int userId)
-    {
-        model.addAttribute("userId",userId);
+    @RequestMapping(value = "/request",method =  RequestMethod.GET)
+    public ModelAndView requestService(Model model) throws IOException {
+        Users loggedInUser= dummyService.getLoggedInUser();
+        model.addAttribute("loggedInUser",loggedInUser);
         model.addAttribute("cities",dummyService.getCities());
         return new ModelAndView("request","m",model);
     }
 
-    @RequestMapping(value = "/offer/{userId}",method =  RequestMethod.GET)
-    public ModelAndView offerService(Model model,@PathVariable("userId") int userId)
-    {
-        model.addAttribute("userId",userId);
+    @RequestMapping(value = "/offer",method =  RequestMethod.GET)
+    public ModelAndView offerService(Model model) throws IOException {
+        Users loggedInUser= dummyService.getLoggedInUser();
+        model.addAttribute("loggedInUser",loggedInUser);
         model.addAttribute("cities",dummyService.getCities());
-//       model.addAttribute("towns",dummyService.getTowns());
         return new ModelAndView("offer","m",model);
     }
 
@@ -90,18 +90,15 @@ public class ExampleController{
     {
         Gson gson = new Gson();
         List<Town> towns=dummyService.getTowns(id);
-        String json = gson.toJson(towns);
-        return json;
+        return gson.toJson(towns);
     }
 
     @RequestMapping(value = "/districts",method = RequestMethod.GET)
     @ResponseBody
-    public  String getDistricts(@RequestParam("id") int id)
-    {
+    public  String getDistricts(@RequestParam("id") int id) throws IOException {
         Gson gson = new Gson();
         List<District> districts=dummyService.getDistricts(id);
-        String json = gson.toJson(districts);
-        return json;
+        return gson.toJson(districts);
     }
 
     @RequestMapping(value = "/offer" ,method = RequestMethod.POST)
@@ -191,8 +188,7 @@ public class ExampleController{
     public static String formatDate(String date)
     {
         String[] numbers=date.split("/");
-        String result=numbers[2]+"-"+numbers[0]+"-"+numbers[1];
-        return  result;
+        return numbers[2]+"-"+numbers[0]+"-"+numbers[1];
     }
 
 

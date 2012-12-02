@@ -14,7 +14,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface DummyService {
-    public Users getLoggedInUser(String userName);
+    public Users getLoggedInUser();
 
     List<RequestedServices> getRequestedServices(Integer userId);
 
