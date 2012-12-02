@@ -55,15 +55,15 @@ public class ServiceTest {
         assertEquals(15,towns.size());
         assertEquals("Ceyhan",towns.get(1).getName());
        
-        List<Town> towns=dummyService.getTowns(26);
+        towns=dummyService.getTowns(26);
         assertEquals(14,towns.size());
         assertEquals("Han",towns.get(4).getName());
         
-        List<Town> towns=dummyService.getTowns(34);
+        towns=dummyService.getTowns(34);
         assertEquals(39,towns.size());
         assertEquals("Zeytinburnu",towns.get(38).getName());
         
-        List<Town> towns=dummyService.getTowns(80);
+        towns=dummyService.getTowns(80);
         assertEquals(7,towns.size());
         assertEquals("Toprakkale",towns.get(6).getName());
         
