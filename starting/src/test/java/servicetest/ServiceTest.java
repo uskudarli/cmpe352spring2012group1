@@ -74,12 +74,9 @@ public class ServiceTest {
         List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
         assertEquals("perde takma",requestedServices.get(0).getTitle());
         assertEquals("math",requestedServices.get(1).getTitle());
-        assertEquals("test",requestedServices.get(2).getTitle());
-        assertEquals("Cook delicious birthday cakes",requestedServices.get(3).getTitle());
+        assertEquals("Cook delicious birthday cakes",requestedServices.get(2).getTitle());
     }
-    
-   
-    
+        
     
    
     
