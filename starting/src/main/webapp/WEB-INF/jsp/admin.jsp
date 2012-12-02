@@ -8,17 +8,17 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="/sodaproject/starting/src/main/webapp/static/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/sodaproject/starting/src/main/webapp/static/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="/sodaproject/starting/src/main/webapp/static/js/jquery-1.7.1.min.js"></script>
+    <script src="/sodaproject/starting/src/main/webapp/static/js/bootstrap.js"></script>
     <script>
 
       $(function(){
@@ -198,7 +198,7 @@
 
       <hr>
       <footer>
-        <p>&copy; Cmpe 451</p>
+        <p>&copy; Cmpe 451 Group Fall 2012</p>
       </footer>
 
     </div> <!-- /container -->
