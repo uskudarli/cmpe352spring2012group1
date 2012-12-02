@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8" %>
 
-<% This page is the welcome page of our project %>
+<%-- This page is the welcome page of our project --%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
