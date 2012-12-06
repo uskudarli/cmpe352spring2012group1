@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8" %>
-<%-- The search facility will be handled through this page --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 
 <!DOCTYPE html>
@@ -117,8 +117,8 @@
                             </div>
                         </div>
                 </td>
-                <td>${service.beginDate}</td>
-                <td>${service.endDate}</td>
+                <td><fmt:formatDate dateStyle="short" value="${service.beginDate}"></fmt:formatDate></td>
+                <td><fmt:formatDate dateStyle="short" value="${service.endDate}"></fmt:formatDate></td>
             </tr>
         </c:forEach>
         </div>
@@ -156,8 +156,8 @@
                             </div>
                         </div>
                 </td>
-                <td>${service.beginDate}</td>
-                <td>${service.endDate}</td>
+                <td><fmt:formatDate value="${service.beginDate}"></fmt:formatDate></td>
+                <td><fmt:formatDate value="${service.endDate}"></fmt:formatDate></td>
             </tr>
         </c:forEach>
         </div>

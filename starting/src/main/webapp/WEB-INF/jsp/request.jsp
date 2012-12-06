@@ -63,10 +63,10 @@
         </label>
 
         <label>Service Name</label>
-        <input type="text" name="servicename" class="cleanable"/>
+        <input type="text" required="" name="servicename" class="cleanable"/>
 
         <label>Description</label>
-        <textarea rows="2" cols="36" name="description" class="cleanable"></textarea>
+        <textarea rows="2" required="" cols="36" name="description" class="cleanable"></textarea>
 
         <label>Tags</label>
         <input type="text" name="tags" placeholder="Tags" class="tagManager"/>
@@ -87,10 +87,10 @@
         <select name="district" id="district" disabled="disabled">
         </select>
         <br>
-        <label><strong>Start Date:</strong></label><input type="text" class="span2" name="begindate" value="" id="dp1">
+        <label><strong>Start Date:</strong></label><input type="text" class="span2" required="" name="begindate" value="" id="dp1">
         <br>
         <br>
-        <label><strong>End Date:</strong></label><input type="text" class="span2" name="enddate" value="" id="dp2">
+        <label><strong>End Date:</strong></label><input type="text" class="span2" required="" name="enddate" value="" id="dp2">
         <br>
         <br>
         <button type="submit" class="btn btn-primary" data-loading-text="Submitting...">Submit</button>

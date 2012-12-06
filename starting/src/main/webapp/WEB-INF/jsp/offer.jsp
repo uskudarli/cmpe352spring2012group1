@@ -58,13 +58,13 @@
             </div>
             <br>
 
-            <input type="hidden" name="userId" value="${loggedInUser}">
+            <input type="hidden" name="userId" value="${loggedInUser.userId}">
 
             <label>Service Name</label>
-            <input type="text" name="servicename" class="cleanable"/>
+            <input type="text" name="servicename" required="" class="cleanable"/>
 
             <label>Description</label>
-            <textarea rows="2" cols="36" name="description" class="cleanable"></textarea>
+            <textarea rows="2" cols="36" name="description" required="" class="cleanable"></textarea>
              
             <label>Tags</label> 
             <input type="text" name="tags" placeholder="Tags" class="tagManager"/>
@@ -85,10 +85,10 @@
             <select name="district" id="district" disabled="disabled">
             </select>
             <br>
-            <label><strong>Start Date:</strong></label><input type="text" class="span2" name="begindate" value="" id="dp1">
+            <label><strong>Start Date:</strong></label><input type="text" class="span2" name="begindate" required="" value="" id="dp1">
             <br>
             <br>
-            <label><strong>End Date:</strong></label><input type="text" class="span2" name="enddate" value="" id="dp2">
+            <label><strong>End Date:</strong></label><input type="text" class="span2" name="enddate" required="" value="" id="dp2">
             <br>
             <br>
 
@@ -122,7 +122,7 @@
 
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval1" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -132,7 +132,7 @@
                    
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval3" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -141,7 +141,7 @@
 
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval5" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -151,7 +151,7 @@
                    
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval7" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -160,7 +160,7 @@
                     
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval9" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -169,7 +169,7 @@
 
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval11" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -179,7 +179,7 @@
                    
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval13" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -196,7 +196,7 @@
 
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval2" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -206,7 +206,7 @@
                    
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval4" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -215,7 +215,7 @@
 
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval6" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -225,7 +225,7 @@
                    
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval8" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -234,7 +234,7 @@
                     
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval10" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -243,7 +243,7 @@
 
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval12" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>
@@ -253,7 +253,7 @@
                    
                     <td>
                       <div class="input-append bootstrap-timepicker-component">
-                      <input type="text" class="timepicker-default input-small">
+                      <input type="text" name="timeinterval14" required="" class="timepicker-default input-small">
                       <span class="add-on">
                       <i class="icon-time"></i>
                       </span>

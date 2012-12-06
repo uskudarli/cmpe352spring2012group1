@@ -4,17 +4,18 @@ $('#city').change(function(event){
     $.ajax({
         type: "GET",
         url: "/starting/towns",
-        data: { id: $id },
-        dataType:"json"
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        data: { id: $id }
     }).success(function( msg ) {
-            var arr=JSON.parse(msg);
+            var arr=msg;
             $('#town').removeAttr('disabled');
             $('#town')
                 .find('option')
-                .remove()
+                .remove();
             $('#district')
                 .find('option')
-                .remove()
+                .remove();
             for (var i=0;i<arr.length;i++)
             {
                 var $townid=arr[i].id;
@@ -31,10 +32,11 @@ $('#town').change(function(event){
     $.ajax({
         type: "GET",
         url: "/starting/districts",
-        data: { id: $id },
-        dataType:"json"
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        data: { id: $id }
     }).success(function( msg ) {
-            var arr=JSON.parse(msg);
+            var arr=msg;
             $('#district').removeAttr('disabled');
             $('#district')
                 .find('option')

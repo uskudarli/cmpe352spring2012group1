@@ -1,18 +1,13 @@
 package plug.DAO.Impl;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Repository;
 import plug.DAO.DummyDAO;
 import plug.beans.*;
 import plug.beans.mappers.UserMapper;
 
 import javax.sql.DataSource;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -65,15 +60,15 @@ public class DummyDAOImpl implements DummyDAO {
     }
 
     @Override
-    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate) {
-        return jdbcTemplate.update("insert into offered_services (user_id,title,`desc`,tag,begin_date,end_date) values(?,?,?,?,?,?)",
-                userId,serviceName,description,hiddenTagList,beginDate,endDate)>0;
+    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate, String intervalString, int cityId, int townId, int districtId) {
+        return jdbcTemplate.update("insert into offered_services (user_id,title,`desc`,tag,begin_date,end_date,`time`,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?)",
+                userId,serviceName,description,hiddenTagList,beginDate,endDate,intervalString,cityId,townId,districtId)>0;
     }
 
     @Override
-    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone) {
-        return jdbcTemplate.update("insert into requested_services (user_id,title,`desc`,tag,begin_date,end_date,service_everyone) values(?,?,?,?,?,?,?)",
-                userId,serviceName,description,hiddenTagList,begin,end,serviceAnyone)>0;
+    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone, int cityId, int townId, int districtId) {
+        return jdbcTemplate.update("insert into requested_services (user_id,title,`desc`,tag,begin_date,end_date,service_everyone,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?)",
+                userId,serviceName,description,hiddenTagList,begin,end,serviceAnyone,cityId,townId,districtId)>0;
     }
 
     @Override
