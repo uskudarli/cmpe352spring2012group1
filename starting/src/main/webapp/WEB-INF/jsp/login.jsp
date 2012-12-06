@@ -91,7 +91,7 @@
             <div class="span4 offset3">
                 <h3>Take a look inside</h3>
                 <p>Take a tour as a guest before registering into the system</p>
-                <p><a class="btn" href="search.html">View details &raquo;</a></p>
+                <p><a class="btn" href="/starting/search">View details &raquo;</a></p>
             </div>
         </div>
     </div>

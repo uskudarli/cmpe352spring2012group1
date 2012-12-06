@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%-- This is the main profile page of a unique user --%>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +107,7 @@ body {
 														<hr class="bs-docs-separator">
 														${service.desc}
 														<hr class="bs-docs-separator">
-														${service.beginDate} ${service.endDate}
+                                                        <fmt:formatDate dateStyle="short" value="${service.beginDate}"></fmt:formatDate> <fmt:formatDate dateStyle="short" value="${service.endDate}"></fmt:formatDate>
 													</div>
 												</div>
 											</div>
@@ -155,8 +156,8 @@ body {
 															<hr class="bs-docs-separator">
 															${service.desc}
 															<hr class="bs-docs-separator">
-															${service.beginDate} ${service.endDate}
-														</div>
+                                                            <fmt:formatDate dateStyle="short" value="${service.beginDate}"></fmt:formatDate> <fmt:formatDate dateStyle="short" value="${service.endDate}"></fmt:formatDate>
+                                                        </div>
 													</div>
 												</div>
 

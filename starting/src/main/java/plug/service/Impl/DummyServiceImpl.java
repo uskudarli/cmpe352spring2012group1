@@ -3,7 +3,6 @@ package plug.service.Impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import plug.DAO.DummyDAO;
 import plug.beans.*;
@@ -56,13 +55,13 @@ public class DummyServiceImpl implements DummyService {
     }
 
     @Override
-    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate) {
-        return dummyDAO.offerService(userId,serviceName,description,hiddenTagList,beginDate,endDate);
+    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate, String intervalString, int cityId, int townId, int districtId) {
+        return dummyDAO.offerService(userId,serviceName,description,hiddenTagList,beginDate,endDate,intervalString,cityId,townId,districtId);
     }
 
     @Override
-    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone) {
-        return dummyDAO.createService(userId,serviceName,description,hiddenTagList,begin,end,serviceAnyone);
+    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone, int cityId, int townId, int districtId) {
+        return dummyDAO.createService(userId,serviceName,description,hiddenTagList,begin,end,serviceAnyone,cityId,townId,districtId);
     }
 
     @Override
