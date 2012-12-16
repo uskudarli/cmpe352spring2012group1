@@ -36,17 +36,40 @@
 <jsp:include page="headerUser.jsp"></jsp:include>
 
 <div class="hero-unit">
-<div class="row">
+
 
 <form class="form-horizontal" method="post" action="" accept-charset="UTF-8">
-        <legend>Edit your information</legend>
-        
-        <!-- Button to trigger modal -->
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Change your avatar</a>
-<img src="/starting/static/img/${loggedInUser.avatar}.jpg" class="img-rounded" width="70" height="70">
+    <legend>Edit your information</legend>       
 	
-<!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <!-- email -->
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">E-mail</label>
+        <div class="controls">
+            <input type="email" id="Email" placeholder="${loggedInUser.email}">
+        </div>
+    </div>
+    <!-- password -->    
+    <div class="control-group">
+        <label class="control-label" for="inputPassword">Password</label>
+        <div class="controls">
+            <input type="password" id="password" placeholder="${loggedInUser.password}"/>
+        </div>
+    </div>
+        <!-- Button to trigger modal -->
+        <div class="control-group">
+            <div class="controls">
+                <img src="/starting/static/img/${loggedInUser.avatar}.jpg" class="img-rounded" width="70" height="70"/>
+                <a href="#myModal" role="button" class="btn btn-link" data-toggle="modal">Change...</a>
+            </div>
+        </div>
+                        <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn">Save changes</button>
+        </div>
+        </div>
+                    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h4 id="myModalLabel">Choose an avatar</h3>
@@ -89,24 +112,10 @@
   </div>
     
 </div>
-        <div class="control-group">
-          <label class="control-label" for="email">E-mail</label>
-          <div class="controls">
-            <input type="email" id="Email" placeholder="${loggedInUser.email}">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="inputPassword">Password</label>
-          <div class="controls">
-            <input type="password" id="password" placeholder="${loggedInUser.password}">
-          </div>
-        </div>
-    </form>
+</form>
+
 
 </div>
-
-</div>
-
 
   </body>
 </html>
