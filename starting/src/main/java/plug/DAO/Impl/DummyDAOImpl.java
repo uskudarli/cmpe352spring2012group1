@@ -81,4 +81,24 @@ public class DummyDAOImpl implements DummyDAO {
         return jdbcTemplate.query(serviceQuery,new BeanPropertyRowMapper<OfferedServices>(OfferedServices.class));
     }
 
+    @Override
+    public boolean enableDisableOffer(int serviceId, int enabled) {
+        return jdbcTemplate.update("update offered_services set enabled=? where id=?",enabled,serviceId)>0;
+    }
+
+    @Override
+    public boolean enableDisableRequest(int serviceId, int enabled) {
+        return jdbcTemplate.update("update requested_services set enabled=? where id=?",enabled,serviceId)>0;
+    }
+
+    @Override
+    public boolean deleteOfferedService(int serviceId) {
+        return jdbcTemplate.update("delete from offered_services where id=?",serviceId)>0;
+    }
+
+    @Override
+    public boolean deleteRequestedService(int serviceId) {
+        return jdbcTemplate.update("delete from requested_services where id=?",serviceId)>0;
+    }
+
 }

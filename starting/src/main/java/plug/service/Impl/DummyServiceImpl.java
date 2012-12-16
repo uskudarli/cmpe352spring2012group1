@@ -73,4 +73,24 @@ public class DummyServiceImpl implements DummyService {
     public List<OfferedServices> getOfferedServicesSearchResult(String serviceQuery) {
         return dummyDAO.getOfferedServicesSearchResult(serviceQuery);
     }
+
+    @Override
+    public boolean enableDisableOffer(int serviceId, int enabled) {
+        return dummyDAO.enableDisableOffer(serviceId,enabled);
+    }
+
+    @Override
+    public boolean enableDisableRequest(int serviceId, int enabled) {
+        return dummyDAO.enableDisableRequest(serviceId,enabled);
+    }
+
+    @Override
+    public boolean deleteOfferedService(int serviceId) {
+        return dummyDAO.deleteOfferedService(serviceId);
+    }
+
+    @Override
+    public boolean deleteRequestedService(int serviceId) {
+        return dummyDAO.deleteRequestedService(serviceId);
+    }
 }

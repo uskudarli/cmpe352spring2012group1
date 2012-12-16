@@ -32,4 +32,12 @@ public interface DummyDAO {
     List<RequestedServices> getRequestedServicesSearhResult(String serviceQuery);
 
     List<OfferedServices> getOfferedServicesSearchResult(String serviceQuery);
+
+    boolean enableDisableOffer(int serviceId, int enabled);
+
+    boolean enableDisableRequest(int serviceId, int enabled);
+
+    boolean deleteOfferedService(int serviceId);
+
+    boolean deleteRequestedService(int serviceId);
 }
