@@ -8,6 +8,7 @@ package plug.beans;
  * To change this template use File | Settings | File Templates.
  */
 public class ServiceStatusBean {
+    int interactionId;
     ServiceType type;
     int serviceId;
     int providerId;
