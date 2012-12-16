@@ -26,14 +26,8 @@
       <script>
           $(document).ready(function() {
               jQuery(".tagManager").tagsManager();
+              $('.btn-danger').popover();
               townUtil();
-              $('#username').editable({
-                  type:  'text',
-                  pk:    1,
-                  name:  'username',
-                  url:   '/starting/edit',
-                  title: 'Enter username'
-              });
           });
       </script>
 
@@ -82,7 +76,6 @@
       
       <br>
 
-        <%--<a href="#" id="username">superuser</a>--%>
 
     </div> <!-- /container -->
 
@@ -119,7 +112,9 @@
                 </td>
                 <td><fmt:formatDate dateStyle="short" value="${service.beginDate}"></fmt:formatDate></td>
                 <td><fmt:formatDate dateStyle="short" value="${service.endDate}"></fmt:formatDate></td>
-            </tr>
+                <%--<td><a data-placement="left" class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a></td>
+                <input type="hidden" value="${service.id}"/>
+           --%> </tr>
         </c:forEach>
         </div>
         </tbody>
@@ -158,7 +153,9 @@
                 </td>
                 <td><fmt:formatDate value="${service.beginDate}"></fmt:formatDate></td>
                 <td><fmt:formatDate value="${service.endDate}"></fmt:formatDate></td>
-            </tr>
+           <%--     <td><a data-placement="left" class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a></td>
+                <input type="hidden" value="${service.id}"/>
+           --%> </tr>
         </c:forEach>
         </div>
         </tbody>

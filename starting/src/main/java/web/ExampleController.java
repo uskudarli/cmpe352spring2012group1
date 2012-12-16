@@ -216,6 +216,40 @@ public class ExampleController{
         return new ModelAndView("search","m",model);
     }
 
+    @RequestMapping(value = "/service/able",method = RequestMethod.POST)
+    @ResponseBody
+    public void enableDisableService(HttpServletResponse response,
+                                     @RequestParam("serviceid") int serviceId,
+                                     @RequestParam("acttype") String actType,
+                                     @RequestParam("servicetype") String serviceType){
+        int enabled=actType.equals("activate")?1:0;
+        if(serviceType.equals("offer")){
+            dummyService.enableDisableOffer(serviceId,enabled);
+        }
+
+        else if(serviceType.equals("request")){
+            dummyService.enableDisableRequest(serviceId,enabled);
+        }
+
+        response.setStatus(204);
+    }
+
+    @RequestMapping(value = "/service/delete",method = RequestMethod.POST)
+    @ResponseBody
+    public void deleteService(HttpServletResponse response,
+                                     @RequestParam("serviceid") int serviceId,
+                                     @RequestParam("servicetype") String serviceType){
+        if(serviceType.equals("offer")){
+            dummyService.deleteOfferedService(serviceId);
+        }
+
+        else if(serviceType.equals("request")){
+            dummyService.deleteRequestedService(serviceId);
+        }
+
+        response.setStatus(204);
+    }
+
     public static String formatDate(String date)
     {
         String[] numbers=date.split("/");

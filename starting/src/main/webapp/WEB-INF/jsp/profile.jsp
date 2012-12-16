@@ -22,6 +22,54 @@
 <script>
 	$(document).ready(function() {
 		jQuery(".tagManager").tagsManager();
+        $('body').on('click','.activator',function(){
+            $that=this;
+            var $serviceid=$(this).parent().next().next().val();
+            var $acttype=$(this).parent().next().next().next().val();
+            var $servicetype=$(this).parent().next().next().next().next().val();
+            var $reverseacttype='activate';
+            var $btnclass=$(this).attr('class');
+            var $reversebtnclass='btn btn-small btn-warning activator';
+//            alert('$serviceid:'+$serviceid+' $acttype:'+$acttype+' $servicetype:'+$servicetype);
+            if($acttype=='activate'){
+               $reverseacttype='inactivate';
+            }
+
+            if($btnclass=='btn btn-small btn-warning activator'){
+                $reversebtnclass='btn btn-small btn-success activator';
+            }
+
+            $.ajax({
+                url: "/starting/service/able",
+                type: "POST",
+                data: {serviceid : $serviceid,acttype:$acttype,servicetype:$servicetype},
+                success:function(data) {
+                    $($that).parent().next().next().next().attr('value',$reverseacttype);
+                    $($that).html($reverseacttype);
+                    $($that).removeClass($btnclass);
+                    $($that).addClass($reversebtnclass);
+                }
+            });
+
+
+            return false;
+        })
+        $('body').on('click','.deleter',function(){
+            var $that=this;
+            var $serviceid=$(this).parent().next().val();
+            var $servicetype=$(this).parent().next().next().next().val();
+
+            $.ajax({
+                url: "/starting/service/delete",
+                type: "POST",
+                data: {serviceid : $serviceid,servicetype:$servicetype},
+                success:function(data) {
+                    $($that).parent().parent().remove();
+                }
+            });
+        })
+
+
 	});
 </script>
 <!-- Le styles -->
@@ -87,8 +135,8 @@ body {
 
 							<tbody>
 
-								<c:forEach items="${offeredServices}" var="service">
 									<div class="accordion" id="accordion1">
+								<c:forEach items="${offeredServices}" var="service">
 									<tr>
 										<td>
 											<div class="accordion-group">
@@ -112,13 +160,14 @@ body {
 												</div>
 											</div>
 										</td>
-
-										<td><button class="btn btn-small btn-success" type="button" rel="tooltip" title="Click to deactivate">Active</button></td>
-										<td><button class="btn btn-small btn-warning" type="button" rel="tooltip" title="Click to activate">Inactive</button></td>
-										<td><button class="btn btn-small btn-danger" type="button" rel="tooltip" title="Click to delete">Delete</button></td>
+										<td><a class="btn btn-small btn-${service.enabled==true?'warning':'success'} activator" href="" type="button" rel="tooltip" title="Click to activate">${service.enabled==true?'Inactivate':'Activate'}</a></td>
+                                        <td><a class="btn btn-small btn-danger deleter" type="button" rel="tooltip" title="Click to delete">Delete</a></td>
+                                        <input type="hidden" name="serviceid" value="${service.id}"/>
+                                        <input type="hidden" name="acttype" value="${service.enabled==true?'inactivate':'activate'}"/>
+                                        <input type="hidden" name="servicetype" value="offer"/>
 									</tr>
-									</div>
 								</c:forEach>
+									</div>
 
 
 							</tbody>
@@ -153,7 +202,7 @@ body {
 														class="accordion-body collapse">
 														<div class="accordion-inner">
 															<i>${service.tag}</i>
-															<hr class="bs-docs-separator">
+															<hr class="bs-docs-setparator">
 															${service.desc}
 															<hr class="bs-docs-separator">
                                                             <fmt:formatDate dateStyle="short" value="${service.beginDate}"></fmt:formatDate> <fmt:formatDate dateStyle="short" value="${service.endDate}"></fmt:formatDate>
@@ -163,9 +212,11 @@ body {
 
 											</td>
 
-											<td><button class="btn btn-small btn-success" type="button" rel="tooltip" title="Click to deactivate">Active</button></td>
-											<td><button class="btn btn-small btn-danger" type="button" rel="tooltip" title="Click to delete">Delete</button></td>
-										</tr>
+                                            <td><a class="btn btn-small btn-${service.enabled==true?'warning':'success'} activator" href="" type="button" rel="tooltip" title="Click to activate">${service.enabled==true?'Inactivate':'Activate'}</a></td>
+                                            <td><a class="btn btn-small btn-danger deleter" type="button" rel="tooltip" title="Click to delete">Delete</a></td>
+                                            <input type="hidden" name="serviceid" value="${service.id}"/>
+                                            <input type="hidden" name="acttype" value="${service.enabled==true?'inactivate':'activate'}"/>
+                                            <input type="hidden" name="servicetype" value="request"/> </tr>
 
 									</c:forEach>
 								</div>
