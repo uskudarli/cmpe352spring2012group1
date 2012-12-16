@@ -92,11 +92,9 @@ public class ServiceTest {
     @Test
     public void testOfferedServices() throws Exception {
         List<OfferedServices> offeredServices=dummyService.getOfferedServicesSearchResult("select title from offered_services where user_id=1");
-        assertEquals("örgü örmek",offeredServices.get(0).getTitle());
-        assertEquals("Guitar Lesson",offeredServices.get(1).getTitle());
-        assertEquals("deneme",offeredServices.get(2).getTitle());
-        assertEquals("Almanca dersi",offeredServices.get(3).getTitle());
-        assertEquals("Waffle toasterr",offeredServices.get(4).getTitle());
+        assertEquals("Guitar Lesson",offeredServices.get(0).getTitle());
+        assertEquals("deneme",offeredServices.get(1).getTitle());
+        assertEquals("Almanca dersi",offeredServices.get(2).getTitle());
     }
 
        
@@ -107,9 +105,6 @@ public class ServiceTest {
         List<RequestedServices> requestedServices=dummyService.getRequestedServicesSearhResult("select title from requested_services where user_id=1");
         assertEquals("perde takma",requestedServices.get(0).getTitle());
         assertEquals("math",requestedServices.get(1).getTitle());
-        assertEquals("ffggf",requestedServices.get(2).getTitle());
-        assertEquals("test",requestedServices.get(3).getTitle());
-        assertEquals("Cook delicious birthday cakes",requestedServices.get(4).getTitle());
     }
     
 }
