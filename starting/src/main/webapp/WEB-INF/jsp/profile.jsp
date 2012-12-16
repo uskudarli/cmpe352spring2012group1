@@ -90,14 +90,14 @@ body {
 	<div class="container">
 		<div class="row">
 			<div class="span3">
-				<img src="static/img/${loggedInUser.avatar}.jpg" />
+				<img src="/starting/static/img/${loggedInUser.avatar}.jpg" class="img-rounded"/>
 			</div>
 			<div class="span3" align="center">
 				<h2>${loggedInUser.name} ${loggedInUser.surname}</h2>
 				<%--<h4>City - Town - District</h4>--%>
 				<div class="btn-group">
 					<button class="btn">
-						<a href="#">Edit Profile</a>
+						<a href="profile/edit">Edit Profile</a>
 					</button>
 				</div>
 			</div>
