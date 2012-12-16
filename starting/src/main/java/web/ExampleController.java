@@ -58,6 +58,19 @@ public class ExampleController{
     public ModelAndView login(Model model) {
         return  new ModelAndView("login","m",model);
     }
+    
+    @RequestMapping(value="/signup", method = RequestMethod.GET)
+    public ModelAndView signup(Model model) {
+        return  new ModelAndView("signup","m",model);
+    }
+    
+    @RequestMapping(value="profile/edit", method = RequestMethod.GET)
+    public ModelAndView edit(Model model) {
+        Users user= dummyService.getLoggedInUser();
+        model.addAttribute("loggedInUser",user);
+        return  new ModelAndView("edit","m",model);
+    }
+    
     @RequestMapping(value="/loginfailed", method = RequestMethod.GET)
     public ModelAndView loginerror(Model model) {
         model.addAttribute("error", "true");
