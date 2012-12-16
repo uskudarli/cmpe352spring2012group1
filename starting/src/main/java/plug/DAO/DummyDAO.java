@@ -40,4 +40,8 @@ public interface DummyDAO {
     boolean deleteOfferedService(int serviceId);
 
     boolean deleteRequestedService(int serviceId);
+
+    boolean applyService(ServiceType type,Integer serviceId, Integer providerId, Integer consumerId, Integer credit, String applyMsg);
+
+    List<ServiceStatus> getServiceStasuses();
 }
