@@ -1,5 +1,51 @@
 #summary Meeting Minutes
 
+
+= Meeting 31 =
+*Date:* 16.12.2012 10.00-20.00 *Location:* Lounge
+
+*Participants:* Duygu, Seçkin, Dila, Hasan, Umur, Tuğra
+
+==Action items:==
+ # will be completed...
+
+----
+= Meeting 30 =
+*Date:* 13.12.2012 11.00-12.00 *Location:* Lounge
+
+*Participants:* Duygu, Seçkin, Dila, Hasan, Umur, Tuğra
+
+==Action items:==
+ # will be completed...
+
+----
+= Meeting 29 =
+*Date:* 06.12.2012 11.00-12.00 *Location:* Lounge
+
+*Participants:* Duygu, Seçkin, Dila, Hasan, Umur, Alperen, Tuğra
+
+==Action items:==
+ # will be completed...
+
+----
+= Meeting 28 =
+*Date:* 29.11.2012 11.00-12.00 *Location:* Lounge
+
+*Participants:* Duygu, Seçkin, Dila, Hasan, Umur, Alperen, Tuğra
+
+==Action items:==
+ # will be completed...
+
+----
+= Meeting 27 =
+*Date:* 02.12.2012 13.00-18.00 *Location:* CMPE Building
+
+*Participants:* Duygu, Seçkin, Dila, Hasan, Umur, Alperen, Tuğra
+
+==Action items:==
+ # will be completed...
+
+----
 = Meeting 26 =
 *Date:* 23.11.2012 23:00-23:45 *Location:* Online
 
