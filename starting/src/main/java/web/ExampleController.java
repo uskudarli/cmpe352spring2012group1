@@ -46,6 +46,7 @@ public class ExampleController{
         Users user= dummyService.getLoggedInUser();
         List<RequestedServices> requestedServices=dummyService.getRequestedServices(user.getUserId());
         List<OfferedServices> offeredServices=dummyService.getOfferedServices(user.getUserId());
+        List<ServiceStatus> serviceStatusList=dummyService.getServiceStasuses();
         model.addAttribute("requestedServices",requestedServices);
         model.addAttribute("offeredServices",offeredServices);
         model.addAttribute("loggedInUser", user);

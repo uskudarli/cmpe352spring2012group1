@@ -101,4 +101,15 @@ public class DummyDAOImpl implements DummyDAO {
         return jdbcTemplate.update("delete from requested_services where id=?",serviceId)>0;
     }
 
+    @Override
+    public boolean applyService(ServiceType type,Integer serviceId, Integer providerId, Integer consumerId, Integer credit, String applyMsg) {
+        return jdbcTemplate.update("insert into service_status values(?,?,?,?,?,?,?,'')",type.toString(),serviceId,providerId,consumerId,credit,
+                ServiceStatus.NotSeen,applyMsg)>0;
+    }
+
+    @Override
+    public List<ServiceStatus> getServiceStasuses() {
+        return jdbcTemplate.query("select * from service_status",new BeanPropertyRowMapper<ServiceStatus>(ServiceStatus.class));
+    }
+
 }

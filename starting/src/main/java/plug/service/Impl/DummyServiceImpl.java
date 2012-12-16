@@ -93,4 +93,14 @@ public class DummyServiceImpl implements DummyService {
     public boolean deleteRequestedService(int serviceId) {
         return dummyDAO.deleteRequestedService(serviceId);
     }
+
+    @Override
+    public boolean applyService(ServiceType type,Integer serviceId, Integer providerId, Integer consumerId, Integer credit, String applyMsg) {
+        return dummyDAO.applyService(type,serviceId,providerId,consumerId,credit,applyMsg);
+    }
+
+    @Override
+    public List<ServiceStatus> getServiceStasuses() {
+        return dummyDAO.getServiceStasuses();
+    }
 }
