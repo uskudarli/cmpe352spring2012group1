@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import net.jeremybrooks.knicker.AccountApi;
 import net.jeremybrooks.knicker.Knicker;
 import net.jeremybrooks.knicker.Knicker.RelationshipType;
@@ -13,7 +14,6 @@ import net.jeremybrooks.knicker.dto.Related;
 import net.jeremybrooks.knicker.dto.TokenStatus;
 
 /**
- *
  * @author Seckin Savasci
  */
 public class QuerryGen {
@@ -22,7 +22,7 @@ public class QuerryGen {
      * @param args the command line arguments
      */
     // example usage for searching in the given cols of the table
-   /* public static void main(String[] args) {
+    /* public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello world");
         String[] priolist = new String[3];
@@ -43,7 +43,8 @@ public class QuerryGen {
 
     }*/
     // method that generates SQL string for given parameters
-    public static String searchQuery(String tableName, String[] fieldName, String begin_date, String end_date, String tags,int cityId,int townId) {
+    // if not specified in GUI, townId will come as -1
+    public static String searchQuery(String tableName, String[] fieldName, String begin_date, String end_date, String tags, int cityId, int townId) {
         String result = "";
         String[] list = tags.split(",");
         //Syntatic Improvement
@@ -54,35 +55,66 @@ public class QuerryGen {
         tags = tags.replaceAll("es$", "");
         tags = tags.replaceAll("s,", ",");
         tags = tags.replaceAll("s$", "");
+        tags = tags.replaceAll("'","\'");
         ///////////////////////////
         tags = tags.replaceAll(",", "|");
 
-        for (int k = 0; k < fieldName.length; k++) {
-            for (int i = list.length; i > 0; i--) {
-                result += "select * from \n ( select * from " + tableName + " where\n "
-                        + "begin_date > '" + begin_date + "' \n"
-                        + " and end_date < '" + end_date + "'\n"
-                        + " and enabled = 1) as date_checked \n"
-                        + " where " + fieldName[k] + " " + "rlike '(.*)";
+        if (townId != -1) {
+            for (int k = 0; k < fieldName.length; k++) {
+                for (int i = list.length; i > 0; i--) {
+                    result += "select * from \n ( select * from " + tableName + " where\n "
+                            + "begin_date > '" + begin_date + "' \n"
+                            + " and end_date < '" + end_date + "'\n"
+                            + " and town_id = " + Integer.toString(townId) + "\n"
+                            + " and enabled = 1) as date_checked \n"
+                            + " where " + fieldName[k] + " " + "rlike '(.*)";
 
-                //for (int j = 0; j < i; j++) {
-                //    result += "(" + tags + ")(.*)";
-                //}
-                result += "((" + tags + ")(.*)){"+Integer.toString(i)+"}";
-                result += "'";
-                if (i != 1) {
-                    result += "\n union \n";
+                    //for (int j = 0; j < i; j++) {
+                    //    result += "(" + tags + ")(.*)";
+                    //}
+                    result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                    result += "'";
+                    if (i != 1) {
+                        result += "\n union \n";
+                    }
+
                 }
-
+                if (k == fieldName.length - 1) {
+                    result += ";";
+                } else {
+                    result += " \n union \n";
+                }
             }
-            if (k == fieldName.length - 1) {
-                result += ";";
-            } else {
-                result += " \n union \n";
+        } else {
+            for (int k = 0; k < fieldName.length; k++) {
+                for (int i = list.length; i > 0; i--) {
+                    result += "select * from \n ( select * from " + tableName + " where\n "
+                            + "begin_date > '" + begin_date + "' \n"
+                            + " and end_date < '" + end_date + "'\n"
+                            + " and city_id = " + Integer.toString(cityId) + "\n"
+                            + " and enabled = 1) as date_checked \n"
+                            + " where " + fieldName[k] + " " + "rlike '(.*)";
+
+                    //for (int j = 0; j < i; j++) {
+                    //    result += "(" + tags + ")(.*)";
+                    //}
+                    result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                    result += "'";
+                    if (i != 1) {
+                        result += "\n union \n";
+                    }
+
+                }
+                if (k == fieldName.length - 1) {
+                    result += ";";
+                } else {
+                    result += " \n union \n";
+                }
             }
         }
         return result;
     }
+
     // returns semantic related tags in comma seperated form
     public static String tagQuery(String tags) {
 
@@ -100,22 +132,26 @@ public class QuerryGen {
             }
 
             for (String inputWord : list) {
+                int i = 0;
                 relationList = WordApi.related(inputWord);
 
                 for (Related relation : relationList) {
                     System.out.println(relation.getRelType());
 
-                    if (RelationshipType.hyponym.toString().equals(relation.getRelType())
-                            || "verb-stem".equals(relation.getRelType())
-                            || "equivalent".equals(relation.getRelType())
-                            || "form".equals(relation.getRelType())
-                            || "verb-form".toString().equals(relation.getRelType())
-                            || "variant".equals(relation.getRelType())
-                            || "same-context".toString().equals(relation.getRelType())) {
+                    if ("hyponym".equals(relation.getRelType())
+                        //|| "verb-stem".equals(relation.getRelType())
+                        //|| "equivalent".equals(relation.getRelType())
+                        //|| "form".equals(relation.getRelType())
+                        //|| "verb-form".toString().equals(relation.getRelType())
+                        //|| "variant".equals(relation.getRelType())
+                        /*|| "same-context".toString().equals(relation.getRelType())*/) {
 
                         for (String word : relation.getWords()) {
+                            if (i > 4) {
+                                break;
+                            }
                             allRelated = allRelated + "," + word;
-
+                            i++;
                         }
 
                     }
