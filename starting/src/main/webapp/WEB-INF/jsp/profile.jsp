@@ -139,7 +139,7 @@ body {
 			<div class="span3" align="center">
 				<h2>${loggedInUser.name} ${loggedInUser.surname}</h2>
 				<%--<h4>City - Town - District</h4>--%>
-				<a class="btn btn-inverse" href="#">Edit Profile</a>
+				<a class="btn btn-inverse" href="profile/edit">Edit Profile</a>
 			</div>
 			<div class="span3" align="center">
 				<h3>Credit</h3>
