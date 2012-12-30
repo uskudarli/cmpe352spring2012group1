@@ -19,6 +19,8 @@
         <script src="/starting/static/js/bootstrap-datepicker.js"></script>
         <script src="/starting/static/js/bootstrap-timepicker.js"></script>
         <script src="/starting/static/js/main.js"></script>
+        <script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+		<script src="http://jquery-limit.googlecode.com/files/jquery.limit-1.2.source.js"></script>
     </head>
  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,10 +60,25 @@
             </div>
             <br>
 
+<!-- <form>
+		<label>Limit demonstration</label>
+		<div class="width-hack-input">
+			<span class="w">
+				<textarea type="text" class="input">Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy.</textarea>
+			</span>
+			<p>You have <span id="charsLeft"></span> chars left.</p>
+		</div>
+	</form -->
+
+
             <input type="hidden" name="userId" value="${loggedInUser.userId}">
 
             <label>Service Name</label>
-            <input class="span6" type="text" name="servicename" required=""/>
+            <input id="title" class="span6" type="text" name="servicename" required=""/>
+            <p>You have <span id="titlecharsLeft"></span> chars left.</p>
+            	<script>
+		$('#title').limit('70','#titlecharsLeft');
+	</script>
 
             <label>Description</label>
             <textarea class="span6" rows="2" name="description" required=""></textarea>
