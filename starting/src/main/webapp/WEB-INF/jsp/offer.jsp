@@ -19,7 +19,6 @@
         <script src="/starting/static/js/bootstrap-datepicker.js"></script>
         <script src="/starting/static/js/bootstrap-timepicker.js"></script>
         <script src="/starting/static/js/main.js"></script>
-        <script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
 		<script src="http://jquery-limit.googlecode.com/files/jquery.limit-1.2.source.js"></script>
     </head>
  
@@ -75,16 +74,23 @@
 
             <label>Service Name</label>
             <input id="title" class="span6" type="text" name="servicename" required=""/>
-            <p>You have <span id="titlecharsLeft"></span> chars left.</p>
-            	<script>
-		$('#title').limit('70','#titlecharsLeft');
-	</script>
+            <span class="help-inline label label-inverse"  id="titlecharsLeft"></span>
+
+            <script>
+		    $('#title').limit('70','#titlecharsLeft');
+	        </script>
 
             <label>Description</label>
-            <textarea class="span6" rows="2" name="description" required=""></textarea>
+            <textarea id="desc" class="span6" rows="2" name="description" required=""></textarea>
+            <span class="help-inline label label-inverse"  id="desccharsLeft"></span>
+
+            <script>
+                $('#desc').limit('500','#desccharsLeft');
+            </script>
              
             <label>Tags</label> 
-            <input type="text" name="tags" placeholder="Tags" class="tagManager"/>
+            <input  type="text" name="tags" placeholder="Tags" class="tagManager"/>
+
 
             <label>Location</label> 
       
