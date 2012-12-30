@@ -19,7 +19,7 @@
         <script src="/starting/static/js/bootstrap-datepicker.js"></script>
         <script src="/starting/static/js/bootstrap-timepicker.js"></script>
         <script src="/starting/static/js/main.js"></script>
-		<script src="http://jquery-limit.googlecode.com/files/jquery.limit-1.2.source.js"></script>
+        <script src="/starting/static/js/jquery.limit-1.2.source.js"></script>
     </head>
  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
