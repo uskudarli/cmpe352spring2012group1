@@ -49,9 +49,9 @@
   <jsp:include page="headerUser.jsp"></jsp:include>
    
     <body>
-      <div class="container">
+      <div class="container" align="center" class="span6">
         <form action="/starting/offer" method="post">
-            <label>Service Type</label> 
+            <label><strong>Offer Service</strong></label> 
             <div class="btn-group" data-toggle="buttons-radio">
             <%--<button type="button" class="btn"><a href="offer.jsp">Offer</a></button>--%>
             <%--<button type="button" class="btn"><a href="request.jsp">Request</a></button>--%>
@@ -61,10 +61,10 @@
             <input type="hidden" name="userId" value="${loggedInUser.userId}">
 
             <label>Service Name</label>
-            <input type="text" name="servicename" required="" class="cleanable"/>
+            <input class="span6" type="text" name="servicename" required=""/>
 
             <label>Description</label>
-            <textarea rows="2" cols="36" name="description" required="" class="cleanable"></textarea>
+            <textarea class="span6" rows="2" name="description" required=""></textarea>
              
             <label>Tags</label> 
             <input type="text" name="tags" placeholder="Tags" class="tagManager"/>
@@ -85,10 +85,10 @@
             <select name="district" id="district" disabled="disabled">
             </select>
             <br>
-            <label><strong>Start Date:</strong></label><input type="text" class="span2" name="begindate" required="" value="" id="dp1">
             <br>
+            <label>Start Date:</label><input type="text" class="span2" name="begindate" required="" value="" id="dp1">
             <br>
-            <label><strong>End Date:</strong></label><input type="text" class="span2" name="enddate" required="" value="" id="dp2">
+            <label>End Date:</label><input type="text" class="span2" name="enddate" required="" value="" id="dp2">
             <br>
             <br>
 
