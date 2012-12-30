@@ -143,11 +143,12 @@ body {
 			</div>
 			<div class="span3" align="center">
 				<h3>Credit</h3>
-				<span class="badge badge-info" style="font-size:20px">100</span>
+				<span class="badge badge-info" style="font-size: 20px">100</span>
 			</div>
 			<div class="span3" align="center">
 				<div class="well">
-					<a href="messages.html">Messages</a><br>
+					<a href="messages.html">Messages</a><br> <a
+						class="btn btn-danger btn-mini" href="#">Report Abuse</a>
 				</div>
 			</div>
 
@@ -280,7 +281,7 @@ body {
 														<td><span class="label label-info">F</span></td>
 														<td><a class="btn btn-mini btn-inverse" type="button"
 															rel="tooltip" title="Click to delete">Delete</a></td>
-														
+
 														<td><span
 															class="label label-${service.enabled==true?'success':'warning'}">${service.enabled==true?'A':'In'}</span></td>
 														<td><a class="btn btn-mini btn-inverse"

@@ -8,7 +8,7 @@
             <ul class="nav">
                 <li><a href="/starting/profile">Profile</a></li>
                 <li><a href="/starting/search">Search for Services</a></li>
-                <li><a href="/starting/createservice">Offer Services</a></li>
+                <li><a href="/starting/createservice">Offer/Request Services</a></li>
                 <li><a href="#">Help</a></li>
             </ul>
               <ul class="nav pull-right">
