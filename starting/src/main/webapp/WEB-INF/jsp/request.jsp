@@ -63,13 +63,17 @@
         </label>
 
         <label>Service Name</label>
-        <input type="text" required="" name="servicename" class="span6"/>
+        dfghj<span id="titleLeft"></span>vbnmöç
+        <input id="titleTextArea" type="text" required="" name="servicename" class="span6"/>
+        <script type="text/javascript">
+    		$('#titleTextArea').limit('70','#titleLeft');
+		</script>
 
         <label>Description</label>
-        <textarea rows="2" required="" cols="48" name="description" class="span6"></textarea>
+        <textarea id="descTextArea" rows="2" required="" cols="48" name="description" class="span6"></textarea>
 
         <label>Tags</label>
-        <input type="text" name="tags" placeholder="Tags" class="tagManager"/>
+        <input id="tagsTextArea" type="text" name="tags" placeholder="Tags" class="tagManager"/>
 
         <label>Location</label>
 
