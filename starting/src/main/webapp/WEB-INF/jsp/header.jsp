@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8" %>
+<script src="/starting/static/js/bootstrap-alert.js"></script>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -19,7 +20,20 @@
                     <input type="password" id="j_password" name="j_password" placeholder="Password">
                     <button type="submit" class="btn">Sign in</button>
                 </form>
+                
             </div><!--/.nav-collapse -->
         </div>
     </div>
+                                <div id = "loginerror" class="span5 offset7" align="right"></div>
+                <script>
+                bootstrap_alert = function() {}
+                bootstrap_alert.alert = function() {
+                            $('#loginerror').html('<div align="center" class="alert alert-error"><a class="close" data-dismiss="alert">×</a>Wrong user name or password.</div>')
+                        }
+
+                if(${error}) {
+                            bootstrap_alert.alert();
+                }
+                </script>​
 </div>
+                
