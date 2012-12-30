@@ -46,7 +46,6 @@ body {
 </head>
 
 <body>
-
 	<jsp:include page="headerUser.jsp"></jsp:include>
 <body>
 	<div class="container" align="left" class="span6">
