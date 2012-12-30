@@ -1,5 +1,15 @@
 #summary Meeting Minutes
 
+= Meeting 33 =
+*Date:* 30.12.2012 11.00-19.00 *Location:* Lounge
+
+*Participants:* Duygu, Seçkin, Dila, Umur, Tuğra -Online: Alperen, Hasan 
+
+==Action items:==
+ # will be completed...
+
+----
+
 = Meeting 32 =
 *Date:* 19.12.2012 19.00-21.00 *Location:* Lounge
 
