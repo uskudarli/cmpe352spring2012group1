@@ -100,7 +100,22 @@ public class DummyServiceImpl implements DummyService {
     }
 
     @Override
-    public List<ServiceStatus> getServiceStasuses() {
+    public List<ServiceStatusBean> getServiceStasuses() {
         return dummyDAO.getServiceStasuses();
+    }
+
+    @Override
+    public RequestedServices getRequestedService(int serviceId) {
+        return dummyDAO.getRequestedService(serviceId);
+    }
+
+    @Override
+    public OfferedServices getOfferedService(int serviceId) {
+        return dummyDAO.getOfferedService(serviceId);
+    }
+
+    @Override
+    public List<ServiceStatusBean> getHistory(int userId, ServiceType type) {
+        return dummyDAO.getHistory(userId,type);
     }
 }

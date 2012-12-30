@@ -1,6 +1,5 @@
 package plug.DAO;
 
-import org.springframework.security.core.userdetails.User;
 import plug.beans.*;
 
 import java.util.List;
@@ -43,5 +42,11 @@ public interface DummyDAO {
 
     boolean applyService(ServiceType type,Integer serviceId, Integer providerId, Integer consumerId, Integer credit, String applyMsg);
 
-    List<ServiceStatus> getServiceStasuses();
+    List<ServiceStatusBean> getServiceStasuses();
+
+    RequestedServices getRequestedService(int serviceId);
+
+    OfferedServices getOfferedService(int serviceId);
+
+    List<ServiceStatusBean> getHistory(int userId, ServiceType type);
 }

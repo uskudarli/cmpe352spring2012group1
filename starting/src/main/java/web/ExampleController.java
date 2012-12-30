@@ -1,20 +1,11 @@
 package web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.stream.JsonWriter;
-import com.mysql.jdbc.interceptors.SessionAssociationInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import plug.DAO.Impl.QuerryGen;
@@ -22,10 +13,7 @@ import plug.beans.*;
 import plug.service.DummyService;
 
 import java.io.*;
-import java.security.Principal;
-import java.util.Formatter;
 import java.util.List;
-import java.util.Locale;
 
 
 @Controller
@@ -44,9 +32,13 @@ public class ExampleController{
     public ModelAndView getProfile(Model model,HttpServletRequest request, HttpServletResponse response){
         //get logged in username
         Users user= dummyService.getLoggedInUser();
+        int userId=user.getUserId();
         List<RequestedServices> requestedServices=dummyService.getRequestedServices(user.getUserId());
         List<OfferedServices> offeredServices=dummyService.getOfferedServices(user.getUserId());
-        List<ServiceStatus> serviceStatusList=dummyService.getServiceStasuses();
+        List<ServiceStatusBean> historyOffered = dummyService.getHistory(userId,ServiceType.offered);
+        List<ServiceStatusBean> historyRequested = dummyService.getHistory(userId,ServiceType.requested);
+
+        List<ServiceStatusBean> serviceStatusList=dummyService.getServiceStasuses();
         model.addAttribute("serviceStatusList",serviceStatusList);
         model.addAttribute("requestedServices",requestedServices);
         model.addAttribute("offeredServices",offeredServices);
@@ -194,6 +186,10 @@ public class ExampleController{
     @RequestMapping(value = "/search" , method = RequestMethod.GET)
     public ModelAndView getSearch(Model model)
     {
+        Users user=dummyService.getLoggedInUser();
+        if(user!=null){
+           model.addAttribute("loggedInUser",user);
+        }
         model.addAttribute("cities",dummyService.getCities());
         return new ModelAndView("search","m",model);
     }
@@ -227,6 +223,8 @@ public class ExampleController{
             List<OfferedServices> offeredServices =dummyService.getOfferedServicesSearchResult(serviceQuery);
             model.addAttribute("requestedServices",offeredServices);
         }
+        Users user=dummyService.getLoggedInUser();
+        model.addAttribute("loggedInUser",user);
         model.addAttribute("cities",dummyService.getCities());
         return new ModelAndView("search","m",model);
     }
@@ -263,6 +261,41 @@ public class ExampleController{
         }
 
         response.setStatus(204);
+    }
+    @RequestMapping(value = "/apply/{type}/{serviceId}/{userId}",method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView applyGet(Model model,
+                              @PathVariable("type") String type,
+                              @PathVariable("serviceId") int serviceId,
+                              @PathVariable("userId") int userId){
+       model.addAttribute("type",type);
+       model.addAttribute("serviceId",serviceId);
+       model.addAttribute("userId",userId);
+       return new ModelAndView("applyPopover","m",model);
+    }
+
+    @RequestMapping(value = "/apply",method = RequestMethod.POST)
+    @ResponseBody
+    public String applyPost(@RequestParam("type") String type,
+                            @RequestParam("serviceId") int serviceId,
+                            @RequestParam(value = "userId" , defaultValue = "0") int userId,
+                            @RequestParam(value = "description" , defaultValue = "") String description
+    ){
+        String response="Başarısız";
+        boolean result=false;
+        if(type.equals("request")){
+            RequestedServices requestedServices=dummyService.getRequestedService(serviceId);
+            result=dummyService.applyService(ServiceType.requested,serviceId,requestedServices.getUserId(),userId,10,description);
+        }
+        else if(type.equals("offer")){
+            OfferedServices offeredServices=dummyService.getOfferedService(serviceId);
+            result=dummyService.applyService(ServiceType.offered,serviceId,offeredServices.getUserId(),userId,10,description);
+        }
+        if(result){
+            response="Başarılı";
+        }
+        return response;
+
     }
 
     public static String formatDate(String date)

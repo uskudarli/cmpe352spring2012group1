@@ -5,9 +5,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import plug.DAO.DummyDAO;
 import plug.beans.*;
+import plug.beans.mappers.OfferedServiceMap;
+import plug.beans.mappers.RequestedServiceMap;
+import plug.beans.mappers.ServiceStatusBeanMapper;
 import plug.beans.mappers.UserMapper;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,6 +27,9 @@ public class DummyDAOImpl implements DummyDAO {
      JdbcTemplate jdbcTemplate;
 
      UserMapper userMapper=new UserMapper();
+     RequestedServiceMap requestedServiceMap=new RequestedServiceMap();
+     OfferedServiceMap offeredServiceMap=new OfferedServiceMap();
+     ServiceStatusBeanMapper serviceStatusBeanMapper=new ServiceStatusBeanMapper();
 
      public void setDataSource(DataSource dataSource)
      {
@@ -36,12 +43,12 @@ public class DummyDAOImpl implements DummyDAO {
 
     @Override
     public List<RequestedServices> getRequestedServices(Integer userId) {
-        return jdbcTemplate.query("select * from requested_services where user_id=?",new BeanPropertyRowMapper<RequestedServices>(RequestedServices.class),userId);
+        return jdbcTemplate.query("select * from requested_services where user_id=?",requestedServiceMap,userId);
     }
 
     @Override
     public List<OfferedServices> getOfferedServices(Integer userId) {
-        return jdbcTemplate.query("select * from offered_services where user_id=?",new BeanPropertyRowMapper<OfferedServices>(OfferedServices.class),userId);
+        return jdbcTemplate.query("select * from offered_services where user_id=?",offeredServiceMap,userId);
     }
 
     @Override
@@ -73,12 +80,12 @@ public class DummyDAOImpl implements DummyDAO {
 
     @Override
     public List<RequestedServices> getRequestedServicesSearhResult(String serviceQuery) {
-        return jdbcTemplate.query(serviceQuery,new BeanPropertyRowMapper<RequestedServices>(RequestedServices.class));
+        return jdbcTemplate.query(serviceQuery,requestedServiceMap);
     }
 
     @Override
     public List<OfferedServices> getOfferedServicesSearchResult(String serviceQuery) {
-        return jdbcTemplate.query(serviceQuery,new BeanPropertyRowMapper<OfferedServices>(OfferedServices.class));
+        return jdbcTemplate.query(serviceQuery,offeredServiceMap);
     }
 
     @Override
@@ -103,13 +110,42 @@ public class DummyDAOImpl implements DummyDAO {
 
     @Override
     public boolean applyService(ServiceType type,Integer serviceId, Integer providerId, Integer consumerId, Integer credit, String applyMsg) {
-        return jdbcTemplate.update("insert into service_status values(?,?,?,?,?,?,?,'')",type.toString(),serviceId,providerId,consumerId,credit,
-                ServiceStatus.NotSeen,applyMsg)>0;
+        return jdbcTemplate.update("insert into service_status (`type`,service_id,provider_id,consumer_id,credit,status,apply_msg,response_msg) values(?,?,?,?,?,?,?,'')",type.toString(),serviceId,providerId,consumerId,credit,
+                ServiceStatusType.NotSeen.toString(),applyMsg)>0;
     }
 
     @Override
-    public List<ServiceStatus> getServiceStasuses() {
-        return jdbcTemplate.query("select * from service_status",new BeanPropertyRowMapper<ServiceStatus>(ServiceStatus.class));
+    public List<ServiceStatusBean> getServiceStasuses() {
+        return jdbcTemplate.query("select * from service_status",serviceStatusBeanMapper);
+    }
+
+    @Override
+    public RequestedServices getRequestedService(int serviceId) {
+        try{
+        return jdbcTemplate.queryForObject("select * from requested_services where id=?",requestedServiceMap ,serviceId);
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+    @Override
+    public OfferedServices getOfferedService(int serviceId) {
+        try{
+            return jdbcTemplate.queryForObject("select * from offered_services where id=?",new BeanPropertyRowMapper<OfferedServices>(OfferedServices.class) ,serviceId);
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+    @Override
+    public List<ServiceStatusBean> getHistory(int userId, ServiceType type) {
+        if(type.equals(ServiceType.offered)){
+            return jdbcTemplate.query("select * from service_status where type='offered' and provider_id=?",serviceStatusBeanMapper,userId);
+        }
+        else if(type.equals(ServiceType.requested)){
+            return jdbcTemplate.query("select * from service_status where type='requested' and consumer_id=?",serviceStatusBeanMapper,userId);
+        }
+        return new ArrayList<ServiceStatusBean>();
     }
 
 }

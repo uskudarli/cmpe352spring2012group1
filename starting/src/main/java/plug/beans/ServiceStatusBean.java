@@ -14,9 +14,17 @@ public class ServiceStatusBean {
     int providerId;
     int consumerId;
     int credit;
-    ServiceStatus status;
+    ServiceStatusType status;
     String applyMsg;
     String responseMsg;
+
+    public int getInteractionId() {
+        return interactionId;
+    }
+
+    public void setInteractionId(int interactionId) {
+        this.interactionId = interactionId;
+    }
 
     public ServiceType getType() {
         return type;
@@ -58,11 +66,11 @@ public class ServiceStatusBean {
         this.credit = credit;
     }
 
-    public ServiceStatus getStatus() {
+    public ServiceStatusType getStatus() {
         return status;
     }
 
-    public void setStatus(ServiceStatus status) {
+    public void setStatus(ServiceStatusType status) {
         this.status = status;
     }
 
