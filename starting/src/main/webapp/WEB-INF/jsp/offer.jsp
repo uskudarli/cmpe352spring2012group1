@@ -49,7 +49,7 @@
   <jsp:include page="headerUser.jsp"></jsp:include>
    
     <body>
-      <div class="container" align="center" class="span6">
+      <div class="container" align="left" class="span6">
         <form action="/starting/offer" method="post">
             <label><strong>Offer Service</strong></label> 
             <div class="btn-group" data-toggle="buttons-radio">
