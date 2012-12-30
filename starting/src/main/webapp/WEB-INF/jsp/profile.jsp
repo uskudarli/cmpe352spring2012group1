@@ -325,7 +325,7 @@ body {
 
 										<tbody>
 
-											<div class="accordion" id="accordion1">
+											<div class="accordion" id="accordion3">
 												<c:forEach items="${offeredServices}" var="service">
 													<tr>
 														<td>
@@ -333,7 +333,7 @@ body {
 																<div class="accordion-heading">
 																	<div>
 																		<a class="accordion-toggle" data-toggle="collapse"
-																			data-parent="#accordion1"
+																			data-parent="#accordion3"
 																			href="#collapseoffer${service.id}">${service.title}</a>
 																	</div>
 																</div>
@@ -379,7 +379,7 @@ body {
 
 										<tbody>
 
-											<div class="accordion" id="accordion2">
+											<div class="accordion" id="accordion4">
 												<c:forEach items="${requestedServices}" var="service">
 													<tr>
 														<td>
@@ -387,7 +387,7 @@ body {
 															<div class="accordion-group">
 																<div class="accordion-heading">
 																	<a class="accordion-toggle" data-toggle="collapse"
-																		data-parent="#accordion2"
+																		data-parent="#accordion4"
 																		href="#collapse${service.id}"> ${service.title} </a>
 																</div>
 
@@ -444,7 +444,7 @@ body {
 
 										<tbody>
 
-											<div class="accordion" id="accordion1">
+											<div class="accordion" id="accordion5">
 												<c:forEach items="${offeredServices}" var="service">
 													<tr>
 														<td>
@@ -452,7 +452,7 @@ body {
 																<div class="accordion-heading">
 																	<div>
 																		<a class="accordion-toggle" data-toggle="collapse"
-																			data-parent="#accordion1"
+																			data-parent="#accordion5"
 																			href="#collapseoffer${service.id}">${service.title}</a>
 																	</div>
 																</div>
@@ -499,7 +499,7 @@ body {
 
 										<tbody>
 
-											<div class="accordion" id="accordion2">
+											<div class="accordion" id="accordion6">
 												<c:forEach items="${requestedServices}" var="service">
 													<tr>
 														<td>
@@ -507,7 +507,7 @@ body {
 															<div class="accordion-group">
 																<div class="accordion-heading">
 																	<a class="accordion-toggle" data-toggle="collapse"
-																		data-parent="#accordion2"
+																		data-parent="#accordion6"
 																		href="#collapse${service.id}"> ${service.title} </a>
 																</div>
 
@@ -569,7 +569,7 @@ body {
 
 										<tbody>
 
-											<div class="accordion" id="accordion1">
+											<div class="accordion" id="accordion7">
 												<c:forEach items="${offeredServices}" var="service">
 													<tr>
 														<td>
@@ -577,7 +577,7 @@ body {
 																<div class="accordion-heading">
 																	<div>
 																		<a class="accordion-toggle" data-toggle="collapse"
-																			data-parent="#accordion1"
+																			data-parent="#accordion7"
 																			href="#collapseoffer${service.id}">${service.title}</a>
 																	</div>
 																</div>
@@ -622,7 +622,7 @@ body {
 
 										<tbody>
 
-											<div class="accordion" id="accordion2">
+											<div class="accordion" id="accordion8">
 												<c:forEach items="${requestedServices}" var="service">
 													<tr>
 														<td>
@@ -630,7 +630,7 @@ body {
 															<div class="accordion-group">
 																<div class="accordion-heading">
 																	<a class="accordion-toggle" data-toggle="collapse"
-																		data-parent="#accordion2"
+																		data-parent="#accordion8"
 																		href="#collapse${service.id}"> ${service.title} </a>
 																</div>
 
@@ -683,24 +683,6 @@ body {
 		</footer>
 
 	</div>
-	<!-- /container -->
-
-	<!-- Le javascript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<%--<script src="assets/js/jquery.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-transition.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-alert.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-modal.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-dropdown.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-scrollspy.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-tab.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-tooltip.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-popover.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-button.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-collapse.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-carousel.js"></script>--%>
-	<%--<script src="assets/js/bootstrap-typeahead.js"></script>--%>
 
 </body>
 </html>

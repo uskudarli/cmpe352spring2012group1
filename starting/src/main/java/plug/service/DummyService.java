@@ -1,7 +1,5 @@
 package plug.service;
 
-import org.springframework.security.core.userdetails.User;
-import org.springframework.stereotype.Service;
 import plug.beans.*;
 
 import java.util.List;
@@ -44,5 +42,11 @@ public interface DummyService {
 
     boolean applyService(ServiceType type,Integer serviceId,Integer providerId,Integer consumerId,Integer credit,String applyMsg);
 
-    List<ServiceStatus> getServiceStasuses();
+    List<ServiceStatusBean> getServiceStasuses();
+
+    RequestedServices getRequestedService(int serviceId);
+
+    OfferedServices getOfferedService(int serviceId);
+
+    List<ServiceStatusBean> getHistory(int userId, ServiceType type);
 }

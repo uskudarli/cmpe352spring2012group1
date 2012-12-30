@@ -65,7 +65,7 @@ public class QuerryGen {
                     result += "select * from \n ( select * from " + tableName + " where\n "
                             + "begin_date > '" + begin_date + "' \n"
                             + " and end_date < '" + end_date + "'\n"
-                            + " and town_id = " + Integer.toString(townId) + "\n"
+//                            + " and town_id = " + Integer.toString(townId) + "\n"
                             + " and enabled = 1) as date_checked \n"
                             + " where " + fieldName[k] + " " + "rlike '(.*)";
 
@@ -91,7 +91,7 @@ public class QuerryGen {
                     result += "select * from \n ( select * from " + tableName + " where\n "
                             + "begin_date > '" + begin_date + "' \n"
                             + " and end_date < '" + end_date + "'\n"
-                            + " and city_id = " + Integer.toString(cityId) + "\n"
+//                            + " and city_id = " + Integer.toString(cityId) + "\n"
                             + " and enabled = 1) as date_checked \n"
                             + " where " + fieldName[k] + " " + "rlike '(.*)";
 

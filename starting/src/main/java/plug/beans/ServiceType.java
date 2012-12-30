@@ -8,5 +8,19 @@ package plug.beans;
  * To change this template use File | Settings | File Templates.
  */
 public enum ServiceType {
-    offered,requested
+    offered("offered"),requested("requested");
+
+    String type;
+
+    ServiceType(String type){
+        type=type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
