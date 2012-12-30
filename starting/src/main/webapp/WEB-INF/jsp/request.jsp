@@ -18,6 +18,7 @@
     <script src="/starting/static/js/bootstrap-tagmanager.js"></script>
     <script src="/starting/static/js/bootstrap-datepicker.js"></script>
     <script src="/starting/static/js/main.js"></script>
+    <script src="http://jquery-limit.googlecode.com/files/jquery.limit-1.2.source.js"></script>
 </head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,10 +64,20 @@
         </label>
 
         <label>Service Name</label>
-        <input type="text" required="" name="servicename" class="span6"/>
+        <input id="title" class="span6" type="text" name="servicename" required=""/>
+        <span class="help-inline label label-inverse"  id="titlecharsLeft"></span>
+
+        <script>
+            $('#title').limit('70','#titlecharsLeft');
+        </script>
 
         <label>Description</label>
-        <textarea rows="2" required="" cols="48" name="description" class="span6"></textarea>
+        <textarea id="desc" class="span6" rows="2" name="description" required=""></textarea>
+        <span class="help-inline label label-inverse"  id="desccharsLeft"></span>
+
+        <script>
+            $('#desc').limit('500','#desccharsLeft');
+        </script>
 
         <label>Tags</label>
         <input type="text" name="tags" placeholder="Tags" class="tagManager"/>
