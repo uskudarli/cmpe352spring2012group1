@@ -55,8 +55,8 @@ body {
 				<c:forEach items="${cities}" var="city">
 					<option value="${city.id}">${city.name}</option>
 				</c:forEach>
-			</select> <label><strong>Town:</strong></label> <select name="town" id="town"
-				disabled="disabled">
+			</select> <img src="/starting/static/img/loading.gif" class="img-rounded" /> <label><strong>Town:</strong></label>
+			<select name="town" id="town" disabled="disabled">
 				<option value="0">You can choose</option>
 			</select>
 			<p>You don't have to choose town, but you must choose city!</p>
@@ -74,6 +74,7 @@ body {
 				class="tagManager" /> <br>
 
 			<button type="submit" class="btn">Search</button>
+			<img src="/starting/static/img/loading.gif" class="img-rounded" />
 		</form>
 
 		<br>
