@@ -9,7 +9,7 @@
                 <li><a href="/starting/profile">Profile</a></li>
                 <li><a href="/starting/search">Search for Services</a></li>
                 <li><a href="/starting/createservice">Offer/Request Services</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="/starting/about">Help</a></li>
             </ul>
               <ul class="nav pull-right">
                   <li><a href="<c:url value="/j_spring_security_logout"/>">Logout</a></li>

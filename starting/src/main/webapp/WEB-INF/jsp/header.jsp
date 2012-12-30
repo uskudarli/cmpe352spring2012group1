@@ -11,16 +11,12 @@
             <a class="brand" href="#">Soda Project</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li><a href="#about">About</a></li>
-
-
+                    <li><a href="/starting/about">About</a></li>
                 </ul>
 
                 <form method="post" action="<c:url value='j_spring_security_check' />" accept-charset="UTF-8" class="navbar-form pull-right">
-
                     <input type="text" id="j_username" name="j_username" placeholder="Email">
                     <input type="password" id="j_password" name="j_password" placeholder="Password">
-
                     <button type="submit" class="btn">Sign in</button>
                 </form>
             </div><!--/.nav-collapse -->
