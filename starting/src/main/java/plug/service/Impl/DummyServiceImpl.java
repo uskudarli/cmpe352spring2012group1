@@ -118,4 +118,24 @@ public class DummyServiceImpl implements DummyService {
     public List<ServiceStatusBean> getHistory(int userId, ServiceType type) {
         return dummyDAO.getHistory(userId,type);
     }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getPendingServicesConsumedByMe(int userId) {
+        return dummyDAO.getPendingServicesConsumedByMe(userId);
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getPendingServicesProvidedByMe(int userId) {
+        return dummyDAO.getPendingServicesProvidedByMe(userId);
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getCurrentServicesToDo(int userId) {
+        return dummyDAO.getCurrentServicesToDo(userId);
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getCurrentServicesWaiting(int userId) {
+        return dummyDAO.getCurrentServicesWaiting(userId);
+    }
 }
