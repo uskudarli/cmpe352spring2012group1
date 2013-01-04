@@ -35,10 +35,23 @@ public class ExampleController{
         int userId=user.getUserId();
         List<RequestedServices> requestedServices=dummyService.getRequestedServices(user.getUserId());
         List<OfferedServices> offeredServices=dummyService.getOfferedServices(user.getUserId());
+        List<ServiceStatusBeanWithUser> pendingServicesToMe = dummyService.getPendingServicesConsumedByMe(userId);
+        List<ServiceStatusBeanWithUser> pendingServicesByMe = dummyService.getPendingServicesProvidedByMe(userId);
+
+        List<ServiceStatusBeanWithUser> currentServicesToDo = dummyService.getCurrentServicesToDo(userId);
+        List<ServiceStatusBeanWithUser> currentServicesWaiting = dummyService.getCurrentServicesWaiting(userId);
+
+
         List<ServiceStatusBean> historyOffered = dummyService.getHistory(userId,ServiceType.offered);
         List<ServiceStatusBean> historyRequested = dummyService.getHistory(userId,ServiceType.requested);
 
         List<ServiceStatusBean> serviceStatusList=dummyService.getServiceStasuses();
+        model.addAttribute("currentServicesToDo",currentServicesToDo);
+        model.addAttribute("currentServicesWaiting",currentServicesWaiting);
+        model.addAttribute("historyOffered",historyOffered);
+        model.addAttribute("historyRequested",historyRequested);
+        model.addAttribute("pendingServicesToMe",pendingServicesToMe);
+        model.addAttribute("pendingServicesByMe",pendingServicesByMe);
         model.addAttribute("serviceStatusList",serviceStatusList);
         model.addAttribute("requestedServices",requestedServices);
         model.addAttribute("offeredServices",offeredServices);
@@ -285,6 +298,7 @@ public class ExampleController{
         boolean result=false;
         if(type.equals("request")){
             RequestedServices requestedServices=dummyService.getRequestedService(serviceId);
+            //todo credit miktarı alınacak.
             result=dummyService.applyService(ServiceType.requested,serviceId,requestedServices.getUserId(),userId,10,description);
         }
         else if(type.equals("offer")){

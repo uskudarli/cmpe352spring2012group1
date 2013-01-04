@@ -5,10 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import plug.DAO.DummyDAO;
 import plug.beans.*;
-import plug.beans.mappers.OfferedServiceMap;
-import plug.beans.mappers.RequestedServiceMap;
-import plug.beans.mappers.ServiceStatusBeanMapper;
-import plug.beans.mappers.UserMapper;
+import plug.beans.mappers.*;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
@@ -30,6 +27,7 @@ public class DummyDAOImpl implements DummyDAO {
      RequestedServiceMap requestedServiceMap=new RequestedServiceMap();
      OfferedServiceMap offeredServiceMap=new OfferedServiceMap();
      ServiceStatusBeanMapper serviceStatusBeanMapper=new ServiceStatusBeanMapper();
+     ServiceStatusBeanWithUserMapper serviceStatusBeanWithUserMapper=new ServiceStatusBeanWithUserMapper();
 
      public void setDataSource(DataSource dataSource)
      {
@@ -140,12 +138,83 @@ public class DummyDAOImpl implements DummyDAO {
     @Override
     public List<ServiceStatusBean> getHistory(int userId, ServiceType type) {
         if(type.equals(ServiceType.offered)){
-            return jdbcTemplate.query("select * from service_status where type='offered' and provider_id=?",serviceStatusBeanMapper,userId);
+            return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+                    "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
+                    "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
+                    "WHERE provider_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='requested'\n" +
+                    "UNION\n" +
+                    "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+                    "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
+                    "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
+                    "WHERE provider_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanMapper,userId,userId);
         }
         else if(type.equals(ServiceType.requested)){
-            return jdbcTemplate.query("select * from service_status where type='requested' and consumer_id=?",serviceStatusBeanMapper,userId);
+            return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+                    "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                    "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
+                    "WHERE consumer_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='requested'\n" +
+                    "UNION\n" +
+                    "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+                    "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                    "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
+                    "WHERE consumer_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanMapper,userId,userId);
         }
         return new ArrayList<ServiceStatusBean>();
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getPendingServicesProvidedByMe(int userId) {
+        return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
+                "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
+                "WHERE provider_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='requested'\n" +
+                "UNION\n" +
+                "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
+                "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
+                "WHERE provider_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
+
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getPendingServicesConsumedByMe(int userId) {
+       return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+               "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+               "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
+               "WHERE consumer_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='requested'\n" +
+               "UNION\n" +
+               "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+               "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+               "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
+               "WHERE consumer_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
+    }
+
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getCurrentServicesToDo(int userId) {
+        return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
+                "INNER JOIN offered_services rs on(rs.id=st.service_id)\n" +
+                "WHERE provider_id=? AND st.`status`='Approved' AND st.type='offered'\n" +
+                "UNION\n" +
+                "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN requested_services os on(os.id=st.service_id)\n" +
+                "WHERE consumer_id=? AND st.`status`='Approved' AND st.type='requested'\n",serviceStatusBeanWithUserMapper,userId,userId);
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getCurrentServicesWaiting(int userId) {
+        return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
+                "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
+                "WHERE provider_id=? AND st.`status`='Approved' AND st.type='requested'\n" +
+                "UNION\n" +
+                "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
+                "WHERE consumer_id=? AND st.`status`='Approved' AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
+
     }
 
 }

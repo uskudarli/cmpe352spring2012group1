@@ -49,4 +49,12 @@ public interface DummyDAO {
     OfferedServices getOfferedService(int serviceId);
 
     List<ServiceStatusBean> getHistory(int userId, ServiceType type);
+
+    List<ServiceStatusBeanWithUser> getPendingServicesConsumedByMe(int userId);
+
+    List<ServiceStatusBeanWithUser> getPendingServicesProvidedByMe(int userId);
+
+    List<ServiceStatusBeanWithUser> getCurrentServicesToDo(int userId);
+
+    List<ServiceStatusBeanWithUser> getCurrentServicesWaiting(int userId);
 }
