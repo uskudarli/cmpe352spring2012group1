@@ -48,7 +48,7 @@ public interface DummyService {
 
     OfferedServices getOfferedService(int serviceId);
 
-    List<ServiceStatusBean> getHistory(int userId, ServiceType type);
+    List<ServiceStatusBeanWithUser> getHistory(int userId, ServiceType type);
 
     List<ServiceStatusBeanWithUser> getPendingServicesConsumedByMe(int userId);
 

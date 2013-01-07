@@ -26,9 +26,7 @@
 			.ready(function(){
                 bindAjaxForm();
                 bindAnchorForFormSubmit();
-            }
-					/*function() {
-						jQuery(".tagManager").tagsManager();
+			    jQuery(".tagManager").tagsManager();
 						$('body')
 								.on(
 										'click',
@@ -42,20 +40,30 @@
 											var $servicetype = $(this).parent()
 													.next().next().next()
 													.next().val();
-											var $reverseacttype = 'Active';
+											var $reverseacttype = 'Activate';
 											var $title = 'Click to inactivate';
 											var $btnclass = $(this).attr(
 													'class');
-											var $reversebtnclass = 'btn btn-small btn-warning activator';
+                                            var $label = $(this).parent().prev().attr('class');
+                                            var $reverselabel = 'label label-warning';
+                                            var $letter = $(this).parent().prev().val();
+                                            var $reverseletter = 'In';
+											var $reversebtnclass = 'btn btn-mini btn-inverse activator';
 											//            alert('$serviceid:'+$serviceid+' $acttype:'+$acttype+' $servicetype:'+$servicetype);
-											if ($acttype == 'Active') {
+											if ($acttype == 'Activate') {
 												$title = "Click to activate";
-												$reverseacttype = 'Inactive';
+												$reverseacttype = 'Inactivate';
 											}
 
-											if ($btnclass == 'btn btn-small btn-warning activator') {
-												$reversebtnclass = 'btn btn-small btn-success activator';
+											if ($btnclass == 'btn btn-mini btn-inverse activator') {
+												$reversebtnclass = 'btn btn-mini btn-inverse activator';
 											}
+                                            if($label=='label label-warning'){
+                                               $reverselabel = 'label label-success';
+                                            }
+                                            if($letter=='In'){
+                                                $reverseletter = 'A';
+                                            }
 
 											$
 													.ajax({
@@ -87,41 +95,19 @@
 															$($that).attr(
 																	'title',
 																	$title);
+                                                           $($that).parent().prev().attr('val',$reverseletter);
+                                                           $($that).parent().prev().attr('class',$reverselabel);
 														}
 													});
 
 											return false;
-										})
-						$('body')
-								.on(
-										'click',
-										'.deleter',
-										function() {
-											var $that = this;
-											var $serviceid = $(this).parent()
-													.next().val();
-											var $servicetype = $(this).parent()
-													.next().next().next().val();
+										})})
 
-											$
-													.ajax({
-														url : "/starting/service/delete",
-														type : "POST",
-														data : {
-															serviceid : $serviceid,
-															servicetype : $servicetype
-														},
-														success : function(data) {
-															$($that).parent()
-																	.parent()
-																	.remove();
-														}
-													});
-										})
 
-					}*/
 
-    );
+
+
+
 </script>
 <!-- Le styles -->
 <%--<link href="assets/css/bootstrap.css" rel="stylesheet">--%>

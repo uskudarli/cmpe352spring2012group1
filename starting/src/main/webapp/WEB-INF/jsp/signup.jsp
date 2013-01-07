@@ -38,21 +38,21 @@
         <legend>Enter your information below</legend>
         <!-- name -->
         <div class="control-group">
-          <label class="control-label" for="inputName">Name</label>
+          <label class="control-label" for="Name">Name</label>
           <div class="controls">
             <input type="text" id="Name" placeholder="Name">
           </div>
         </div>
         <!-- surname -->
         <div class="control-group">
-          <label class="control-label" for="inputSurname">Surname</label>
+          <label class="control-label" for="Surname">Surname</label>
           <div class="controls">
             <input type="text" id="Surname" placeholder="Surname">
           </div>
         </div>
         <!-- email -->
         <div class="control-group">
-          <label class="control-label" for="inputEmail">E-mail</label>
+          <label class="control-label" for="Email">E-mail</label>
           <div class="controls">
             <input type="email" id="Email" placeholder="E-mail">
           </div>
@@ -90,7 +90,7 @@
         <!-- Modal -->
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
                 <h4 id="myModalLabel">Choose an avatar</h4>
             </div>
             <div class="modal-body" align="center">

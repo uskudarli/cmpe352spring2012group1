@@ -136,7 +136,7 @@ public class DummyDAOImpl implements DummyDAO {
     }
 
     @Override
-    public List<ServiceStatusBean> getHistory(int userId, ServiceType type) {
+    public List<ServiceStatusBeanWithUser> getHistory(int userId, ServiceType type) {
         if(type.equals(ServiceType.offered)){
             return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
                     "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
@@ -146,7 +146,7 @@ public class DummyDAOImpl implements DummyDAO {
                     "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
                     "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
                     "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
-                    "WHERE provider_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanMapper,userId,userId);
+                    "WHERE provider_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
         }
         else if(type.equals(ServiceType.requested)){
             return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
@@ -157,9 +157,9 @@ public class DummyDAOImpl implements DummyDAO {
                     "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
                     "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
                     "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
-                    "WHERE consumer_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanMapper,userId,userId);
+                    "WHERE consumer_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
         }
-        return new ArrayList<ServiceStatusBean>();
+        return new ArrayList<ServiceStatusBeanWithUser>();
     }
 
     @Override
