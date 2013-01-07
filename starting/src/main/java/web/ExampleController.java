@@ -312,6 +312,37 @@ public class ExampleController{
 
     }
 
+    @RequestMapping(value = "/offered/delete/{id}", method = RequestMethod.GET)
+    public void deleteOfferedService(@PathVariable("id") int id,HttpServletResponse response
+    ){
+        dummyService.deleteOfferedService(id);
+        response.setStatus(HttpServletResponse.SC_NO_CONTENT);
+    }
+
+    @RequestMapping(value = "/requested/delete/{id}", method = RequestMethod.GET)
+    public void deleteRequestedService(@PathVariable("id") int id,HttpServletResponse response
+    ){
+        dummyService.deleteRequestedService(id);
+        response.setStatus(HttpServletResponse.SC_NO_CONTENT);
+    }
+
+    @RequestMapping(value = "/action/{type}/{id}", method = RequestMethod.GET)
+    public void action(@PathVariable("id") int id,
+                       @PathVariable("type") String type,
+                       HttpServletResponse response
+    ){
+        ServiceStatusType serviceStatusType;
+        if("approve".equals(type)){serviceStatusType = ServiceStatusType.Approved;}
+        else if("reject".equals(type)){serviceStatusType = ServiceStatusType.Rejected;}
+        else if("cancel".equals(type)){serviceStatusType = ServiceStatusType.Withdrawn;}
+        else if("complete".equals(type)){serviceStatusType = ServiceStatusType.Completed;}
+        else if("fail".equals(type)){serviceStatusType = ServiceStatusType.Failed;}
+        else serviceStatusType = ServiceStatusType.Seen;
+        dummyService.changeServiceStatusType(id,serviceStatusType);
+        response.setStatus(HttpServletResponse.SC_NO_CONTENT);
+    }
+
+
     public static String formatDate(String date)
     {
         String[] numbers=date.split("/");

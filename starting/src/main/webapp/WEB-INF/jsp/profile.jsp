@@ -19,10 +19,15 @@
 <script src="/starting/static/js/jquery-1.7.1.min.js"></script>
 <script src="/starting/static/js/bootstrap.js"></script>
 <script src="/starting/static/js/bootstrap-tagmanager.js"></script>
-<script>
+<script src="/starting/static/js/main.js"></script>
+
+    <script>
 	$(document)
-			.ready(
-					function() {
+			.ready(function(){
+                bindAjaxForm();
+                bindAnchorForFormSubmit();
+            }
+					/*function() {
 						jQuery(".tagManager").tagsManager();
 						$('body')
 								.on(
@@ -114,7 +119,9 @@
 													});
 										})
 
-					});
+					}*/
+
+    );
 </script>
 <!-- Le styles -->
 <%--<link href="assets/css/bootstrap.css" rel="stylesheet">--%>

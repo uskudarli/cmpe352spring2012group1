@@ -1,10 +1,11 @@
 <%--
+&lt;%&ndash;
   Created by IntelliJ IDEA.
   User: alperen
   Date: 02.01.2013
   Time: 22:36
   To change this template use File | Settings | File Templates.
---%>
+&ndash;%&gt;
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -49,10 +50,10 @@
                                         </div>
                                     </div>
                                 </td>
-                              <%--  <td><span class="label label-success">Completed</span></td>
+                              &lt;%&ndash;  <td><span class="label label-success">Completed</span></td>
                                 <td><span class="label label-important">Failed</span></td>
                                 <td><span class="label label-warning">Rejected</span></td>
-                              --%>  <td><span class="label label-warning">${service.serviceStatusBean.status}</span></td>
+                              &ndash;%&gt;  <td><span class="label label-warning">${service.serviceStatusBean.status}</span></td>
                             </tr>
                         </c:forEach>
                     </div>
@@ -98,10 +99,10 @@
                                     </div>
 
                                 </td>
-                             <%--   <td><span class="label label-success">Completed</span></td>
+                             &lt;%&ndash;   <td><span class="label label-success">Completed</span></td>
                                 <td><span class="label label-important">Failed</span></td>
                                 <td><span class="label label-warning">Rejected</span></td>
-                             --%>   <td><span class="label label-warning">${service.serviceStatusBean.status}</span></td>
+                             &ndash;%&gt;   <td><span class="label label-warning">${service.serviceStatusBean.status}</span></td>
                             </tr>
 
                         </c:forEach>
@@ -114,3 +115,4 @@
         </div>
     </div>
 </div>
+--%>

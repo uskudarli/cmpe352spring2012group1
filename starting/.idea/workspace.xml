@@ -70,52 +70,61 @@
       <file leaf-file-name="ExampleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/web/ExampleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
+            <state line="344" column="14" selection-start="16656" selection-end="16656" vertical-scroll-proportion="-14.28">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="servicesHistory.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesHistory.jsp">
+      <file leaf-file-name="DummyService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/DummyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="121" selection-start="2718" selection-end="2718" vertical-scroll-proportion="-0.65384614">
+            <state line="60" column="81" selection-start="2063" selection-end="2063" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <file leaf-file-name="DummyServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/Impl/DummyServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.1153846">
+            <state line="143" column="70" selection-start="4770" selection-end="4770" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/welcome.jsp">
+      <file leaf-file-name="DummyDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/DummyDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="60" column="81" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="servicesInProgress.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesInProgress.jsp">
+      <file leaf-file-name="DummyDAOImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/Impl/DummyDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="58" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0">
+            <state line="221" column="70" selection-start="12075" selection-end="12075" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp">
+      <file leaf-file-name="ServiceStatusBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="49" selection-start="5655" selection-end="5655" vertical-scroll-proportion="4.730769">
+            <state line="10" column="21" selection-start="218" selection-end="231" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceStatusType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="98" selection-start="298" selection-end="307" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,7 +133,25 @@
       <file leaf-file-name="pendingApplies.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/pendingApplies.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="82" selection-start="3832" selection-end="3871" vertical-scroll-proportion="0.0">
+            <state line="89" column="92" selection-start="4238" selection-end="4238" vertical-scroll-proportion="-5.8076925">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="servicesHistory.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesHistory.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="28" selection-start="0" selection-end="5309" vertical-scroll-proportion="0.418">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="servicesCreatedByMe.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesCreatedByMe.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="126" column="10" selection-start="6613" selection-end="6613" vertical-scroll-proportion="-3.8846154">
               <folding />
             </state>
           </provider>
@@ -147,21 +174,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusType.java" />
         <option value="$PROJECT_DIR$/src/main/java/plug/beans/mappers/ServiceStatusBeanWithUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/plug/beans/mappers/ServiceStatusBeanMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusBeanWithUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/plug/beans/mappers/ServiceStatusBeanWithUserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesInProgress.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusType.java" />
         <option value="$PROJECT_DIR$/src/main/java/plug/service/DummyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/plug/service/Impl/DummyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/plug/DAO/DummyDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/plug/DAO/Impl/DummyDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/web/ExampleController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/pendingApplies.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/plug/DAO/Impl/DummyDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesCreatedByMe.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesInProgress.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/pendingApplies.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesHistory.jsp" />
       </list>
     </option>
@@ -226,16 +253,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -246,6 +263,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="starting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -335,6 +362,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="starting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="starting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="starting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="starting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -476,9 +559,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -642,24 +725,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -693,6 +758,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -710,6 +793,17 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -736,17 +830,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -871,8 +954,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -993,96 +1076,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/DummyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="74" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/Impl/DummyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="58" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/DummyDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="74" selection-start="1981" selection-end="1981" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/Impl/DummyDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="72" selection-start="5974" selection-end="5974" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusBeanWithUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/mappers/ServiceStatusBeanWithUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="790" selection-end="798" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/mappers/ServiceStatusBeanMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="55" selection-start="1129" selection-end="1143" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesCreatedByMe.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="41" selection-start="2614" selection-end="2614" vertical-scroll-proportion="0.204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesInProgress.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="58" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/pendingApplies.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="82" selection-start="3832" selection-end="3871" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesHistory.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="121" selection-start="2718" selection-end="2718" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.1153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/ExampleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesInProgress.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
+        <state line="52" column="25" selection-start="2426" selection-end="2426" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="57" selection-start="1233" selection-end="1291" vertical-scroll-proportion="-15.038462">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="49" selection-start="5655" selection-end="5655" vertical-scroll-proportion="4.730769">
+        <state line="26" column="22" selection-start="1076" selection-end="1076" vertical-scroll-proportion="-13.076923">
+          <folding>
+            <element signature="e#1148#3865#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="46" selection-start="3463" selection-end="3463" vertical-scroll-proportion="-4.64">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/Impl/DummyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="70" selection-start="4770" selection-end="4770" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/DummyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="81" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="21" selection-start="218" selection-end="231" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/DummyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="81" selection-start="2063" selection-end="2063" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/plug/beans/ServiceStatusType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="98" selection-start="298" selection-end="307" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/Impl/DummyDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="70" selection-start="12075" selection-end="12075" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web/ExampleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="344" column="14" selection-start="16656" selection-end="16656" vertical-scroll-proportion="-14.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesCreatedByMe.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="10" selection-start="6613" selection-end="6613" vertical-scroll-proportion="-3.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/pendingApplies.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="92" selection-start="4238" selection-end="4238" vertical-scroll-proportion="-5.8076925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesHistory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="28" selection-start="0" selection-end="5309" vertical-scroll-proportion="0.418">
           <folding />
         </state>
       </provider>

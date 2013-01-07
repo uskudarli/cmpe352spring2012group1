@@ -57,4 +57,6 @@ public interface DummyDAO {
     List<ServiceStatusBeanWithUser> getCurrentServicesToDo(int userId);
 
     List<ServiceStatusBeanWithUser> getCurrentServicesWaiting(int userId);
+
+    boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType);
 }
