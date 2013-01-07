@@ -36,6 +36,10 @@
           <img src="static/img/slide3.jpg" alt="">
 
         </div>
+        <div class="item">
+          <img src="static/img/slide4.jpg" alt="">
+
+        </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
