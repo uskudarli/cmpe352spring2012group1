@@ -48,10 +48,10 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td><a class="btn btn-small btn-success" href=""
+                                <td><a class="btn btn-small btn-success" data-response-target-sel="tr" href="/starting/action/approve/${service.serviceStatusBean.interactionId}"
                                        type="button" rel="tooltip" title="Click to approve">Approve</a></td>
                                 <td><a class="btn btn-small btn-danger" type="button"
-                                       rel="tooltip" title="Click to reject">Reject</a></td>
+                                       rel="tooltip" title="Click to reject" data-response-target-sel="tr" href="/starting/action/reject/${service.serviceStatusBean.interactionId}">Reject</a></td>
                                 <td><span class="label label-info">In Progress</span></td>
                             </tr>
                         </c:forEach>
@@ -103,7 +103,7 @@
 																for response</span></td>
                                 <td><a class="btn btn-small btn-inverse"
                                        type="button" rel="tooltip"
-                                       title="Click to cancel the request">Cancel</a></td>
+                                       title="Click to cancel the request" data-response-target-sel="tr" href="/starting/action/cancel/${service.serviceStatusBean.interactionId}">Cancel</a></td>
                             </tr>
 
                         </c:forEach>

@@ -138,4 +138,9 @@ public class DummyServiceImpl implements DummyService {
     public List<ServiceStatusBeanWithUser> getCurrentServicesWaiting(int userId) {
         return dummyDAO.getCurrentServicesWaiting(userId);
     }
+
+    @Override
+    public boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType) {
+        return dummyDAO.changeServiceStatusType(id,serviceStatusType);
+    }
 }

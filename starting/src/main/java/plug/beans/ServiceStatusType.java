@@ -8,7 +8,7 @@ package plug.beans;
  * To change this template use File | Settings | File Templates.
  */
 public enum ServiceStatusType {
-    Seen("Seen"),NotSeen("NotSeen"),Approved("Approved"),Rejected("Rejected"),Completed("Completed"),Failed("Failed");
+    Seen("Seen"),NotSeen("NotSeen"),Approved("Approved"),Rejected("Rejected"),Withdrawn("Withdrawn"),Completed("Completed"),Failed("Failed");
 
     String name;
 

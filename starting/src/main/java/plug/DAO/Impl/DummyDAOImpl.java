@@ -217,4 +217,9 @@ public class DummyDAOImpl implements DummyDAO {
 
     }
 
+    @Override
+    public boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType) {
+        return jdbcTemplate.update("update service_status set `status` = ? where interaction_id=?",serviceStatusType.getName(),id)>0;
+    }
+
 }

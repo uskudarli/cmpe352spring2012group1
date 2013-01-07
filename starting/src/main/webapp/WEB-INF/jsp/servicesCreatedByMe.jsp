@@ -61,8 +61,7 @@
                                 <td><a class="btn btn-mini btn-inverse"
                                        title="Click to ${service.enabled==true?'inactivate':'activate'}"
                                        href="" type="button">${service.enabled==true?'Inactivate':'Activate'}</a></td>
-                                <td><a class="btn btn-mini btn-inverse" type="button"
-                                       rel="tooltip" title="Click to delete">Delete</a></td>
+                                <td><a class="btn btn-mini btn-inverse" data-response-target-sel="tr" href="/starting/offered/delete/${service.id}" type="button">Delete</a></td>
                                 <input type="hidden" name="serviceid"
                                        value="${service.id}" />
                                 <input type="hidden" name="acttype"
@@ -127,7 +126,7 @@
                                        title="Click to ${service.enabled==true?'inactivate':'activate'}"
                                        href="" type="button">${service.enabled==true?'Inactivate':'Activate'}</a></td>
                                 <td><a class="btn btn-mini btn-inverse" type="button"
-                                       rel="tooltip" title="Click to delete">Delete</a></td>
+                                       rel="tooltip" title="Click to delete" data-response-target-sel="tr" href="/starting/requested/delete/${service.id}">Delete</a></td>
                                 <input type="hidden" name="serviceid"
                                        value="${service.id}" />
                                 <input type="hidden" name="acttype"
