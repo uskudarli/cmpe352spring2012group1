@@ -140,7 +140,6 @@
     </table>
 
     </c:if>
-    haso:${loggedInUser}
     <c:if test="${offeredServices!=null}">
     <table class="table table-condensed">
         <thead>

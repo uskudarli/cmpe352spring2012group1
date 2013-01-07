@@ -42,8 +42,8 @@ public class ExampleController{
         List<ServiceStatusBeanWithUser> currentServicesWaiting = dummyService.getCurrentServicesWaiting(userId);
 
 
-        List<ServiceStatusBean> historyOffered = dummyService.getHistory(userId,ServiceType.offered);
-        List<ServiceStatusBean> historyRequested = dummyService.getHistory(userId,ServiceType.requested);
+        List<ServiceStatusBeanWithUser> historyOffered = dummyService.getHistory(userId,ServiceType.offered);
+        List<ServiceStatusBeanWithUser> historyRequested = dummyService.getHistory(userId,ServiceType.requested);
 
         List<ServiceStatusBean> serviceStatusList=dummyService.getServiceStasuses();
         model.addAttribute("currentServicesToDo",currentServicesToDo);

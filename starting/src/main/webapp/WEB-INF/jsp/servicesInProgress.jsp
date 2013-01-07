@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: alperen
-  Date: 02.01.2013
-  Time: 22:34
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -49,10 +43,6 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td><a class="btn btn-small btn-inverse" href=""
-                                       type="button" rel="tooltip"
-                                       title="Click if you have given the service">I did
-                                    this!</a></td>
                                 <td><span class="label label-info">Waiting
 																confirmation for transaction</span></td>
                             </tr>

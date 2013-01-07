@@ -115,7 +115,7 @@ public class DummyServiceImpl implements DummyService {
     }
 
     @Override
-    public List<ServiceStatusBean> getHistory(int userId, ServiceType type) {
+    public List<ServiceStatusBeanWithUser> getHistory(int userId, ServiceType type) {
         return dummyDAO.getHistory(userId,type);
     }
 
