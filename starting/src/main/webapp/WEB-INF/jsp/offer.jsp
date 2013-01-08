@@ -40,6 +40,7 @@ body {
 		$('.timepicker-default').timepicker();
 		townUtil();
 		districtUtil();
+        submitValidation();
 	});
 </script>
 
@@ -49,7 +50,7 @@ body {
 	<jsp:include page="headerUser.jsp"></jsp:include>
 <body>
 	<div class="container" align="left" class="span6">
-		<form action="/starting/offer" method="post">
+		<form action="/starting/offer" method="post" id="createform">
 			<label><strong>Offer Service</strong></label>
 			<div class="btn-group" data-toggle="buttons-radio">
 				<%--<button type="button" class="btn"><a href="offer.jsp">Offer</a></button>--%>
@@ -93,12 +94,13 @@ body {
 				<c:forEach items="${cities}" var="city">
 					<option value="${city.id}">${city.name}</option>
 				</c:forEach>
-			</select> <img src="/starting/static/img/loading.gif" class="img-rounded" />
+			</select>
 			<br> <br> <select name="town" id="town" disabled="disabled">
-			</select> <img src="/starting/static/img/loading.gif" class="img-rounded" />
+			</select> <img src="/starting/static/img/loading.gif" hidden="hidden" class="towngif" />
 			<br> <br> <select name="district" id="district"
 				disabled="disabled">
-			</select> <br> <br> <label>Start Date:</label><input type="text"
+			</select><img src="/starting/static/img/loading.gif" hidden="hidden" class="districtgif" />
+            <br> <br> <label>Start Date:</label><input type="text"
 				class="span2" name="begindate" required="" value="" id="dp1">
 			<br> <label>End Date:</label><input type="text" class="span2"
 				name="enddate" required="" value="" id="dp2"> <br> <br>

@@ -166,9 +166,9 @@ public class ExampleController{
                             @RequestParam("description") String description,
                             @RequestParam("tags") String tags,
                             @RequestParam("hidden-tags") String hiddenTagList,
-                            @RequestParam("city") int cityId,
-                            @RequestParam("town") int townId,
-                            @RequestParam("district") int districtId,
+                            @RequestParam( value = "city",defaultValue = "-1") int cityId,
+                            @RequestParam(value = "town" , defaultValue = "-1") int townId,
+                            @RequestParam(value = "district" , defaultValue = "-1") int districtId,
                             @RequestParam("begindate") String beginDate,
                             @RequestParam("enddate") String endDate,
                             @RequestParam("timeinterval1") String timeInterval1,
@@ -210,18 +210,41 @@ public class ExampleController{
                               @RequestParam("description") String description,
                               @RequestParam("tags") String tags,
                               @RequestParam("hidden-tags") String hiddenTagList,
-                              @RequestParam("city") int cityId,
-                              @RequestParam("town") int townId,
-                              @RequestParam("district") int districtId,
+                              @RequestParam( value = "city",defaultValue = "-1") int cityId,
+                              @RequestParam(value = "town" , defaultValue = "-1") int townId,
+                              @RequestParam(value = "district" , defaultValue = "-1") int districtId,
                               @RequestParam("begindate") String beginDate,
                               @RequestParam("enddate") String endDate,
+                              @RequestParam("timeinterval1") String timeInterval1,
+                              @RequestParam("timeinterval2") String timeInterval2,
+                              @RequestParam("timeinterval3") String timeInterval3,
+                              @RequestParam("timeinterval4") String timeInterval4,
+                              @RequestParam("timeinterval5") String timeInterval5,
+                              @RequestParam("timeinterval6") String timeInterval6,
+                              @RequestParam("timeinterval7") String timeInterval7,
+                              @RequestParam("timeinterval8") String timeInterval8,
+                              @RequestParam("timeinterval9") String timeInterval9,
+                              @RequestParam("timeinterval10") String timeInterval10,
+                              @RequestParam("timeinterval11") String timeInterval11,
+                              @RequestParam("timeinterval12") String timeInterval12,
+                              @RequestParam("timeinterval13") String timeInterval13,
+                              @RequestParam("timeinterval14") String timeInterval14,
                               HttpServletRequest request,
                               HttpServletResponse response
     ) throws IOException {
+        String interval1=timeInterval1+"-"+timeInterval2;
+        String interval2=timeInterval3+"-"+timeInterval4;
+        String interval3=timeInterval5+"-"+timeInterval6;
+        String interval4=timeInterval7+"-"+timeInterval8;
+        String interval5=timeInterval9+"-"+timeInterval10;
+        String interval6=timeInterval11+"-"+timeInterval12;
+        String interval7=timeInterval13+"-"+timeInterval14;
+        String intervalString=interval1+","+interval2+","+interval3+","+interval4+","+interval5+","+interval6+","+interval7;
+
         String begin=formatDate(beginDate);
         String end =formatDate(endDate);
         int everyone=serviceAnyone.equals("1")?1:0;
-        dummyService.createService(userId,serviceName,description,hiddenTagList,begin,end,everyone,cityId,townId,districtId);
+        dummyService.createService(userId,serviceName,description,hiddenTagList,begin,end,intervalString,everyone,cityId,townId,districtId);
         response.sendRedirect("/starting/profile");
     }
 
@@ -313,6 +336,17 @@ public class ExampleController{
        model.addAttribute("type",type);
        model.addAttribute("serviceId",serviceId);
        model.addAttribute("userId",userId);
+       return new ModelAndView("applyPopover","m",model);
+    }
+
+    @RequestMapping(value = "/apply/{type}/{serviceId}/",method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView applyNonUser(Model model,
+                              @PathVariable("type") String type,
+                              @PathVariable("serviceId") int serviceId)
+                              {
+       model.addAttribute("type",type);
+       model.addAttribute("serviceId",serviceId);
        return new ModelAndView("applyPopover","m",model);
     }
 

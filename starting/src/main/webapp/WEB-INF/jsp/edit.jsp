@@ -88,7 +88,7 @@
     <h3 id="myModalLabel">Choose an avatar</h3>
   </div>
   <div class="modal-body" align="center">
-      
+
     <div id="avatars">
         <input type="radio" name="radio" id="radio01" value="01" /><img src="/starting/static/img/01.jpg" class="img-rounded" alt="" width="70" height="70"/>
         <input type="radio" name="radio" id="radio02" value="02" /><img src="/starting/static/img/02.jpg" class="img-rounded" alt="" width="70" height="70"/>
