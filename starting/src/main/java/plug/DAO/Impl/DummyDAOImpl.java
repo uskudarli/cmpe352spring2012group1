@@ -222,4 +222,15 @@ public class DummyDAOImpl implements DummyDAO {
         return jdbcTemplate.update("update service_status set `status` = ? where interaction_id=?",serviceStatusType.getName(),id)>0;
     }
 
+    @Override
+    public boolean updateProfile(Integer userId, String name, String surname, String password, String avatarId) {
+        return jdbcTemplate.update("update users set name=? , surname = ? , password=? , avatar=? where user_id=?",name,surname,password,avatarId,userId)>0;
+    }
+    //todo credit default verilecek...
+    @Override
+    public boolean signup(String name, String surname, String email, String password, String avatarId) {
+        return jdbcTemplate.update("insert into users (email,password,`name`,surname,avatar,credit) values(?,?,?,?,?,?)",
+                email,password,name,surname,avatarId,10)>0;
+    }
+
 }

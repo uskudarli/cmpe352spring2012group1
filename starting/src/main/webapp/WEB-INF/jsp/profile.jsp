@@ -40,19 +40,19 @@
 											var $servicetype = $(this).parent()
 													.next().next().next()
 													.next().val();
-											var $reverseacttype = 'Activate';
-											var $title = 'Click to inactivate';
+											var $reverseacttype = 'Active';
+											var $title = 'Click to activate';
 											var $btnclass = $(this).attr(
 													'class');
-                                            var $label = $(this).parent().prev().attr('class');
+                                            var $label = $(this).parent().prev().children(0).attr('class');
                                             var $reverselabel = 'label label-warning';
-                                            var $letter = $(this).parent().prev().val();
+                                            var $letter = $(this).parent().prev().children(0).text();
                                             var $reverseletter = 'In';
 											var $reversebtnclass = 'btn btn-mini btn-inverse activator';
 											//            alert('$serviceid:'+$serviceid+' $acttype:'+$acttype+' $servicetype:'+$servicetype);
-											if ($acttype == 'Activate') {
-												$title = "Click to activate";
-												$reverseacttype = 'Inactivate';
+											if ($acttype == 'Active') {
+												$title = "Click to inactivate";
+												$reverseacttype = 'Inactive';
 											}
 
 											if ($btnclass == 'btn btn-mini btn-inverse activator') {
@@ -95,8 +95,9 @@
 															$($that).attr(
 																	'title',
 																	$title);
-                                                           $($that).parent().prev().attr('val',$reverseletter);
-                                                           $($that).parent().prev().attr('class',$reverselabel);
+                                                           $($that).parent().prev().children(0).html($reverseletter);
+                                                           $($that).parent().prev().children(0).removeClass($label);
+                                                           $($that).parent().prev().children(0).addClass($reverselabel);
 														}
 													});
 

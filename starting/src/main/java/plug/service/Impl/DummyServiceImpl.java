@@ -143,4 +143,14 @@ public class DummyServiceImpl implements DummyService {
     public boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType) {
         return dummyDAO.changeServiceStatusType(id,serviceStatusType);
     }
+
+    @Override
+    public boolean updateProfile(Integer userId, String name, String surname ,String password, String avatarId) {
+        return dummyDAO.updateProfile(userId,name,surname,password,avatarId);
+    }
+
+    @Override
+    public boolean signup(String name, String surname, String email, String password, String avatarId) {
+        return dummyDAO.signup(name,surname,email,password,avatarId);
+    }
 }
