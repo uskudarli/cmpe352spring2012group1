@@ -75,6 +75,33 @@ public class ExampleController{
         model.addAttribute("loggedInUser",user);
         return  new ModelAndView("edit","m",model);
     }
+
+    @RequestMapping(value="profile/edit", method = RequestMethod.POST)
+    public void editPOST(Model model,
+                             @RequestParam("name") String name,
+                             @RequestParam("surname") String surname,
+                             @RequestParam("password") String password,
+                             @RequestParam("avatarId") String avatarId,
+                             HttpServletResponse response
+                             ) throws IOException {
+        Users user= dummyService.getLoggedInUser();
+        dummyService.updateProfile(user.getUserId(),name,surname,password,avatarId);
+        response.sendRedirect("/starting/profile");
+    }
+
+    @RequestMapping(value="/signup", method = RequestMethod.POST)
+    public void signupPOST(Model model,
+                             @RequestParam("name") String name,
+                             @RequestParam("surname") String surname,
+                             @RequestParam("email") String email,
+                             @RequestParam("password") String password,
+                             @RequestParam("password2") String password2,
+                             @RequestParam("avatarId") String avatarId,
+                             HttpServletResponse response
+                             ) throws IOException {
+        dummyService.signup(name,surname,email,password,avatarId);
+        response.sendRedirect("/starting/login");
+    }
     
     @RequestMapping(value="/loginfailed", method = RequestMethod.GET)
     public ModelAndView loginerror(Model model) {
@@ -248,7 +275,7 @@ public class ExampleController{
                                      @RequestParam("serviceid") int serviceId,
                                      @RequestParam("acttype") String actType,
                                      @RequestParam("servicetype") String serviceType){
-        int enabled=actType.equals("activate")?1:0;
+        int enabled=actType.equals("Active")?1:0;
         if(serviceType.equals("offer")){
             dummyService.enableDisableOffer(serviceId,enabled);
         }

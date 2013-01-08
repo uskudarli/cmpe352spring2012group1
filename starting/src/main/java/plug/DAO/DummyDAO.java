@@ -60,4 +60,8 @@ public interface DummyDAO {
     List<ServiceStatusBeanWithUser> getCurrentServicesWaiting(int userId);
 
     boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType);
+
+    boolean updateProfile(Integer userId, String nema, String surname, String password, String avatarId);
+
+    boolean signup(String name, String surname, String email, String password, String avatarId);
 }

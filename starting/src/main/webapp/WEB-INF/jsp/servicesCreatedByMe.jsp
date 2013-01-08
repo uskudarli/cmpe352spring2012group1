@@ -60,7 +60,7 @@
                                         class="label label-${service.enabled==true?'success':'warning'}">${service.enabled==true?'A':'In'}</span></td>
                                 <td><a class="btn btn-mini btn-inverse activator"
                                        title="Click to ${service.enabled==true?'inactivate':'activate'}"
-                                       href="" type="button">${service.enabled==true?'Inactivate':'Activate'}</a></td>
+                                       href="" type="button">${service.enabled==true?'Inactive':'Active'}</a></td>
                                 <td><a class="btn btn-mini btn-inverse" data-response-target-sel="tr" href="/starting/offered/delete/${service.id}" type="button">Delete</a></td>
                                 <input type="hidden" name="serviceid"
                                        value="${service.id}" />
@@ -124,14 +124,14 @@
                                         class="label label-${service.enabled==true?'success':'warning'}">${service.enabled==true?'A':'In'}</span></td>
                                 <td><a class="btn btn-mini btn-inverse activator"
                                        title="Click to ${service.enabled==true?'inactivate':'activate'}"
-                                        type="button">${service.enabled==true?'Inactivate':'Activate'}</a></td>
+                                        type="button">${service.enabled==true?'Inactive':'Active'}</a></td>
                                 <td><a class="btn btn-mini btn-inverse" type="button"
                                        rel="tooltip" title="Click to delete" data-response-target-sel="tr" href="/starting/requested/delete/${service.id}">Delete</a></td>
                                 <input type="hidden" name="serviceid"
                                        value="${service.id}" />
                                 <input type="hidden" name="acttype"
                                        value="${service.enabled==true?'Inactive':'Active'}" />
-                                <input type="hidden" name="servicetype" value="offer" />
+                                <input type="hidden" name="servicetype" value="request" />
                             </tr>
 
                         </c:forEach>
