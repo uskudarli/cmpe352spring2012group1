@@ -95,11 +95,13 @@ public class ExampleController{
                              @RequestParam("surname") String surname,
                              @RequestParam("email") String email,
                              @RequestParam("password") String password,
-                             @RequestParam("password2") String password2,
+//                             @RequestParam("password2") String password2,
                              @RequestParam("avatarId") String avatarId,
                              HttpServletResponse response
                              ) throws IOException {
         dummyService.signup(name,surname,email,password,avatarId);
+        Users user = dummyService.getUser(email);
+        dummyService.insertUserRole(user.getUserId());
         response.sendRedirect("/starting/login");
     }
     

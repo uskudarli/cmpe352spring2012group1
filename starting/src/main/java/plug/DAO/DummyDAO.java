@@ -64,4 +64,6 @@ public interface DummyDAO {
     boolean updateProfile(Integer userId, String nema, String surname, String password, String avatarId);
 
     boolean signup(String name, String surname, String email, String password, String avatarId);
+
+    boolean insertUserRole(Integer userId);
 }

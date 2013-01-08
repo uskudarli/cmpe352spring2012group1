@@ -71,12 +71,12 @@
           </div>
         </div>
         <!-- password again -->
-        <div class="control-group">
+        <%--<div class="control-group">
           <div class="controls">
             <input type="password" id="inputPassword2" required="" name="password2" placeholder="Enter password again">
           </div>
         </div>
-
+--%>
         <!-- Button to trigger modal -->
         <div class="control-group">
             <div class="controls">
@@ -85,15 +85,15 @@
                 <a href="#myModal" role="button" class="btn btn-link" data-toggle="modal">Choose...</a>
             </div>
         </div>
-        <div class="control-group">
+        <%--<div class="control-group">
             <div class="controls">
                 <label class="checkbox">
                     <input type="checkbox"/> I agree to the <a href="">Terms & Conditions</a>
                 </label>
                 <br>
-                <button type="submit" class="btn btn-primary">Sign up</button>
             </div>
-        </div>
+        </div>--%>
+                <button type="submit" class="btn btn-primary">Sign up</button>
     </form>
 
       <!-- Modal -->

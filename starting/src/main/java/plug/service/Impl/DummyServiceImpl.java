@@ -153,4 +153,14 @@ public class DummyServiceImpl implements DummyService {
     public boolean signup(String name, String surname, String email, String password, String avatarId) {
         return dummyDAO.signup(name,surname,email,password,avatarId);
     }
+
+    @Override
+    public Users getUser(String email) {
+        return dummyDAO.getLoggedInUser(email);
+    }
+
+    @Override
+    public boolean insertUserRole(Integer userId) {
+        return dummyDAO.insertUserRole(userId);
+    }
 }
