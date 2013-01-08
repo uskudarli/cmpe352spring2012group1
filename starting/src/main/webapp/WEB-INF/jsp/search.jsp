@@ -44,7 +44,16 @@
 
                   });
                   return false;
-              })
+              });
+
+              $('#searchform').submit(function() {
+                  if($('.myTag').find('span').text()==""){
+                      alert("Please insert tag");
+                      return false;
+                  }
+                  return true;
+              });
+
 
           });
       </script>
@@ -62,7 +71,7 @@
   <jsp:include page="headerUser.jsp"></jsp:include>
 
     <div class="container">
-      <form action="/starting/search" method="post">
+      <form action="/starting/search" method="post" id="searchform">
           <label><strong>City:</strong></label>
           <select name="city" id="city" required="required">
               <c:forEach items="${cities}" var="city">
@@ -72,7 +81,7 @@
           <label><strong>Town:</strong></label>
               <select name="town" id="town" disabled="disabled">
                   <option value="0">You can choose</option>
-              </select>
+              </select><img src="/starting/static/img/loading.gif" hidden="hidden" class="towngif">
               <p>You don't have to choose town, but you must choose city!</p>
         <br>
         <%--<button type="submit" class="btn">I'm Feeling Lucky</button>--%>

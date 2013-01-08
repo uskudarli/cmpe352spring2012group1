@@ -35,7 +35,6 @@
                                         <div id="collapsehistoryOffered${service.serviceStatusBean.interactionId}"
                                              class="accordion-body collapse">
                                             <div class="accordion-inner">
-                                                <i>${service.tag}</i>
                                                 <hr class="bs-docs-separator">
                                                 ${service.desc}
                                                 <hr class="bs-docs-separator">
@@ -83,7 +82,6 @@
                                         <div id="collapsehistoryRequested${service.serviceStatusBean.interactionId}"
                                              class="accordion-body collapse">
                                             <div class="accordion-inner">
-                                                <i>${service.tag}</i>
                                                 <hr class="bs-docs-setparator">
                                                 ${service.desc}
                                                 <hr class="bs-docs-separator">

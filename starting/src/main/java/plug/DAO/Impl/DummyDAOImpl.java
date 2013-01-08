@@ -1,5 +1,6 @@
 package plug.DAO.Impl;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -36,7 +37,11 @@ public class DummyDAOImpl implements DummyDAO {
 
     @Override
     public Users getLoggedInUser(String email) {
-       return jdbcTemplate.queryForObject("select * from users where email=?",userMapper,email);
+        try {
+            return jdbcTemplate.queryForObject("select * from users where email=?",userMapper,email);
+        } catch (DataAccessException e) {
+            return null;
+        }
     }
 
     @Override
@@ -71,9 +76,9 @@ public class DummyDAOImpl implements DummyDAO {
     }
 
     @Override
-    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone, int cityId, int townId, int districtId) {
-        return jdbcTemplate.update("insert into requested_services (user_id,title,`desc`,tag,begin_date,end_date,service_everyone,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?)",
-                userId,serviceName,description,hiddenTagList,begin,end,serviceAnyone,cityId,townId,districtId)>0;
+    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, String intervalString, int serviceAnyone, int cityId, int townId, int districtId) {
+        return jdbcTemplate.update("insert into requested_services (user_id,title,`desc`,tag,begin_date,end_date,`time`,service_everyone,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?)",
+                userId,serviceName,description,hiddenTagList,begin,end,intervalString,serviceAnyone,cityId,townId,districtId)>0;
     }
 
     @Override

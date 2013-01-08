@@ -11,6 +11,7 @@
         <intercept-url  pattern="/createservice*" access="ROLE_USER" />
         <intercept-url  pattern="/request*" access="ROLE_USER" />
         <intercept-url  pattern="/offer*" access="ROLE_USER" />
+        <intercept-url  pattern="/apply*" access="ROLE_USER" />
         <form-login login-page="/login" default-target-url="/profile"
                     authentication-failure-url="/loginfailed" />
         <logout logout-success-url="/logout" />

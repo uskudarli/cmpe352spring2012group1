@@ -53,7 +53,7 @@ body {
 	<jsp:include page="headerUser.jsp"></jsp:include>
 <body>
 	<div class="container" align="left" class="span6">
-		<form action="/starting/request" method="post">
+		<form action="/starting/request" method="post" id="createform">
 			<label><strong>Request Service</strong></label>
 			<div class="btn-group" data-toggle="buttons-radio">
 				<%--<button type="button" class="btn"><a href="offer.jsp">Offer</a></button>--%>
@@ -86,11 +86,16 @@ body {
 				<c:forEach items="${cities}" var="city">
 					<option value="${city.id}">${city.name}</option>
 				</c:forEach>
-			</select> <img src="/starting/static/img/loading.gif" class="img-rounded" /> <br>
-			<br> <select name="town" id="town" disabled="disabled">
-			</select> <img src="/starting/static/img/loading.gif" class="img-rounded" /> <br>
+			</select>
+            <br>
+			<br>
+            <select name="town" id="town" disabled="disabled">
+			</select>
+            <img src="/starting/static/img/loading.gif" hidden="hidden" class="towngif" />
+            <br>
 			<br> <select name="district" id="district" disabled="disabled">
-			</select> <br> <br> <label>Start Date:</label><input type="text"
+			</select><img src="/starting/static/img/loading.gif" hidden="hidden" class="districtgif" />
+            <br> <br> <label>Start Date:</label><input type="text"
 				class="span2" required="" name="begindate" value="" id="dp1">
 			<br> <label>End Date:</label><input type="text" class="span2"
 				required="" name="enddate" value="" id="dp2"> <br> <br>

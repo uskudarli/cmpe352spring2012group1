@@ -27,7 +27,7 @@ public interface DummyDAO {
 
     boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate, String intervalString, int cityId, int townId, int districtId);
 
-    boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, int serviceAnyone, int cityId, int townId, int districtId);
+    boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, String intervalString, int serviceAnyone, int cityId, int townId, int districtId);
 
     List<RequestedServices> getRequestedServicesSearhResult(String serviceQuery);
 
