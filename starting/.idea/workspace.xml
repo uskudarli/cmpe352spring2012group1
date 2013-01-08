@@ -70,7 +70,7 @@
       <file leaf-file-name="search.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="23" selection-start="5888" selection-end="5888" vertical-scroll-proportion="-11.923077">
+            <state line="141" column="23" selection-start="5888" selection-end="5888" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -79,16 +79,7 @@
       <file leaf-file-name="profile.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="88" selection-start="4931" selection-end="4931" vertical-scroll-proportion="-8.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="4" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.374">
+            <state line="135" column="88" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,7 +88,7 @@
       <file leaf-file-name="searchResult.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchResult.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="65" selection-start="64" selection-end="64" vertical-scroll-proportion="38.076923">
+            <state line="1" column="65" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,7 +97,7 @@
       <file leaf-file-name="ExampleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/web/ExampleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="349" column="0" selection-start="17858" selection-end="17858" vertical-scroll-proportion="-9.8">
+            <state line="349" column="0" selection-start="17858" selection-end="17858" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,7 +106,16 @@
       <file leaf-file-name="spring-security.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="47" selection-start="817" selection-end="817" vertical-scroll-proportion="-9.45">
+            <state line="13" column="47" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="starting-servlet.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/starting-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="51" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.32806325">
               <folding />
             </state>
           </provider>
@@ -155,9 +155,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/Impl/DummyDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="40" column="24" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/plug/DAO/DummyDAO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/servicesHistory.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/starting-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/offer.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/plug/service/Impl/DummyServiceImpl.java" />
@@ -195,6 +192,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
         <option value="$PROJECT_DIR$/src/main/java/web/ExampleController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/starting-servlet.xml" />
       </list>
     </option>
   </component>
@@ -264,20 +262,6 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="starting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -434,6 +418,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="starting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="starting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -452,9 +450,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -618,6 +616,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -651,24 +667,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -686,17 +684,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -723,6 +710,17 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -969,91 +967,87 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/starting-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="50" selection-start="1085" selection-end="1085" vertical-scroll-proportion="-13.6">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="18" selection-start="3564" selection-end="3564" vertical-scroll-proportion="-61.46154">
-          <folding />
-        </state>
+        <state line="94" column="18" selection-start="3564" selection-end="3564" vertical-scroll-proportion="-61.46154" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/serviceCreation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.076923">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.076923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/offer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="309" column="76" selection-start="9145" selection-end="9145" vertical-scroll-proportion="-100.57692">
-          <folding />
-        </state>
+        <state line="309" column="76" selection-start="9145" selection-end="9145" vertical-scroll-proportion="-100.57692" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="55" selection-start="1729" selection-end="1729" vertical-scroll-proportion="-6.730769">
-          <folding />
-        </state>
+        <state line="57" column="55" selection-start="1729" selection-end="1729" vertical-scroll-proportion="-6.730769" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="74" selection-start="4498" selection-end="4498" vertical-scroll-proportion="0.0">
+        <state line="111" column="74" selection-start="4498" selection-end="4498" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="79" selection-start="3204" selection-end="3204" vertical-scroll-proportion="0.608" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="88" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchResult.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="65" selection-start="64" selection-end="64" vertical-scroll-proportion="38.076923">
+        <state line="1" column="65" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web/ExampleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="349" column="0" selection-start="17858" selection-end="17858" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/DummyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/plug/service/Impl/DummyServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="26" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="26" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/DummyDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/plug/DAO/Impl/DummyDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="24" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="40" column="24" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="23" selection-start="5888" selection-end="5888" vertical-scroll-proportion="-0.65384614">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="817" selection-end="817" vertical-scroll-proportion="-9.45">
+        <state line="13" column="47" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1061,32 +1055,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/ExampleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/starting-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="0" selection-start="17858" selection-end="17858" vertical-scroll-proportion="-9.8">
+        <state line="16" column="51" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.32806325">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="23" selection-start="5888" selection-end="5888" vertical-scroll-proportion="-11.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="88" selection-start="4931" selection-end="4931" vertical-scroll-proportion="-8.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="4" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.374">
-          <folding />
-        </state>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>
