@@ -63,4 +63,8 @@ public interface DummyService {
     boolean updateProfile(Integer userId, String name, String surname, String password, String avatarId);
 
     boolean signup(String name, String surname, String email, String password, String avatarId);
+
+    Users getUser(String email);
+
+    boolean insertUserRole(Integer userId);
 }
