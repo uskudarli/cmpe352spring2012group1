@@ -128,7 +128,7 @@ body {
 	<div class="container">
 		<div class="row">
 			<div class="span3">
-				<img src="static/img/${loggedInUser.avatar}.jpg" />
+				<img src="static/img/${loggedInUser.avatar}.jpg" class="img-rounded">
 			</div>
 			<div class="span3" align="center">
 				<h2>${loggedInUser.name} ${loggedInUser.surname}</h2>
@@ -141,16 +141,17 @@ body {
 			</div>
 			<div class="span3" align="center">
 				<div class="well">
-					<a href="messages.html">Messages</a><br> <a
-						class="btn btn-danger btn-mini" href="#">Report Abuse</a>
+					<a href="messages.html">Messages</a><br><br>
+                                        <a class="btn btn-primary" href="/starting/createservice">Create New Service</a>
+                
 				</div>
 			</div>
 
 			<!-- middle grid -->
-
+                                                
 		</div>
-
-		<hr class="bs-docs-separator"></hr>
+                        
+		<hr class="bs-docs-separator">
 
 		<div class="tabbable tabs-left">
 			<!-- Only required for left/right tabs -->
@@ -175,11 +176,6 @@ body {
 				</div>
 			</div>
 		</div>
-
-		<hr class="bs-docs-separator">
-
-		<a class="btn btn-primary" href="/starting/createservice">Create
-			New Service</a>
 
 		<hr>
 
