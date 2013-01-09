@@ -25,6 +25,7 @@ public class UserMapper implements RowMapper<Users> {
         userBean.setName(resultSet.getString("name"));
         userBean.setSurname(resultSet.getString("surname"));
         userBean.setAvatar(resultSet.getString("avatar"));
+        userBean.setCredit(resultSet.getString("credit"));
         return  userBean;
     }
 }

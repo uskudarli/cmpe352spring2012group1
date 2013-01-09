@@ -137,7 +137,7 @@ body {
 			</div>
 			<div class="span3" align="center">
 				<h3>Credit</h3>
-				<span class="badge badge-info" style="font-size: 20px">100</span>
+				<span class="badge badge-info" style="font-size: 20px">${loggedInUser.credit}</span>
 			</div>
 			<div class="span3" align="center">
 				<div class="well">
