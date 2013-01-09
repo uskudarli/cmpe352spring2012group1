@@ -27,16 +27,16 @@
             </div><!--/.nav-collapse -->
         </div>
     </div>
-                                <%--<div id = "loginerror" class="span5 offset7" align="right"></div>--%>
-                <%--<script>
-                bootstrap_alert = function() {}
-                bootstrap_alert.alert = function() {
-                            $('#loginerror').html('<div align="center" class="alert alert-error"><a class="close" data-dismiss="alert">×</a>Wrong user name or password.</div>')
-                        }
+    <div id = "loginerror" class="span5 offset7" align="right"></div>
+        <script>
+            bootstrap_alert = function() {}
+            bootstrap_alert.alert = function() {
+                $('#loginerror').html('<div align="center" class="alert alert-error"><a class="close" data-dismiss="alert">×</a>Wrong user name or password.</div>')
+            }
 
-                if(${error}) {
-                            bootstrap_alert.alert();
-                }
-                </script>--%>​
+            if(${error}) {
+                bootstrap_alert.alert();
+            }
+        </script>
 </div>
                 
