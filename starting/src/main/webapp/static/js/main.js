@@ -17,7 +17,7 @@ $('#city').change(function(event){
             $('#district')
                 .find('option')
                 .remove();
-            $('#town').append('<option value='+'-1'+'>'+'Choose please'+'</option>');
+            $('#town').append('<option value='+'-1'+'>'+'Please Choose...'+'</option>');
             for (var i=0;i<arr.length;i++)
             {
                 var $townid=arr[i].id;
@@ -34,6 +34,7 @@ function submitValidation(){
     $('#createform').submit(function() {
         var $selectedTown = $('#town').find('option:selected').attr('value');
         var $selectedDistrict = $('#district').find('option:selected').attr('value');
+        var $selectedCity = $('#city').find('option:selected').attr('value');
         var $time1 = $('input[name="timeinterval1"]').attr('value');
         var $time2 = $('input[name="timeinterval2"]').attr('value');
         var $time3 = $('input[name="timeinterval3"]').attr('value');
@@ -54,13 +55,18 @@ function submitValidation(){
             return false;
         }
 
+        if($selectedCity=="-1" || $selectedCity==undefined){
+            alert("please select city!");
+            return false;
+        }
+
         if($selectedTown=="-1" || $selectedTown==undefined){
             alert("please select town!");
             return false;
         }
 
         if($selectedDistrict=="-1" || $selectedDistrict==undefined){
-            alert("please select District!");
+            alert("please select district!");
             return false;
         }
 
@@ -109,7 +115,7 @@ $('#town').change(function(event){
             $('#district')
                 .find('option')
                 .remove()
-            $('#district').append('<option value='+'-1'+'>'+'Choose please'+'</option>');
+            $('#district').append('<option value='+'-1'+'>'+'Please Choose...'+'</option>');
             for (var i=0;i<arr.length;i++)
             {
                 var $districtid=arr[i].id;

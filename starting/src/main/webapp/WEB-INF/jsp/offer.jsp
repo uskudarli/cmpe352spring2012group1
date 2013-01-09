@@ -91,6 +91,7 @@ body {
 			<label>Tags</label> <input type="text" name="tags" placeholder="Tags"
 				class="tagManager" /> <label>Location</label> <select name="city"
 				id="city">
+                <option value="-1" >Please Choose...</option>
 				<c:forEach items="${cities}" var="city">
 					<option value="${city.id}">${city.name}</option>
 				</c:forEach>
