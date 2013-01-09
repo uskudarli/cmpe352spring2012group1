@@ -70,25 +70,31 @@ function submitValidation(){
             return false;
         }
 
-        if(Date.parse("1-1-2000 " + $time1) > Date.parse("1-1-2000 " + $time2)){
+        if((Date.parse("1-1-2000 " + $time1) > Date.parse("1-1-2000 " + $time2))){
             alert("Begin time can not be bigger than end time");
             return false;
-        }if(Date.parse("1-1-2000 " + $time3) > Date.parse("1-1-2000 " + $time4)){
+       }
+        if(Date.parse("1-1-2000 " + $time3) > Date.parse("1-1-2000 " + $time4)){
             alert("Begin time can not be bigger than end time");
             return false;
-        }if(Date.parse("1-1-2000 " + $time5) > Date.parse("1-1-2000 " + $time6)){
+        }
+         if(Date.parse("1-1-2000 " + $time5) > Date.parse("1-1-2000 " + $time6)){
             alert("Begin time can not be bigger than end time");
             return false;
-        }if(Date.parse("1-1-2000 " + $time7) > Date.parse("1-1-2000 " + $time8)){
+        }
+         if(Date.parse("1-1-2000 " + $time7) > Date.parse("1-1-2000 " + $time8)){
             alert("Begin time can not be bigger than end time");
             return false;
-        }if(Date.parse("1-1-2000 " + $time9) > Date.parse("1-1-2000 " + $time10)){
+        }
+         if(Date.parse("1-1-2000 " + $time9) > Date.parse("1-1-2000 " + $time10)){
             alert("Begin time can not be bigger than end time");
             return false;
-        }if(Date.parse("1-1-2000 " + $time11) > Date.parse("1-1-2000 " + $time12)){
+        }
+         if(Date.parse("1-1-2000 " + $time11) > Date.parse("1-1-2000 " + $time12)){
             alert("Begin time can not be bigger than end time");
             return false;
-        }if(Date.parse("1-1-2000 " + $time13) > Date.parse("1-1-2000 " + $time14)){
+        }
+         if(Date.parse("1-1-2000 " + $time13) > Date.parse("1-1-2000 " + $time14)){
             alert("Begin time can not be bigger than end time");
             return false;
         }

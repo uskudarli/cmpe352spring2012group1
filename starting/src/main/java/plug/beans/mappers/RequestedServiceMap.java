@@ -26,7 +26,7 @@ public class RequestedServiceMap implements RowMapper<RequestedServices> {
         services.setEndDate(rs.getDate("end_date"));
         services.setServiceEveryone(rs.getBoolean("service_everyone"));
         services.setTag(rs.getString("tag"));
-        services.setTime(rs.getInt("time"));
+        services.setTime(rs.getString("time"));
         services.setTitle(rs.getString("title"));
         services.setTownId(rs.getInt("town_id"));
         services.setUserId(rs.getInt("user_id"));
