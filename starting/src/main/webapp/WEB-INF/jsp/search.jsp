@@ -47,6 +47,11 @@
               });
 
               $('#searchform').submit(function() {
+                  var $selectedCity = $('#city').find('option:selected').attr('value');
+                  if($selectedCity=="-1" || $selectedCity==undefined){
+                      alert("please select city!");
+                      return false;
+                  }
                   if($('.myTag').find('span').text()==""){
                       alert("Please insert tag");
                       return false;
@@ -74,6 +79,7 @@
       <form action="/starting/search" method="post" id="searchform">
           <label><strong>City:</strong></label>
           <select name="city" id="city" required="required">
+                  <option value="-1" >Please Choose...</option>
               <c:forEach items="${cities}" var="city">
                   <option value="${city.id}" >${city.name}</option>
               </c:forEach>
