@@ -17,10 +17,15 @@
 	href="/starting/static/css/bootstrap-tagmanager.css" />
 <link rel="stylesheet" type="text/css"
 	href="/starting/static/css/datepicker.css" />
+<link rel="stylesheet" type="text/css" 
+	href="/starting/static/css/timepicker.css" />
+<link rel="stylesheet" type="text/css" 
+	href="/starting/static/css/timepicker.css" />
 <script src="/starting/static/js/jquery-1.7.1.min.js"></script>
 <script src="/starting/static/js/bootstrap.js"></script>
 <script src="/starting/static/js/bootstrap-tagmanager.js"></script>
 <script src="/starting/static/js/bootstrap-datepicker.js"></script>
+<script src="/starting/static/js/bootstrap-timepicker.js"></script>
 <script src="/starting/static/js/main.js"></script>
 <script
 	src="http://jquery-limit.googlecode.com/files/jquery.limit-1.2.source.js"></script>
@@ -99,6 +104,182 @@ body {
 				class="span2" required="" name="begindate" value="" id="dp1">
 			<br> <label>End Date:</label><input type="text" class="span2"
 				required="" name="enddate" value="" id="dp2"> <br> <br>
+
+
+<table class="table">
+				<thead>
+
+					<tr>
+						<td>#</td>
+						<td>Monday</td>
+						<td>Tuesday</td>
+						<td>Wednesday</td>
+						<td>Thursday</td>
+						<td>Friday</td>
+						<td>Saturday</td>
+						<td>Sunday</td>
+
+
+
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr>
+
+						<td>Beginning</td>
+
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval1" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval3" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval5" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval7" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval9" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval11" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval13" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<td>End</td>
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval2" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval4" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval6" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval8" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval10" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval12" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+
+						<td>
+							<div class="input-append bootstrap-timepicker-component">
+								<input type="text" name="timeinterval14" required=""
+									class="timepicker-default input-small"> <span
+									class="add-on"> <i class="icon-time"></i>
+								</span>
+							</div>
+						</td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+
+
+
+
+
 			<button type="submit" class="btn btn-primary"
 				data-loading-text="Submitting...">Submit</button>
 		</form>
