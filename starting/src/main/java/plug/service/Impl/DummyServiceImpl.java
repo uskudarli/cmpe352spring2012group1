@@ -55,13 +55,13 @@ public class DummyServiceImpl implements DummyService {
     }
 
     @Override
-    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate, String intervalString, int cityId, int townId, int districtId) {
-        return dummyDAO.offerService(userId,serviceName,description,hiddenTagList,beginDate,endDate,intervalString,cityId,townId,districtId);
+    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate,String duration, String intervalString, int cityId, int townId, int districtId) {
+        return dummyDAO.offerService(userId,serviceName,description,hiddenTagList,beginDate,endDate,duration,intervalString,cityId,townId,districtId);
     }
 
     @Override
-    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, String intervalString, int serviceAnyone, int cityId, int townId, int districtId) {
-        return dummyDAO.createService(userId,serviceName,description,hiddenTagList,begin,end,intervalString,serviceAnyone,cityId,townId,districtId);
+    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end,String duration, String intervalString, int serviceAnyone, int cityId, int townId, int districtId) {
+        return dummyDAO.createService(userId,serviceName,description,hiddenTagList,begin,end,duration,intervalString,serviceAnyone,cityId,townId,districtId);
     }
 
     @Override

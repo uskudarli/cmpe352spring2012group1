@@ -70,15 +70,15 @@ public class DummyDAOImpl implements DummyDAO {
     }
 
     @Override
-    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate, String intervalString, int cityId, int townId, int districtId) {
-        return jdbcTemplate.update("insert into offered_services (user_id,title,`desc`,tag,begin_date,end_date,`time`,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?)",
-                userId,serviceName,description,hiddenTagList,beginDate,endDate,intervalString,cityId,townId,districtId)>0;
+    public boolean offerService(int userId, String serviceName, String description, String hiddenTagList, String beginDate, String endDate,String duration, String intervalString, int cityId, int townId, int districtId) {
+        return jdbcTemplate.update("insert into offered_services (user_id,title,`desc`,tag,begin_date,end_date,duration,`time`,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?,?)",
+                userId,serviceName,description,hiddenTagList,beginDate,endDate,duration,intervalString,cityId,townId,districtId)>0;
     }
 
     @Override
-    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end, String intervalString, int serviceAnyone, int cityId, int townId, int districtId) {
-        return jdbcTemplate.update("insert into requested_services (user_id,title,`desc`,tag,begin_date,end_date,`time`,service_everyone,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?)",
-                userId,serviceName,description,hiddenTagList,begin,end,intervalString,serviceAnyone,cityId,townId,districtId)>0;
+    public boolean createService(int userId, String serviceName, String description, String hiddenTagList, String begin, String end,String duration ,String intervalString, int serviceAnyone, int cityId, int townId, int districtId) {
+        return jdbcTemplate.update("insert into requested_services (user_id,title,`desc`,tag,begin_date,end_date,duration,`time`,service_everyone,city_id,town_id,district_id) values(?,?,?,?,?,?,?,?,?,?,?,?)",
+                userId,serviceName,description,hiddenTagList,begin,end,duration,intervalString,serviceAnyone,cityId,townId,districtId)>0;
     }
 
     @Override
@@ -231,11 +231,11 @@ public class DummyDAOImpl implements DummyDAO {
     public boolean updateProfile(Integer userId, String name, String surname, String password, String avatarId) {
         return jdbcTemplate.update("update users set name=? , surname = ? , password=? , avatar=? where user_id=?",name,surname,password,avatarId,userId)>0;
     }
-    //todo credit default verilecek...
+
     @Override
     public boolean signup(String name, String surname, String email, String password, String avatarId) {
         return jdbcTemplate.update("insert into users (email,password,`name`,surname,avatar,credit) values(?,?,?,?,?,?)",
-                email,password,name,surname,avatarId,10)>0;
+                email,password,name,surname,avatarId,5)>0;
 
     }
 

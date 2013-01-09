@@ -171,6 +171,7 @@ public class ExampleController{
                             @RequestParam(value = "district" , defaultValue = "-1") int districtId,
                             @RequestParam("begindate") String beginDate,
                             @RequestParam("enddate") String endDate,
+                            @RequestParam("duration") String duration,
                             @RequestParam("timeinterval1") String timeInterval1,
                             @RequestParam("timeinterval2") String timeInterval2,
                             @RequestParam("timeinterval3") String timeInterval3,
@@ -198,7 +199,7 @@ public class ExampleController{
         String intervalString=interval1+","+interval2+","+interval3+","+interval4+","+interval5+","+interval6+","+interval7;
         String begin=formatDate(beginDate);
         String end =formatDate(endDate);
-        dummyService.offerService(userId,serviceName,description,hiddenTagList,begin,end,intervalString,cityId,townId,districtId);
+        dummyService.offerService(userId,serviceName,description,hiddenTagList,begin,end,duration,intervalString,cityId,townId,districtId);
         response.sendRedirect("/starting/profile");
     }
 
@@ -215,6 +216,7 @@ public class ExampleController{
                               @RequestParam(value = "district" , defaultValue = "-1") int districtId,
                               @RequestParam("begindate") String beginDate,
                               @RequestParam("enddate") String endDate,
+                              @RequestParam("duration") String duration,
                               @RequestParam("timeinterval1") String timeInterval1,
                               @RequestParam("timeinterval2") String timeInterval2,
                               @RequestParam("timeinterval3") String timeInterval3,
@@ -244,7 +246,7 @@ public class ExampleController{
         String begin=formatDate(beginDate);
         String end =formatDate(endDate);
         int everyone=serviceAnyone.equals("1")?1:0;
-        dummyService.createService(userId,serviceName,description,hiddenTagList,begin,end,intervalString,everyone,cityId,townId,districtId);
+        dummyService.createService(userId,serviceName,description,hiddenTagList,begin,end,duration,intervalString,everyone,cityId,townId,districtId);
         response.sendRedirect("/starting/profile");
     }
 

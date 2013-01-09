@@ -24,7 +24,7 @@ public class OfferedServiceMap implements RowMapper<OfferedServices> {
         services.setEnabled(rs.getBoolean("enabled"));
         services.setEndDate(rs.getDate("end_date"));
         services.setTag(rs.getString("tag"));
-        services.setTime(rs.getInt("time"));
+        services.setTime(rs.getString("time"));
         services.setTitle(rs.getString("title"));
         services.setTownId(rs.getInt("town_id"));
         services.setUserId(rs.getInt("user_id"));

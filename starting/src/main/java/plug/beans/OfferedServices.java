@@ -25,7 +25,7 @@ public class OfferedServices implements Serializable {
     private Date endDate;
     private boolean enabled;
     int duration;
-    int time;
+    String time;
     int cityId;
     int townId;
     int districtId;
@@ -105,11 +105,11 @@ public class OfferedServices implements Serializable {
         this.duration = duration;
     }
 
-    public int getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
