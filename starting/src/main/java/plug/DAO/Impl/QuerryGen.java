@@ -91,7 +91,7 @@ public class QuerryGen {
                     for (int i = list.length; i > 0; i--) {
                         result += "select * from \n ( select * from " + tableName + " where\n "
                                 + "begin_date > '" + begin_date + "' \n"
-                                + " and end_date < '" + end_date + "'\n"
+                                + "and end_date < '" + end_date + "'\n"
 //                            + " and city_id = " + Integer.toString(cityId) + "\n"
                                 + " and enabled = 1) as date_checked \n"
                                 + " where " + fieldName[k] + " " + "rlike '(.*)";
@@ -119,7 +119,7 @@ public class QuerryGen {
                     for (int i = list.length; i > 0; i--) {
                         result += "select * from \n ( select * from " + tableName + " where\n "
                                 + "user_id <> " + Integer.toString(userId) + "\n"
-                                + "begin_date > '" + begin_date + "' \n"
+                                + "and begin_date > '" + begin_date + "' \n"
                                 + " and end_date < '" + end_date + "'\n"
 //                            + " and town_id = " + Integer.toString(townId) + "\n"
                                 + " and enabled = 1) as date_checked \n"
@@ -146,7 +146,7 @@ public class QuerryGen {
                     for (int i = list.length; i > 0; i--) {
                         result += "select * from \n ( select * from " + tableName + " where\n "
                                 + "user_id <> " + Integer.toString(userId) + "\n"
-                                + "begin_date > '" + begin_date + "' \n"
+                                + "and begin_date > '" + begin_date + "' \n"
                                 + " and end_date < '" + end_date + "'\n"
 //                            + " and city_id = " + Integer.toString(cityId) + "\n"
                                 + " and enabled = 1) as date_checked \n"
@@ -178,7 +178,7 @@ public class QuerryGen {
                         for (int i = list.length; i > 0; i--) {
                             result += "select * from \n ( select * from " + tableName + " where\n "
                                     + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
-                                    + "begin_date > '" + begin_date + "' \n"
+                                    + "and begin_date > '" + begin_date + "' \n"
                                     + " and end_date < '" + end_date + "'\n"
 //                            + " and town_id = " + Integer.toString(townId) + "\n"
                                     + " and enabled = 1) as date_checked \n"
@@ -205,7 +205,7 @@ public class QuerryGen {
                         for (int i = list.length; i > 0; i--) {
                             result += "select * from \n ( select * from " + tableName + " where\n "
                                     + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
-                                    + "begin_date > '" + begin_date + "' \n"
+                                    + "and begin_date > '" + begin_date + "' \n"
                                     + " and end_date < '" + end_date + "'\n"
 //                            + " and city_id = " + Integer.toString(cityId) + "\n"
                                     + " and enabled = 1) as date_checked \n"
@@ -234,8 +234,8 @@ public class QuerryGen {
                         for (int i = list.length; i > 0; i--) {
                             result += "select * from \n ( select * from " + tableName + " where\n "
                                     + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
-                                    + "user_id <> " + Integer.toString(userId) + "\n"
-                                    + "begin_date > '" + begin_date + "' \n"
+                                    + "and user_id <> " + Integer.toString(userId) + "\n"
+                                    + "and begin_date > '" + begin_date + "' \n"
                                     + " and end_date < '" + end_date + "'\n"
 //                            + " and town_id = " + Integer.toString(townId) + "\n"
                                     + " and enabled = 1) as date_checked \n"
@@ -262,8 +262,8 @@ public class QuerryGen {
                         for (int i = list.length; i > 0; i--) {
                             result += "select * from \n ( select * from " + tableName + " where\n "
                                     + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
-                                    + "user_id <> " + Integer.toString(userId) + "\n"
-                                    + "begin_date > '" + begin_date + "' \n"
+                                    + "and user_id <> " + Integer.toString(userId) + "\n"
+                                    + "and begin_date > '" + begin_date + "' \n"
                                     + " and end_date < '" + end_date + "'\n"
 //                            + " and city_id = " + Integer.toString(cityId) + "\n"
                                     + " and enabled = 1) as date_checked \n"
