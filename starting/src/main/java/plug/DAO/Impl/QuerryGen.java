@@ -44,7 +44,7 @@ public class QuerryGen {
     }*/
     // method that generates SQL string for given parameters
     // if not specified in GUI, townId will come as -1
-    public static String searchQuery(int userId,String tableName, String[] fieldName, String begin_date, String end_date, String tags, int cityId, int townId) {
+    public static String searchQuery(int userId,String tableName, String[] fieldName, String begin_date, String end_date, String tags, int cityId, int townId,int service_everyone) {
         String result = "";
         String[] list = tags.split(",");
         //Syntatic Improvement
@@ -58,58 +58,235 @@ public class QuerryGen {
         tags = tags.replaceAll("'","\'");
         ///////////////////////////
         tags = tags.replaceAll(",", "|");
-
-        if (townId != -1) {
-            for (int k = 0; k < fieldName.length; k++) {
-                for (int i = list.length; i > 0; i--) {
-                    result += "select * from \n ( select * from " + tableName + " where\n "
-                            + "begin_date > '" + begin_date + "' \n"
-                            + " and end_date < '" + end_date + "'\n"
+        if(service_everyone == -1) {
+        if (userId == -1) {
+            if (townId != -1) {
+                for (int k = 0; k < fieldName.length; k++) {
+                    for (int i = list.length; i > 0; i--) {
+                        result += "select * from \n ( select * from " + tableName + " where\n "
+                                + "begin_date > '" + begin_date + "' \n"
+                                + " and end_date < '" + end_date + "'\n"
 //                            + " and town_id = " + Integer.toString(townId) + "\n"
-                            + " and enabled = 1) as date_checked \n"
-                            + " where " + fieldName[k] + " " + "rlike '(.*)";
+                                + " and enabled = 1) as date_checked \n"
+                                + " where " + fieldName[k] + " " + "rlike '(.*)";
 
-                    //for (int j = 0; j < i; j++) {
-                    //    result += "(" + tags + ")(.*)";
-                    //}
-                    result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
-                    result += "'";
-                    if (i != 1) {
-                        result += "\n union \n";
+                        //for (int j = 0; j < i; j++) {
+                        //    result += "(" + tags + ")(.*)";
+                        //}
+                        result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                        result += "'";
+                        if (i != 1) {
+                            result += "\n union \n";
+                        }
+
                     }
-
+                    if (k == fieldName.length - 1) {
+                        result += ";";
+                    } else {
+                        result += " \n union \n";
+                    }
                 }
-                if (k == fieldName.length - 1) {
-                    result += ";";
-                } else {
-                    result += " \n union \n";
+            } else {
+                for (int k = 0; k < fieldName.length; k++) {
+                    for (int i = list.length; i > 0; i--) {
+                        result += "select * from \n ( select * from " + tableName + " where\n "
+                                + "begin_date > '" + begin_date + "' \n"
+                                + " and end_date < '" + end_date + "'\n"
+//                            + " and city_id = " + Integer.toString(cityId) + "\n"
+                                + " and enabled = 1) as date_checked \n"
+                                + " where " + fieldName[k] + " " + "rlike '(.*)";
+
+                        //for (int j = 0; j < i; j++) {
+                        //    result += "(" + tags + ")(.*)";
+                        //}
+                        result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                        result += "'";
+                        if (i != 1) {
+                            result += "\n union \n";
+                        }
+
+                    }
+                    if (k == fieldName.length - 1) {
+                        result += ";";
+                    } else {
+                        result += " \n union \n";
+                    }
                 }
             }
         } else {
-            for (int k = 0; k < fieldName.length; k++) {
-                for (int i = list.length; i > 0; i--) {
-                    result += "select * from \n ( select * from " + tableName + " where\n "
-                            + "begin_date > '" + begin_date + "' \n"
-                            + " and end_date < '" + end_date + "'\n"
-//                            + " and city_id = " + Integer.toString(cityId) + "\n"
-                            + " and enabled = 1) as date_checked \n"
-                            + " where " + fieldName[k] + " " + "rlike '(.*)";
+            if (townId != -1) {
+                for (int k = 0; k < fieldName.length; k++) {
+                    for (int i = list.length; i > 0; i--) {
+                        result += "select * from \n ( select * from " + tableName + " where\n "
+                                + "user_id <> " + Integer.toString(userId) + "\n"
+                                + "begin_date > '" + begin_date + "' \n"
+                                + " and end_date < '" + end_date + "'\n"
+//                            + " and town_id = " + Integer.toString(townId) + "\n"
+                                + " and enabled = 1) as date_checked \n"
+                                + " where " + fieldName[k] + " " + "rlike '(.*)";
 
-                    //for (int j = 0; j < i; j++) {
-                    //    result += "(" + tags + ")(.*)";
-                    //}
-                    result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
-                    result += "'";
-                    if (i != 1) {
-                        result += "\n union \n";
+                        //for (int j = 0; j < i; j++) {
+                        //    result += "(" + tags + ")(.*)";
+                        //}
+                        result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                        result += "'";
+                        if (i != 1) {
+                            result += "\n union \n";
+                        }
+
                     }
+                    if (k == fieldName.length - 1) {
+                        result += ";";
+                    } else {
+                        result += " \n union \n";
+                    }
+                }
+            } else {
+                for (int k = 0; k < fieldName.length; k++) {
+                    for (int i = list.length; i > 0; i--) {
+                        result += "select * from \n ( select * from " + tableName + " where\n "
+                                + "user_id <> " + Integer.toString(userId) + "\n"
+                                + "begin_date > '" + begin_date + "' \n"
+                                + " and end_date < '" + end_date + "'\n"
+//                            + " and city_id = " + Integer.toString(cityId) + "\n"
+                                + " and enabled = 1) as date_checked \n"
+                                + " where " + fieldName[k] + " " + "rlike '(.*)";
 
+                        //for (int j = 0; j < i; j++) {
+                        //    result += "(" + tags + ")(.*)";
+                        //}
+                        result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                        result += "'";
+                        if (i != 1) {
+                            result += "\n union \n";
+                        }
+
+                    }
+                    if (k == fieldName.length - 1) {
+                        result += ";";
+                    } else {
+                        result += " \n union \n";
+                    }
                 }
-                if (k == fieldName.length - 1) {
-                    result += ";";
+            }
+
+        }
+        } else {
+            if (userId == -1) {
+                if (townId != -1) {
+                    for (int k = 0; k < fieldName.length; k++) {
+                        for (int i = list.length; i > 0; i--) {
+                            result += "select * from \n ( select * from " + tableName + " where\n "
+                                    + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
+                                    + "begin_date > '" + begin_date + "' \n"
+                                    + " and end_date < '" + end_date + "'\n"
+//                            + " and town_id = " + Integer.toString(townId) + "\n"
+                                    + " and enabled = 1) as date_checked \n"
+                                    + " where " + fieldName[k] + " " + "rlike '(.*)";
+
+                            //for (int j = 0; j < i; j++) {
+                            //    result += "(" + tags + ")(.*)";
+                            //}
+                            result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                            result += "'";
+                            if (i != 1) {
+                                result += "\n union \n";
+                            }
+
+                        }
+                        if (k == fieldName.length - 1) {
+                            result += ";";
+                        } else {
+                            result += " \n union \n";
+                        }
+                    }
                 } else {
-                    result += " \n union \n";
+                    for (int k = 0; k < fieldName.length; k++) {
+                        for (int i = list.length; i > 0; i--) {
+                            result += "select * from \n ( select * from " + tableName + " where\n "
+                                    + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
+                                    + "begin_date > '" + begin_date + "' \n"
+                                    + " and end_date < '" + end_date + "'\n"
+//                            + " and city_id = " + Integer.toString(cityId) + "\n"
+                                    + " and enabled = 1) as date_checked \n"
+                                    + " where " + fieldName[k] + " " + "rlike '(.*)";
+
+                            //for (int j = 0; j < i; j++) {
+                            //    result += "(" + tags + ")(.*)";
+                            //}
+                            result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                            result += "'";
+                            if (i != 1) {
+                                result += "\n union \n";
+                            }
+
+                        }
+                        if (k == fieldName.length - 1) {
+                            result += ";";
+                        } else {
+                            result += " \n union \n";
+                        }
+                    }
                 }
+            } else {
+                if (townId != -1) {
+                    for (int k = 0; k < fieldName.length; k++) {
+                        for (int i = list.length; i > 0; i--) {
+                            result += "select * from \n ( select * from " + tableName + " where\n "
+                                    + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
+                                    + "user_id <> " + Integer.toString(userId) + "\n"
+                                    + "begin_date > '" + begin_date + "' \n"
+                                    + " and end_date < '" + end_date + "'\n"
+//                            + " and town_id = " + Integer.toString(townId) + "\n"
+                                    + " and enabled = 1) as date_checked \n"
+                                    + " where " + fieldName[k] + " " + "rlike '(.*)";
+
+                            //for (int j = 0; j < i; j++) {
+                            //    result += "(" + tags + ")(.*)";
+                            //}
+                            result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                            result += "'";
+                            if (i != 1) {
+                                result += "\n union \n";
+                            }
+
+                        }
+                        if (k == fieldName.length - 1) {
+                            result += ";";
+                        } else {
+                            result += " \n union \n";
+                        }
+                    }
+                } else {
+                    for (int k = 0; k < fieldName.length; k++) {
+                        for (int i = list.length; i > 0; i--) {
+                            result += "select * from \n ( select * from " + tableName + " where\n "
+                                    + "service_everyone >= " + Integer.toString(service_everyone) + "\n"
+                                    + "user_id <> " + Integer.toString(userId) + "\n"
+                                    + "begin_date > '" + begin_date + "' \n"
+                                    + " and end_date < '" + end_date + "'\n"
+//                            + " and city_id = " + Integer.toString(cityId) + "\n"
+                                    + " and enabled = 1) as date_checked \n"
+                                    + " where " + fieldName[k] + " " + "rlike '(.*)";
+
+                            //for (int j = 0; j < i; j++) {
+                            //    result += "(" + tags + ")(.*)";
+                            //}
+                            result += "((" + tags + ")(.*)){" + Integer.toString(i) + "}";
+                            result += "'";
+                            if (i != 1) {
+                                result += "\n union \n";
+                            }
+
+                        }
+                        if (k == fieldName.length - 1) {
+                            result += ";";
+                        } else {
+                            result += " \n union \n";
+                        }
+                    }
+                }
+
             }
         }
         return result;
