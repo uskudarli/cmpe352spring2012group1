@@ -235,7 +235,7 @@ public class DummyDAOImpl implements DummyDAO {
     @Override
     public boolean signup(String name, String surname, String email, String password, String avatarId) {
         return jdbcTemplate.update("insert into users (email,password,`name`,surname,avatar,credit) values(?,?,?,?,?,?)",
-                email,password,name,surname,avatarId,5)>0;
+                email,password,name,surname,avatarId,10)>0;
 
     }
 
