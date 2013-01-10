@@ -140,13 +140,7 @@ body {
 				<h3>Credit</h3>
 				<span class="badge badge-info" style="font-size: 20px">${loggedInUser.credit}</span>
 			</div>
-			<div class="span3" align="center">
-				<div class="well">
-					<a href="messages.html">Messages</a><br><br>
-                                        <a class="btn btn-primary" href="/starting/createservice">Create New Service</a>
-                
-				</div>
-			</div>
+
 
 			<!-- middle grid -->
                                                 
