@@ -73,4 +73,8 @@ public interface DummyService {
     List<ServiceStatusBeanWithUser> getHistoryToMe(int userId);
 
     List<ServiceStatusBeanWithUser> getHistoryBeMe(int userId);
+
+    ServiceStatusBean getServiceStatuse(int id);
+
+    boolean complete(int id, int credit);
 }

@@ -252,14 +252,14 @@ public class DummyDAOImpl implements DummyDAO {
     @Override
     public List<ServiceStatusBeanWithUser> getHistoryToMe(int userId) {
         return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
-                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
                 "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
-                "WHERE consumer_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='requested'\n" +
+                "WHERE provider_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='requested'\n" +
                 "UNION\n" +
                 "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
-                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN users u on(u.user_id=st.consumer_id)\n" +
                 "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
-                "WHERE consumer_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
+                "WHERE provider_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
     }
 
     @Override
@@ -274,6 +274,16 @@ public class DummyDAOImpl implements DummyDAO {
                 "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
                 "WHERE consumer_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
 
+    }
+
+    @Override
+    public ServiceStatusBean getServiceStatuse(int id) {
+        return jdbcTemplate.queryForObject("select * from service_status where interaction_id=?", serviceStatusBeanMapper, id);
+    }
+
+    @Override
+    public boolean complete(int id, int credit) {
+        return jdbcTemplate.update("update users set credit=credit-? where user_id=?",credit,id)>0;
     }
 
 
