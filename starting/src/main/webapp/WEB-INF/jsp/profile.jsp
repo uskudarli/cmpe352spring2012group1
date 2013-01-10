@@ -112,7 +112,7 @@
 
 </script>
 <!-- Le styles -->
-<%--<link href="assets/css/bootstrap.css" rel="stylesheet">--%>
+<link href="assets/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
 	padding-top: 60px;
@@ -134,11 +134,17 @@ body {
 			<div class="span3" align="center">
 				<h2>${loggedInUser.name} ${loggedInUser.surname}</h2>
 				<%--<h4>City - Town - District</h4>--%>
-				<a class="btn btn-inverse" href="profile/edit">Edit Profile</a>
+				<a class="btn btn-info" href="profile/edit"><i class="icon-edit icon-white"></i> Edit Profile</a>
 			</div>
 			<div class="span3" align="center">
 				<h3>Credit</h3>
 				<span class="badge badge-info" style="font-size: 20px">${loggedInUser.credit}</span>
+			</div>
+			<div class="span3" align="center">
+				<div class="well">
+                                        <a class="btn btn-primary" href="/starting/createservice">Create New Service</a>
+                
+				</div>
 			</div>
 
 
