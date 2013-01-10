@@ -67,4 +67,6 @@ public interface DummyService {
     Users getUser(String email);
 
     boolean insertUserRole(Integer userId);
+
+    boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType, String responseMsg);
 }

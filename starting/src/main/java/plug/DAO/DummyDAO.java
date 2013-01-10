@@ -66,4 +66,6 @@ public interface DummyDAO {
     boolean signup(String name, String surname, String email, String password, String avatarId);
 
     boolean insertUserRole(Integer userId);
+
+    boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType, String responseMsg);
 }

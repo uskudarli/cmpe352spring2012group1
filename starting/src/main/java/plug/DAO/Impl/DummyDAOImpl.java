@@ -244,4 +244,9 @@ public class DummyDAOImpl implements DummyDAO {
         return jdbcTemplate.update("insert into user_roles (user_id,authority) values(?,'ROLE_USER')",userId)>0;
     }
 
+    @Override
+    public boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType, String responseMsg) {
+        return jdbcTemplate.update("update service_status set `status` = ? , response_msg = ? where interaction_id=?",serviceStatusType.getName(),responseMsg,id)>0;
+    }
+
 }

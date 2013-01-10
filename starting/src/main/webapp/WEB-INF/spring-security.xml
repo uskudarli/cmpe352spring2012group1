@@ -7,11 +7,12 @@
 	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
     <http auto-config="true">
-        <intercept-url  pattern="/profile*" access="ROLE_USER" />
-        <intercept-url  pattern="/createservice*" access="ROLE_USER" />
-        <intercept-url  pattern="/request*" access="ROLE_USER" />
-        <intercept-url  pattern="/offer*" access="ROLE_USER" />
-        <intercept-url  pattern="/apply*" access="ROLE_USER" />
+        <intercept-url  pattern="/profile*" access="ROLE_USER,ROLE_ADMIN" />
+        <intercept-url  pattern="/createservice*" access="ROLE_USER,ROLE_ADMIN" />
+        <intercept-url  pattern="/request*" access="ROLE_USER,ROLE_ADMIN" />
+        <intercept-url  pattern="/offer*" access="ROLE_USER,ROLE_ADMIN" />
+        <intercept-url  pattern="/apply*" access="ROLE_USER,ROLE_ADMIN" />
+        <intercept-url  pattern="/admin*" access="ROLE_ADMIN" />
         <form-login login-page="/login" default-target-url="/profile"
                     authentication-failure-url="/loginfailed" />
         <logout logout-success-url="/logout" />

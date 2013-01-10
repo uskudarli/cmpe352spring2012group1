@@ -329,52 +329,22 @@ public class ExampleController{
 
         response.setStatus(204);
     }
-    @RequestMapping(value = "/apply/{type}/{serviceId}/{userId}",method = RequestMethod.GET)
-    @ResponseBody
-    public ModelAndView applyGet(Model model,
+    @RequestMapping(value = "/apply/{type}/{serviceId}/{userId}/{description}",method = RequestMethod.GET)
+    public void applyGet(Model model,
                               @PathVariable("type") String type,
                               @PathVariable("serviceId") int serviceId,
-                              @PathVariable("userId") int userId){
-       model.addAttribute("type",type);
-       model.addAttribute("serviceId",serviceId);
-       model.addAttribute("userId",userId);
-       return new ModelAndView("applyPopover","m",model);
-    }
-
-    @RequestMapping(value = "/apply/{type}/{serviceId}/",method = RequestMethod.GET)
-    @ResponseBody
-    public ModelAndView applyNonUser(Model model,
-                              @PathVariable("type") String type,
-                              @PathVariable("serviceId") int serviceId)
-                              {
-       model.addAttribute("type",type);
-       model.addAttribute("serviceId",serviceId);
-       return new ModelAndView("applyPopover","m",model);
-    }
-
-    @RequestMapping(value = "/apply",method = RequestMethod.POST)
-    @ResponseBody
-    public String applyPost(@RequestParam("type") String type,
-                            @RequestParam("serviceId") int serviceId,
-                            @RequestParam(value = "userId" , defaultValue = "0") int userId,
-                            @RequestParam(value = "description" , defaultValue = "") String description
-    ){
-        String response="Başarısız";
-        boolean result=false;
+                              @PathVariable("userId") int userId,
+                              @PathVariable("description") String description,
+                              HttpServletResponse response){
         if(type.equals("request")){
             RequestedServices requestedServices=dummyService.getRequestedService(serviceId);
-            //todo credit miktarı alınacak.
-            result=dummyService.applyService(ServiceType.requested,serviceId,requestedServices.getUserId(),userId,10,description);
+            dummyService.applyService(ServiceType.requested,serviceId,requestedServices.getUserId(),userId,requestedServices.getDuration(),description);
         }
         else if(type.equals("offer")){
             OfferedServices offeredServices=dummyService.getOfferedService(serviceId);
-            result=dummyService.applyService(ServiceType.offered,serviceId,offeredServices.getUserId(),userId,10,description);
+            dummyService.applyService(ServiceType.offered,serviceId,offeredServices.getUserId(),userId,offeredServices.getDuration(),description);
         }
-        if(result){
-            response="Başarılı";
-        }
-        return response;
-
+        response.setStatus(HttpServletResponse.SC_NO_CONTENT);
     }
 
     @RequestMapping(value = "/offered/delete/{id}", method = RequestMethod.GET)
@@ -406,7 +376,28 @@ public class ExampleController{
         dummyService.changeServiceStatusType(id,serviceStatusType);
         response.setStatus(HttpServletResponse.SC_NO_CONTENT);
     }
+    @RequestMapping(value = "/action/{type}/{id}/{responseMsg}", method = RequestMethod.GET)
+    public void actionWithDesc(@PathVariable("id") int id,
+                       @PathVariable("type") String type,
+                       @PathVariable("responseMsg") String responseMsg,
+                       HttpServletResponse response
+    ){
+        ServiceStatusType serviceStatusType;
+        if("approve".equals(type)){serviceStatusType = ServiceStatusType.Approved;}
+        else if("reject".equals(type)){serviceStatusType = ServiceStatusType.Rejected;}
+        else if("cancel".equals(type)){serviceStatusType = ServiceStatusType.Withdrawn;}
+        else if("complete".equals(type)){serviceStatusType = ServiceStatusType.Completed;}
+        else if("fail".equals(type)){serviceStatusType = ServiceStatusType.Failed;}
+        else serviceStatusType = ServiceStatusType.Seen;
+        dummyService.changeServiceStatusType(id,serviceStatusType,responseMsg);
+        response.setStatus(HttpServletResponse.SC_NO_CONTENT);
+    }
 
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public ModelAndView getAdminPage(Model model){
+        Users user = dummyService.getLoggedInUser();
+        return new ModelAndView("admin","m",model);
+    }
 
     public static String formatDate(String date)
     {

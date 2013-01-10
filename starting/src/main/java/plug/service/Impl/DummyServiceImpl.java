@@ -163,4 +163,9 @@ public class DummyServiceImpl implements DummyService {
     public boolean insertUserRole(Integer userId) {
         return dummyDAO.insertUserRole(userId);
     }
+
+    @Override
+    public boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType, String responseMsg) {
+        return dummyDAO.changeServiceStatusType(id, serviceStatusType,responseMsg);
+    }
 }
