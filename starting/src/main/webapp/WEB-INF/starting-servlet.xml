@@ -12,9 +12,9 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://titan.cmpe.boun.edu.tr:3306/database1" />
-        <property name="username" value="project1" />
-        <property name="password" value="8t7p4C" />
+        <property name="url" value="jdbc:mysql://sodaproject.db.8731195.hostedresource.com:3306/sodaproject" />
+        <property name="username" value="sodaproject" />
+        <property name="password" value="Asdfqwer1!" />
     </bean>
 
     <bean id="dummyDAO" class="plug.DAO.Impl.DummyDAOImpl">

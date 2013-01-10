@@ -44,7 +44,7 @@ public class QuerryGen {
     }*/
     // method that generates SQL string for given parameters
     // if not specified in GUI, townId will come as -1
-    public static String searchQuery(String tableName, String[] fieldName, String begin_date, String end_date, String tags, int cityId, int townId) {
+    public static String searchQuery(int userId,String tableName, String[] fieldName, String begin_date, String end_date, String tags, int cityId, int townId) {
         String result = "";
         String[] list = tags.split(",");
         //Syntatic Improvement
