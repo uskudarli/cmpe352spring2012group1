@@ -178,4 +178,14 @@ public class DummyServiceImpl implements DummyService {
     public List<ServiceStatusBeanWithUser> getHistoryBeMe(int userId) {
         return dummyDAO.getHistoryBeMe(userId);
     }
+
+    @Override
+    public ServiceStatusBean getServiceStatuse(int id) {
+        return dummyDAO.getServiceStatuse(id);
+    }
+
+    @Override
+    public boolean complete(int id, int credit) {
+        return dummyDAO.complete(id,credit);
+    }
 }

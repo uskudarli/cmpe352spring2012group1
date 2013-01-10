@@ -398,6 +398,7 @@ public class ExampleController{
                        @PathVariable("type") String type,
                        HttpServletResponse response
     ){
+        ServiceStatusBean serviceStatusBean = dummyService.getServiceStatuse(id);
         ServiceStatusType serviceStatusType;
         if("approve".equals(type)){serviceStatusType = ServiceStatusType.Approved;}
         else if("reject".equals(type)){serviceStatusType = ServiceStatusType.Rejected;}
@@ -405,6 +406,12 @@ public class ExampleController{
         else if("complete".equals(type)){serviceStatusType = ServiceStatusType.Completed;}
         else if("fail".equals(type)){serviceStatusType = ServiceStatusType.Failed;}
         else serviceStatusType = ServiceStatusType.Seen;
+        if("complete".equals(type)&&serviceStatusBean.getType().equals(ServiceType.offered)){
+            dummyService.complete(serviceStatusBean.getProviderId(),serviceStatusBean.getCredit());
+        }
+        if("complete".equals(type)&&serviceStatusBean.getType().equals(ServiceType.requested)){
+            dummyService.complete(serviceStatusBean.getConsumerId(),serviceStatusBean.getCredit());
+        }
         dummyService.changeServiceStatusType(id,serviceStatusType);
         response.setStatus(HttpServletResponse.SC_NO_CONTENT);
     }

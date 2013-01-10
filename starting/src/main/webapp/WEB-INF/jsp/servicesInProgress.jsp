@@ -81,10 +81,10 @@
 
                                 </td>
                                 <td><span class="label label-info">Waiting for confirmation</span></td>
-                                <td><a class="btn btn-small btn-success" href=""
+                                <td><a class="btn btn-small btn-success" data-response-target-sel="tr" href="/starting/action/complete/${service.serviceStatusBean.interactionId}/''"
                                        type="button" rel="tooltip"
                                        title="Click if you have taken the service"><i class="icon-thumbs-up icon-white"></i></a></td>
-                                <td><a class="btn btn-small btn-danger" href=""
+                                <td><a class="btn btn-small btn-danger" data-response-target-sel="tr" href="/starting/action/fail/${service.serviceStatusBean.interactionId}/''"
                                        type="button" rel="tooltip"
                                        title="Click if you have not taken the service as you agreed"><i class="icon-thumbs-down icon-white"></i></a></td>
                                 

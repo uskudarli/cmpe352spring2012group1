@@ -107,7 +107,6 @@
                                     </div>
 
                                 </td>
-                                <td><span class="label label-info">F</span></td>
 
                                 <td><span
                                         class="label label-${service.enabled==true?'success':'warning'}">${service.enabled==true?'A':'In'}</span></td>
