@@ -11,7 +11,7 @@
             <div class="span5">
                 Services requested from me
                 <table class="table table-condensed">
-                    <thead>
+                    <thead align="center">
                     <tr>
                         <th>Title</th>
                     </tr>
@@ -43,8 +43,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td><span class="label label-info">Waiting
-																confirmation for transaction</span></td>
+                                <td><span class="label label-info">Waiting for confirmation</span></td>
                             </tr>
                         </c:forEach>
                     </div>
@@ -56,14 +55,9 @@
             </div>
 
             <div class="span5">
-                Services I requested
+                <b>Services I requested</b>
                 <table class="table table-condensed">
-                    <thead>
-                    <tr>
-                        <th>Title</th>
-                    </tr>
-                    </thead>
-
+                    
                     <tbody>
 
                     <div class="accordion" id="accordion6">
@@ -90,17 +84,14 @@
                                     </div>
 
                                 </td>
-                                <td><a class="btn btn-small btn-inverse" href=""
+                                <td><span class="label label-info">Waiting for confirmation</span></td>
+                                <td><a class="btn btn-small btn-success" href=""
                                        type="button" rel="tooltip"
-                                       title="Click if you have not taken the service as you agreed">It
-                                    was a failure.</a></td>
-                                <td><span class="label label-info">Waiting
-																confirmation for service</span></td>
-                                <td><a class="btn btn-small btn-inverse" href=""
+                                       title="Click if you have taken the service"><i class="icon-thumbs-up icon-white"></i></a></td>
+                                <td><a class="btn btn-small btn-danger" href=""
                                        type="button" rel="tooltip"
-                                       title="Click if you have taken the service">I made
-                                    this job done!</a></td>
-
+                                       title="Click if you have not taken the service as you agreed"><i class="icon-thumbs-down icon-white"></i></a></td>
+                                
                             </tr>
 
                         </c:forEach>
