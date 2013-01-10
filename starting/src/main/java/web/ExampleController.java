@@ -270,13 +270,18 @@ public class ExampleController{
                                    @RequestParam("searchType") String searchType,
                                    @RequestParam("hidden-tags") String searchWords)
     {
+        int userId=-1;
+        Users user=dummyService.getLoggedInUser();
+        if(user!=null){
+            userId = user.getUserId();
+        }
         String[] priolist = new String[3];
         priolist[0] = "tag";
         priolist[1] = "title";
         priolist[2] = "`desc`";
         String begin=formatDate(beginDate);
         String end =formatDate(endDate);
-        String serviceQuery = QuerryGen.searchQuery(searchType,
+        String serviceQuery = QuerryGen.searchQuery(userId,searchType,
                 priolist,
                 begin,
                 end,
@@ -290,7 +295,6 @@ public class ExampleController{
             List<OfferedServices> offeredServices =dummyService.getOfferedServicesSearchResult(serviceQuery);
             model.addAttribute("requestedServices",offeredServices);
         }
-        Users user=dummyService.getLoggedInUser();
         model.addAttribute("loggedInUser",user);
         model.addAttribute("cities",dummyService.getCities());
         return new ModelAndView("search","m",model);
