@@ -20,7 +20,7 @@
             <div class="span5">
                 Offered Services
                 <table class="table table-condensed">
-                    <thead>
+                    <thead align="center">
                     <tr>
                         <th>Title</th>
                     </tr>
@@ -58,10 +58,10 @@
                                 </td>
                                 <td><span
                                         class="label label-${service.enabled==true?'success':'warning'}">${service.enabled==true?'A':'In'}</span></td>
-                                <td><a class="btn btn-mini btn-inverse activator"
+                                <td><a class="btn btn-mini btn-inverse activator" style="width:50px"
                                        title="Click to ${service.enabled==true?'inactivate':'activate'}"
                                        href="" type="button">${service.enabled==true?'Inactive':'Active'}</a></td>
-                                <td><a class="btn btn-mini btn-inverse" data-response-target-sel="tr" href="/starting/offered/delete/${service.id}" type="button">Delete</a></td>
+                                <td><a class="btn btn-mini btn-inverse" rel="tooltip" title="Click to delete" data-response-target-sel="tr" href="/starting/offered/delete/${service.id}" type="button"><i class="icon-trash icon-white"></i></a></td>
                                 <input type="hidden" name="serviceid"
                                        value="${service.id}" />
                                 <input type="hidden" name="acttype"
@@ -104,7 +104,7 @@
                                              class="accordion-body collapse">
                                             <div class="accordion-inner">
                                                 <i>${service.tag}</i>
-                                                <hr class="bs-docs-setparator">
+                                                <hr class="bs-docs-separator">
                                                 ${service.desc}
                                                 <hr class="bs-docs-separator">
                                                 <fmt:formatDate dateStyle="short"
@@ -120,11 +120,11 @@
 
                                 <td><span
                                         class="label label-${service.enabled==true?'success':'warning'}">${service.enabled==true?'A':'In'}</span></td>
-                                <td><a class="btn btn-mini btn-inverse activator"
+                                <td><a class="btn btn-mini btn-inverse activator" style="width:50px"
                                        title="Click to ${service.enabled==true?'inactivate':'activate'}"
                                         type="button">${service.enabled==true?'Inactive':'Active'}</a></td>
                                 <td><a class="btn btn-mini btn-inverse" type="button"
-                                       rel="tooltip" title="Click to delete" data-response-target-sel="tr" href="/starting/requested/delete/${service.id}">Delete</a></td>
+                                       rel="tooltip" title="Click to delete" data-response-target-sel="tr" href="/starting/requested/delete/${service.id}"><i class="icon-trash icon-white"></i></a></td>
                                 <input type="hidden" name="serviceid"
                                        value="${service.id}" />
                                 <input type="hidden" name="acttype"
