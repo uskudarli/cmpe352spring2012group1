@@ -15,13 +15,9 @@
 
         <div class="row">
             <div class="span5">
-                Services requested from me
+                <b>Services requested from me</b>
                 <table class="table table-condensed">
-                    <thead>
-                    <tr>
-                        <th>Title</th>
-                    </tr>
-                    </thead>
+                    
 
                     <tbody>
 
@@ -78,13 +74,9 @@
             </div>
 
             <div class="span5">
-                Services I requested
+                <b>Services I requested</b>
                 <table class="table table-condensed">
-                    <thead>
-                    <tr>
-                        <th>Title</th>
-                    </tr>
-                    </thead>
+                    
 
                     <tbody>
 
