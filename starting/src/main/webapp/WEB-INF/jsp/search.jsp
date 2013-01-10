@@ -139,7 +139,7 @@
         </thead>
         <tbody>
         <div class="accordion" id="accordion1">
-        <c:forEach items="${requestedServices}" var="service">
+        <c:forEach items="${requestedServices}" var="service" varStatus="status">
             <tr>
                 <td>
                         <div class="accordion-group">
@@ -152,6 +152,20 @@
                                 <div class="accordion-inner">
                                         ${service.desc}
                                         ${service.tag}
+                                            <br>
+                                            M:${timesRequest[status.index][0]}
+                                            <br>
+                                            T:${timesRequest[status.index][1]}
+                                            <br>
+                                            W:${timesRequest[status.index][2]}
+                                            <br>
+                                            Th:${timesRequest[status.index][3]}
+                                            <br>
+                                            Fr:${timesRequest[status.index][4]}
+                                            <br>
+                                            Sat:${timesRequest[status.index][5]}
+                                            <br>
+                                            Sun:${timesRequest[status.index][6]}
                                 </div>
                             </div>
                         </div>
@@ -189,7 +203,7 @@
         </thead>
         <tbody>
         <div class="accordion" id="accordion2">
-        <c:forEach items="${offeredServices}" var="service">
+        <c:forEach items="${offeredServices}" var="service" varStatus="status">
             <tr>
                 <td>
                         <div class="accordion-group">
@@ -202,6 +216,22 @@
                                 <div class="accordion-inner">
                                         ${service.desc}
                                         ${service.tag}
+                                            <br>
+                                        M:${timesOffer[status.index][0]}
+                                            <br>
+                                        T:${timesOffer[status.index][1]}
+                                            <br>
+                                        W:${timesOffer[status.index][2]}
+                                            <br>
+                                        Th:${timesOffer[status.index][3]}
+                                            <br>
+                                        Fr:${timesOffer[status.index][4]}
+                                            <br>
+                                        Sat:${timesOffer[status.index][5]}
+                                            <br>
+                                        Sun:${timesOffer[status.index][6]}
+
+
                                 </div>
                             </div>
                         </div>

@@ -68,4 +68,8 @@ public interface DummyDAO {
     boolean insertUserRole(Integer userId);
 
     boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType, String responseMsg);
+
+    List<ServiceStatusBeanWithUser> getHistoryToMe(int userId);
+
+    List<ServiceStatusBeanWithUser> getHistoryBeMe(int userId);
 }

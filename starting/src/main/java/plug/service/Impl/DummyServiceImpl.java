@@ -168,4 +168,14 @@ public class DummyServiceImpl implements DummyService {
     public boolean changeServiceStatusType(int id, ServiceStatusType serviceStatusType, String responseMsg) {
         return dummyDAO.changeServiceStatusType(id, serviceStatusType,responseMsg);
     }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getHistoryToMe(int userId) {
+        return dummyDAO.getHistoryToMe(userId);
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getHistoryBeMe(int userId) {
+        return dummyDAO.getHistoryBeMe(userId);
+    }
 }
