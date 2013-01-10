@@ -12,13 +12,13 @@
     <div class="span10" align="center">
 
         <h3>My Services</h3>
-        <h5>
+        
             <i>Services that I offer or request</i>
-        </h5>
+        
 
         <div class="row">
             <div class="span5">
-                Offered Services
+                <b>Offered Services</b>
                 <table class="table table-condensed">
                     <thead align="center">
                     <tr>
@@ -78,9 +78,9 @@
             </div>
 
             <div class="span5">
-                Requested Services
+                <b>Requested Services</b>
                 <table class="table table-condensed">
-                    <thead>
+                    <thead align="center">
                     <tr>
                         <th>Title</th>
                     </tr>

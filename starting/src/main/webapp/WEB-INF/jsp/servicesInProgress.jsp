@@ -9,13 +9,9 @@
 
         <div class="row">
             <div class="span5">
-                Services requested from me
+                <b>Services requested from me</b>
                 <table class="table table-condensed">
-                    <thead align="center">
-                    <tr>
-                        <th>Title</th>
-                    </tr>
-                    </thead>
+                    
 
                     <tbody>
 
