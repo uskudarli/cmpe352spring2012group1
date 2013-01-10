@@ -8,24 +8,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<link href="assets/css/bootstrap.css" rel="stylesheet">
 <div class="row">
     <div class="span10" align="center">
 
         <h3>My Services</h3>
         
-            <i>Services that I offer or request</i>
+        <i>Services that I offer or request</i><br><br>
         
 
         <div class="row">
             <div class="span5">
                 <b>Offered Services</b>
                 <table class="table table-condensed">
-                    <thead align="center">
-                    <tr>
-                        <th>Title</th>
-                    </tr>
-                    </thead>
-
+                    
                     <tbody>
 
                     <div class="accordion" id="accordion1">
@@ -80,12 +76,7 @@
             <div class="span5">
                 <b>Requested Services</b>
                 <table class="table table-condensed">
-                    <thead align="center">
-                    <tr>
-                        <th>Title</th>
-                    </tr>
-                    </thead>
-
+                    
                     <tbody>
 
                     <div class="accordion" id="accordion2">
