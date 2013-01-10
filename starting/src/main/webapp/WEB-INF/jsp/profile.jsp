@@ -26,6 +26,7 @@
 			.ready(function(){
                 bindAjaxForm();
                 bindAnchorForFormSubmit();
+                myAjaxSubmit();
 			    jQuery(".tagManager").tagsManager();
 						$('body')
 								.on(

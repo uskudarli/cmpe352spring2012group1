@@ -133,6 +133,25 @@ $('#town').change(function(event){
 })
 }
 
+function myAjaxSubmit(){
+    $('.applylink').on('click',function(){
+        var $that = $(this);
+        if($that.next().attr('hidden')){
+            $that.next().removeAttr('hidden')
+        }
+        else{
+            $that.next().attr('hidden','hidden')
+        }
+    });
+    $('.submitlink').on('click',function(){
+        var $that = $(this);
+        var $text = $that.prev().prev().val();
+        var $href = $that.attr('href');
+        $that.attr('href',$href+$text);
+        $that.closest("tr").remove();
+    })
+}
+
 function ajaxSubmit(data, resSel, context) {
     function isProcessable() {
         return data.contentType && data.contentType.indexOf("multipart/form-data") == -1;

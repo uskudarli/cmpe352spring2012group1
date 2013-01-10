@@ -43,15 +43,29 @@
                                              class="accordion-body collapse">
                                             <div class="accordion-inner">
                                                 <hr class="bs-docs-separator">
-                                                ${service.desc}
+                                                ${service.serviceStatusBean.applyMsg}
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                <td><a class="btn btn-small btn-success" data-response-target-sel="tr" href="/starting/action/approve/${service.serviceStatusBean.interactionId}"
-                                       type="button" rel="tooltip" title="Click to approve">Approve</a></td>
-                                <td><a class="btn btn-small btn-danger" type="button"
-                                       rel="tooltip" title="Click to reject" data-response-target-sel="tr" href="/starting/action/reject/${service.serviceStatusBean.interactionId}">Reject</a></td>
+                                <td>
+                                    <a class="applylink">Approve</a>
+                                    <div hidden="hidden">
+                                        <br>
+                                        <textarea rows="2" name="description" cols="2"></textarea>
+                                        <br>
+                                        <a href="/starting/action/approve/${service.serviceStatusBean.interactionId}/" title="Click to approve" class="btn btn-success submitlink">Approve</a>
+                                    </div>
+                                    </td>
+                                <td>
+                                    <a class="applylink">Reject</a>
+                                    <div hidden="hidden">
+                                        <br>
+                                        <textarea rows="2" name="description" cols="2"></textarea>
+                                        <br>
+                                        <a href="/starting/action/reject/${service.serviceStatusBean.interactionId}/" title="Click to reject" class="btn btn-danger submitlink">Reject</a>
+                                    </div>
+                                    </td>
                                 <td><span class="label label-info">In Progress</span></td>
                             </tr>
                         </c:forEach>

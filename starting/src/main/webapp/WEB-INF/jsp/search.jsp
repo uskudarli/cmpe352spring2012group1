@@ -28,7 +28,7 @@
               jQuery(".tagManager").tagsManager();
 //              $('.btn-danger').popover();
               townUtil();
-
+              myAjaxSubmit();
               $('.applypop').bind('click',function(){
                  var that=this;
                  var $url=$(that).attr('data-load');
@@ -58,7 +58,6 @@
                   }
                   return true;
               });
-
 
           });
       </script>
@@ -145,7 +144,17 @@
                 </td>
                 <td><fmt:formatDate dateStyle="short" value="${service.beginDate}"></fmt:formatDate></td>
                 <td><fmt:formatDate dateStyle="short" value="${service.endDate}"></fmt:formatDate></td>
-                <td><a data-placement="top" data-load="/starting/apply/request/${service.id}/${loggedInUser.userId}" class="btn btn-large btn-danger applypop" rel="popover">Click to toggle popover</a></td>
+                <td>
+                <c:if test="${loggedInUser!=null}">
+                <a class="applylink">Apply</a>
+                <div hidden="hidden">
+                    <br>
+                    <textarea rows="2" name="description" cols="2"></textarea>
+                    <br>
+                    <a href="/starting/apply/request/${service.id}/${loggedInUser.userId}/" class="btn btn-success submitlink">Submit</a>
+                </div>
+                 </c:if>
+                </td>
                 <input type="hidden" value="${service.id}"/>
             </tr>
         </c:forEach>
@@ -185,11 +194,23 @@
                 </td>
                 <td><fmt:formatDate value="${service.beginDate}"></fmt:formatDate></td>
                 <td><fmt:formatDate value="${service.endDate}"></fmt:formatDate></td>
-                <td><a data-placement="top" data-load="/starting/apply/request/${service.id}/${loggedInUser.userId}" class="btn btn-danger applypop" rel="popover">Click to toggle popover</a></td>
+                <td>
+                    <c:if test="${loggedInUser!=null}">
+                    <a class="applylink">Apply</a>
+                    <div hidden="hidden">
+                        <br>
+                        <textarea rows="2" name="description" cols="2"></textarea>
+                        <br>
+                        <a href="/starting/apply/offer/${service.id}/${loggedInUser.userId}/" class="btn btn-success submitlink">Submit</a>
+                    </div>
+                </c:if>
+                </td>
+                </td>
                 <input type="hidden" value="${service.id}"/>
             </tr>
         </c:forEach>
         </div>
+
         </tbody>
 
     </table>
