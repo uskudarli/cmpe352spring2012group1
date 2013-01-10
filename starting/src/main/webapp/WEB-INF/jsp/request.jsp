@@ -107,7 +107,7 @@ body {
 				class="span2" required="" name="begindate" value="" id="dp1">
 			<br> <label>End Date:</label><input type="text" class="span2"
 				required="" name="enddate" value="" id="dp2"> <br> <br>
-
+            <label>Duration:</label>
             <select name="duration">
                 <option selected="selected" value="1">1</option>
                 <option value="2">2</option>
