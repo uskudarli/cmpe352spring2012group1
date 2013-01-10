@@ -4,6 +4,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.common.base.Function;
 import com.google.common.base.Splitter;
+import com.google.common.collect.FluentIterable;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +18,10 @@ import plug.beans.*;
 import plug.service.DummyService;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -44,8 +50,8 @@ public class ExampleController{
         List<ServiceStatusBeanWithUser> currentServicesWaiting = dummyService.getCurrentServicesWaiting(userId);
 
 
-        List<ServiceStatusBeanWithUser> historyOffered = dummyService.getHistory(userId,ServiceType.offered);
-        List<ServiceStatusBeanWithUser> historyRequested = dummyService.getHistory(userId,ServiceType.requested);
+        List<ServiceStatusBeanWithUser> historyOffered = dummyService.getHistoryToMe(userId);
+        List<ServiceStatusBeanWithUser> historyRequested = dummyService.getHistoryBeMe(userId);
 
         List<ServiceStatusBean> serviceStatusList=dummyService.getServiceStasuses();
         model.addAttribute("currentServicesToDo",currentServicesToDo);
@@ -274,6 +280,8 @@ public class ExampleController{
                                    @RequestParam("hidden-tags") String searchWords,
                                    @RequestParam(value = "serviceeveryone", defaultValue = "0") Integer service_everyone)
     {
+        Splitter.MapSplitter mapSplitter = Splitter.on(",").trimResults().withKeyValueSeparator("-");
+
         int userId=-1;
         Users user=dummyService.getLoggedInUser();
         if(user!=null){
@@ -295,12 +303,25 @@ public class ExampleController{
                 QuerryGen.tagQuery(searchWords), cityId, townId,service_everyone);
         if(searchType.equals("requested_services")){
             List<RequestedServices> requestedServices = dummyService.getRequestedServicesSearhResult(serviceQuery);
+            List<List<String>> timesRequest = new ArrayList<List<String>>();
+            for(RequestedServices requestedServices1 : requestedServices){
+                String[] timesOffArr = requestedServices1.getTime().split(",");
+                List<String> dummy = Arrays.asList(timesOffArr);
+                timesRequest.add(dummy);}
+            model.addAttribute("timesRequest",timesRequest);
             model.addAttribute("requestedServices",requestedServices);
         }
         else if(searchType.equals("offered_services"))
         {
             List<OfferedServices> offeredServices =dummyService.getOfferedServicesSearchResult(serviceQuery);
-            model.addAttribute("requestedServices",offeredServices);
+            List<List<String>> timesOffer = new ArrayList<List<String>>();
+            for(OfferedServices offeredService : offeredServices){
+            String[] timesOffArr = offeredService.getTime().split(",");
+            List<String> dummy = Arrays.asList(timesOffArr);
+            timesOffer.add(dummy);}
+            model.addAttribute("timesOffer",timesOffer);
+            model.addAttribute("offeredServices",offeredServices);
+
         }
         model.addAttribute("loggedInUser",user);
         model.addAttribute("cities",dummyService.getCities());

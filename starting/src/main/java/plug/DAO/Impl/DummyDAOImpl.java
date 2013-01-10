@@ -249,4 +249,32 @@ public class DummyDAOImpl implements DummyDAO {
         return jdbcTemplate.update("update service_status set `status` = ? , response_msg = ? where interaction_id=?",serviceStatusType.getName(),responseMsg,id)>0;
     }
 
+    @Override
+    public List<ServiceStatusBeanWithUser> getHistoryToMe(int userId) {
+        return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
+                "WHERE consumer_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='requested'\n" +
+                "UNION\n" +
+                "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
+                "WHERE consumer_id=? AND (st.`status`='Seen' OR st.`status`='NotSeen') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
+    }
+
+    @Override
+    public List<ServiceStatusBeanWithUser> getHistoryBeMe(int userId) {
+        return jdbcTemplate.query("select st.*,u.user_id,u.`name`,u.surname,rs.title,rs.`desc`,rs.begin_date,rs.end_date,rs.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN requested_services rs on(rs.id=st.service_id)\n" +
+                "WHERE consumer_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='requested'\n" +
+                "UNION\n" +
+                "select st.*,u.user_id,u.`name`,u.surname,os.title,os.`desc`,os.begin_date,os.end_date,os.enabled from service_status st \n" +
+                "INNER JOIN users u on(u.user_id=st.provider_id)\n" +
+                "INNER JOIN offered_services os on(os.id=st.service_id)\n" +
+                "WHERE consumer_id=? AND (st.`status`='Completed' OR st.`status`='Rejected' OR st.`status`='Failed' or st.`status`='Withdrawn') AND st.type='offered'\n",serviceStatusBeanWithUserMapper,userId,userId);
+
+    }
+
+
 }
