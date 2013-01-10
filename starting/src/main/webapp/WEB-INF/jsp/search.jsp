@@ -59,6 +59,15 @@
                   return true;
               });
 
+              $('input:radio').on('click',function(){
+                  if($(this).val()=="requested_services"){
+                     $('#everyone').removeAttr('disabled');
+                  }
+                  else if($(this).val()=="offered_services"){
+                      $('#everyone').attr('disabled','disabled');
+                  }
+              })
+
           });
       </script>
 
@@ -97,6 +106,11 @@
             <input type="radio" name="searchType" value="requested_services" checked="checked"> I want to see requested services
             <br>
             <input type="radio" name="searchType" value="offered_services" > I want to see offered services
+            <br>
+            <br>
+            <label class="checkbox">
+              <input id="everyone" name="serviceeveryone" value="1" type="checkbox"> Service everyone
+            </label>
             <br>
             <br>
             <label>Search:</label>

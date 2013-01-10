@@ -2,6 +2,8 @@ package web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.common.base.Function;
+import com.google.common.base.Splitter;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -261,19 +263,24 @@ public class ExampleController{
         return new ModelAndView("search","m",model);
     }
 
+
     @RequestMapping(value = "/search" , method = RequestMethod.POST)
     public ModelAndView postSearch(Model model,
                                    @RequestParam("city") int cityId,
-                                   @RequestParam(value = "town",defaultValue = "0") int townId,
+                                   @RequestParam(value = "town",defaultValue = "-1") int townId,
                                    @RequestParam("begindate") String beginDate,
                                    @RequestParam("enddate") String endDate,
                                    @RequestParam("searchType") String searchType,
-                                   @RequestParam("hidden-tags") String searchWords)
+                                   @RequestParam("hidden-tags") String searchWords,
+                                   @RequestParam(value = "serviceeveryone", defaultValue = "0") Integer service_everyone)
     {
         int userId=-1;
         Users user=dummyService.getLoggedInUser();
         if(user!=null){
             userId = user.getUserId();
+        }
+        if(searchType.equals("offered_services")){
+            service_everyone=-1;
         }
         String[] priolist = new String[3];
         priolist[0] = "tag";
@@ -285,7 +292,7 @@ public class ExampleController{
                 priolist,
                 begin,
                 end,
-                QuerryGen.tagQuery(searchWords), cityId, townId);
+                QuerryGen.tagQuery(searchWords), cityId, townId,service_everyone);
         if(searchType.equals("requested_services")){
             List<RequestedServices> requestedServices = dummyService.getRequestedServicesSearhResult(serviceQuery);
             model.addAttribute("requestedServices",requestedServices);
