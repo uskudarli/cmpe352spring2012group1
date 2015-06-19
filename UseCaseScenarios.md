@@ -1,0 +1,74 @@
+## Scenario 1 ##
+
+**Summary:**
+
+  * Ali offers a new service and is looking to broadcast/socialize.
+
+**Plot:**
+
+  * Ali, who is a student in CMPE department, decides to enter the social services community.
+
+  * He first registers to the website and then creates himself a profile.
+
+  * Ali wants to create a rich profile since this may help attract more people to his profile. He enriches his profile by adding a photo and personal information. He also provides links from his Facebook page to add up more information about himself.
+
+  * Then, he decides to serve the community with his programming skills.
+
+  * Ali is not sure what exactly he can offer. So, he checks the system and reviews similar services offered by other members.
+
+  * He eventually decides to submit an offer for freelance programming in interesting web-based projects for 2 days a week, 5 hours a day. He specifies location is not a big problem for him, since he can collaborate using his laptop and ADSL connection. He describes his skills in great detail and also shares a document including the projects that he has accomplished so far.
+
+  * He lists his service under “programming” service type and also adds “computer” and “software” tags so that it would be easier for others to find it.
+
+  * Then, Ali' s service is listed in the list of recent activities.
+
+  * After offering a service, Ali decides to take a look at the services offered by others and tries to see if there are services and members he might be interested in.
+
+  * Ali’s flat has a problematic electric network and it usually breaks down. So Ali becomes really happy when he finds Mehmet Bey who is an experienced electrician and offers fixing minor electricity problems in his neighborhood.
+
+  * Ali starts to follow Mehmet Bey on the services community in case he might have a problem with electricity of his flat.
+
+  * Ali then takes a look on the forum of the social network and reads more about topics related to the programming service that he is giving.
+
+  * He also takes a look on other topics mostly opened by electricians, keeping in mind that he may need an electrician one day.
+
+
+---
+
+
+
+## Scenario 2 ##
+
+**Summary:**
+
+  * Ayse is looking for a specific service. She cannot find what she is looking for. She then decides to look for a slightly different service and finds many. She compares them and chooses one among them. She is matched with Handan Hanim.
+
+**Plot:**
+
+  * Ayse, who is 13 years old, really likes apple pie.
+
+  * One day, when she arrives home after school, she feels really hungry and realizes that her mother is at work and forgot to make an apple pie for her.
+
+  * Therefore, she logs into the social services community and tries to find out a person who offers cooking an apple pie, so that she could end her hunger.
+
+  * She searches for “apple pie” but she can’t find any.
+
+  * Then she types only “pie” to the search bar, but still she cannot find exactly what she is looking for.
+
+  * In the end, when she searches for “apple”, she finds some people offering apple cookies and she decides to have some of those instead of an apple pie.
+
+  * Ayse lists the retrieved search results (services offered) with respect to their location. Being in the same neighborhood is the most important criterion for her since she is too hungry.
+
+  * She decides to request the service whose provider is the closest and available.
+
+  * Ayse requests the service from Handan Hanim who lives in the next apartment by indicating the time as ‘now’.
+
+  * Handan Hanim receives the request and messages Ayse to understand how many cookies Ayse needs.
+
+  * Handan Hanim has the required ingredients already and she agrees that she will cook and deliver them within an hour.
+
+  * Handan Hanim approves the request and starts to cook apple cookies.
+
+  * After an hour Handan Hanim brings cookies to Ayse. Ayse eats the cookies and really likes them. She again logs into the social services community system and ranks the service of Handan Hanim with maximum points.
+
+  * Since the service has been accomplished, Handan Hanim receives an hourly credit from Ayse’s account.

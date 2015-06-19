@@ -1,0 +1,2 @@
+|![http://cmpe352spring2012group1.googlecode.com/files/SeqDiagram_S1.png](http://cmpe352spring2012group1.googlecode.com/files/SeqDiagram_S1.png)|
+|:----------------------------------------------------------------------------------------------------------------------------------------------|

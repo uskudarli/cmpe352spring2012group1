@@ -1,0 +1,123 @@
+# What is "Social Services Community"? #
+
+> The social services community offers individuals the opportunity to share skills and needs, to help themselves while helping others. For example, tutoring can be offered to a teenager who in turn takes care of the tutor’s pet. The main principles of matching people are reciprocity and equality. For such a system to work all members of the community should provide and consume services. Every individual can supply useful services.The service exchange not only complements existing services but also promotes self-sufficiency and connection inside community.
+
+<br />
+
+# Domain Analysis and Similar Projects #
+
+
+  * http://en.wikipedia.org/wiki/List_of_social_networking_websites is a list of all social-network websites on the internet.  Taken from that website;
+
+  1. http://www.goodwizz.com/social-network-with-matchmaking-personality-and-relationship-games offers games to match users and create user profiles.
+  1. http://www.patientslikeme.com/ offers patients to learn from the experiences of similar patients by condition, age and sex matching. The site is very simple to use.
+  1. http://www.ning.com/ is a webpage which allows the users to create their own social community websites.
+
+_Yavuz Köroğlu_
+
+---
+
+<br />
+
+  * Local exchange/employment trading systems (LETS) are not-for-profit community enterprises that provide a community information service and record transactions of members exchanging "goods and services" by using the currency of locally created "LETS Credits". Means for crediting and rating as well as encouragement of community members are central to our project. Therefore, it is worth further investigating the following links.
+
+  1. http://en.wikipedia.org/wiki/Local_exchange_trading_system
+  1. [UniLets Directory](http://www.unilets.org/)
+  1. [LETS in Belgium](http://www.letsvlaanderen.be/Links/tabid/386/Default.aspx)
+
+Unilets provides links to LETS worldwide. Most of the links point to simple sites with phone/email as the only contact medium. Trust is very important in such societies, therefore they do not let people in by simple web-based sign up. Most of these systems have properties like the following;
+
+  1. Each member has a record book (or an e-wallet). There are no physical tokens - it's more like earning gold stars or brownie points. Members put currency into their accounts by doing work for other members. If you want a job done on LETS, you phone/email someone in the directory and negotiate a "price" in the local currency units.
+  1. The scheme is (said to be) self-regulating in practice. Members are trusted to use it fairly and as the accounts are published from time to time, all members can see how others operate. A member who only takes from the system is quickly seen and isolated. If a member leaves the scheme, they must leave their account at zero or in credit.
+  1. Administration can be burdensome and costly. Some systems even take an initial registration fee. Effective use of web-based systems are needed here.
+  1. Kind of services offered are decided by the community.
+  1. The system forces into a world where "one earns easily, but spends hardly" from a world where it is the opposite.
+
+Social networking approach may be useful to apply to such a system. Further to providing tools for improving communication and easing administration, it may also be used, for example, to analyze social network information about a person to evaluate his/her trustworthiness.
+
+_Murat Yağcı_
+
+---
+
+<br />
+
+  * During my research on the web I encountered projects similar to ours. I want to mention two of them. The first one is [The Service Exchange of Boulder Country](http://bcn.boulder.co.us/community/servexchange/). The idea of meeting each other’s need is the same. However their principle depends solely on a written membership agreement rather than a web-based system.
+
+> The second one is quoted from a continuing brainstorm on the future          of cities and published on the webpage of a US based company called [GOOD](http://www.good.is/post/ideas-for-cities-diy-city/). It is suggested that cities would extend [this](http://seeclickfix.com/citizens) to a trade platform for services. This model is able to display recent activities and allow some kind of rating system as in the requirements of our project. As a result all citizens would have a complete profile of their skills, experience, and contributions in a Facebook-like citizen social network paired with opportunity matching.
+
+_Duygu Algan_
+
+---
+
+<br />
+
+  * There are similar projects to the one we are supposed to work on, "Social Services Community". Some are similar in the way of exchanging services, some are in terms of being nonprofit organizations, and some in terms of establishing a network between members. We need to combine these in order to fulfil our requirements.
+
+  1. http://yapanzi.com/ is a website that provides getting or offering services that are splitted into categories, can be searched, rated etc.
+  1. http://www.service-network.co.uk/ Service Network, the voice of the service sector in the North East of England, brings together the best of the corporate world and vibrant smaller businesses, all focussed on delivering high value, business to business services. Our members are talented, driven individuals and companies looking for opportunities to exchange best practice, learn, move their business forward, and collaborate.
+  1. http://meetup.com/ is a network of local groups. Meetup makes it easy for anyone to organize a local group or find one of the thousands already meeting up face-to-face.
+> An example for a Meetup group is: http://www.meetup.com/Nonprofits-and-Social-Services-Community-Network-NSCN/
+
+_Dila Taşer_
+
+---
+
+<br />
+
+**Social Networks**
+
+A social networking service is an online service, platform, or site that focuses on building and reflecting of social networks or social relations among people, who, for example, share interests and/or activities. Source: [Wikipedia](http://en.wikipedia.org/wiki/Social_networking_service)
+
+More on Social Networks:
+
+http://social-networking-websites-review.toptenreviews.com/
+
+http://www.whatissocialnetworking.com/
+
+**Similar Web Sites**
+
+Couch-surfing,Armut and Localyte are the social networks that are based on specific service exchanges.
+
+**Couchsurfing** is a social network offering its users hospitality exchange. More information provided by a member, it is more likely that someone will find the member trustworthy enough to be his host or guest. We can make use of this idea by letting users to provide detailed info and upload photos to create a trusted environment. Security issues may be seen as the weakest point of the service exchange through a social network. However Couchsurfing makes use of personal references and a personal vouching system to increase security of hospitality exchange.
+
+On the other hand, **Localyte** brings travelers and local people together to promote travel experiences. Members write about themselves as well as the services they offer such as tours, driving, tutoring and more.
+
+**Armut** is from Turkey and it seems like it is the most similar one to our project. It is based on finding offers and facilitating service exchange.
+
+More Info: [Localyte](http://www.localyte.com/), [Couchsurfing](http://www.couchsurfing.org/),
+[Armut](http://armut.com/)
+
+_Tuğra Çetindamar_
+
+
+---
+
+<br />
+
+**Craigslist** is a global advertisement based site. Anyone can reach to whole advertisements around the world. These ads includes not only rental or on sale ones but also social services or job postings.
+Users communicate via their e-mails. To publish ads, one must sign up to the site.
+
+> Global
+> > http://www.craigslist.org/about/sites
+
+
+> Istanbul
+> > http://istanbul.craigslist.com.tr/
+
+_Semih Öztürk_
+
+
+---
+
+<br />
+
+There are wide range of applications exist similar to our project, as some examples are indicated above, what I think after a little bit of research is further potential lies especially in services for specific needs. **Armut** is a very good example for it. There are more narrowed applications as well. For example [Kale Seramik](http://www.tanidikusta.com/) has created a portal for customers to find certificated tilers.
+
+If we want to look from another perspective I've found a different community exchange service which is not active currently yet an interesting idea. A friend of mine in Dominican Republic founded an NGO network two years ago. The aim was linking volunteers, who want to participate in a social responsibility project but cannot find a proper one, to NGOs that need volunteers. Facebook page of that NGO network is [this](http://www.facebook.com/pages/Redes-RD/156386571066401).
+
+_Alperen Adikti_
+
+
+---
+
+<br />
